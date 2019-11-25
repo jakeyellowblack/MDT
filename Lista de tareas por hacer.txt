@@ -1,0 +1,2 @@
+>Eliminar Username de la tabla User
+>Agregar la tabla Subcategory al MER y a la base de datos.
