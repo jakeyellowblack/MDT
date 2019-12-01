@@ -5,6 +5,8 @@ namespace MDT;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use DB;
+
 
 class User extends Authenticatable
 {
@@ -56,7 +58,7 @@ class User extends Authenticatable
 
 	public function hasRole($role)
 	{
-			if($this->roles()->where('name',$role)->first())
+			if($this->roles()->where('firstname',$role)->first())
 				{
 					return true;
 				}
@@ -69,7 +71,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'userame', 'firstname', 'lastname', 'country', 'category', 'email', 'password',
+        'firstname', 'lastname', 'country', 'email', 'password',
     ];
 
     /**

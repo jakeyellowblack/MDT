@@ -22,7 +22,6 @@ class UserTableSeeder extends Seeder
 		$role_user = Role::where('name','user')->first();
 		
 		$user = new User();
-		$user->username = "El_Negris";
 		$user->firstname = "Miles";
 		$user->lastname = "Morales";
 		$user->country = "USA";
@@ -32,7 +31,6 @@ class UserTableSeeder extends Seeder
 		$user->roles()->attach($role_admin);
 		
 		$user = new User();
-		$user->username = "InvisibleWoman61";
 		$user->firstname = "Sue";
 		$user->lastname = "Storm";
 		$user->country = "USA";
@@ -42,7 +40,6 @@ class UserTableSeeder extends Seeder
 		$user->roles()->attach($role_client);
 		
 		$user = new User();
-		$user->username = "ElTelarañas";
 		$user->firstname = "Peter";
 		$user->lastname = "Parker";
 		$user->country = "USA";
@@ -52,7 +49,6 @@ class UserTableSeeder extends Seeder
 		$user->roles()->attach($role_freelancer);
 		
 		$user = new User();
-		$user->username = "Ms.Marvel";
 		$user->firstname = "Kamala";
 		$user->lastname = "Khan";
 		$user->country = "USA";
