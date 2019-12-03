@@ -5,6 +5,7 @@ namespace MDT\Http\Controllers\Auth;
 use MDT\Http\Controllers\Controller;
 use MDT\User;
 use MDT\Category;
+use MDT\Country;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -83,15 +84,14 @@ class RegisterController extends Controller
     }
 	
 
-	
-	
 		public function showRegistrationForm()
 	{
 	
 		$categories = Category::all();
+		$countries = Country::all();
 		
 
-		return view('auth.register', compact('categories'));
+		return view('auth.register', compact('categories', 'countries'));
 		
 	}
 	
