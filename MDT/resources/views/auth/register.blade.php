@@ -21,6 +21,12 @@
 	<link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<style type="text/css">
+	.sign-in .wrapper .sign-in-page .signin-popup .signin-pop .row .col-lg-6 .cmp-info p {
+	text-align: center;
+	font-weight: bold;
+}
+    </style>
 </head>
 
 
@@ -39,9 +45,9 @@
 							<div class="cmp-info">
 								<!--<div class="cm-logo">
 									<img src="images/cm-logo.png" alt="">-->
-									<p>WELCOME TO MDT!!!</p>
+									<p>WELCOME TO MDT !!!</p>
 								<!--</div>--><!--cm-logo end-->	
-								<img src="images/cm-main-img.png" alt="">			
+								<img src="images/2014_04_digital-government.jpg" alt="">			
 							</div><!--cmp-info end-->
 						</div>
 						<div class="col-lg-6">
@@ -205,11 +211,11 @@
 												</div>
                                                 
                                                 
-                                                <div class="col-lg-12 no-pdd">
+                                              <div class="col-lg-12 no-pdd">
 													<div class="sn-field">
 														<select class="form-control" name="category_id">
                                                         
-                                                       <option disabled selected>Select a Category</option>
+                                                      <option disabled selected>Select a Category</option>
                                                                 
 															@foreach ($categories as $cate)
 
@@ -237,7 +243,7 @@
                                                <i class="la la-envelope-o"></i>
     
 													</div>
-												</div>       
+											  </div>       
                                                 
                                                  <div class="col-lg-12 no-pdd">
 													<div class="sn-field">
@@ -265,7 +271,7 @@
                                          
                                                 
                                                 
-												<!--<div class="col-lg-12 no-pdd">
+											  <!--<div class="col-lg-12 no-pdd">
 													<div class="sn-field">
 														<input type="text" name="country" placeholder="Country">
 														<i class="la la-globe"></i>
@@ -399,7 +405,7 @@
 														<i class="la la-dropbox"></i>
 														<span><i class="fa fa-ellipsis-h"></i></span>
 													</div>
-												</div>
+											  </div>
                               
                               
                        
