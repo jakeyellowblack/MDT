@@ -17,8 +17,6 @@ Route::get('/register', function () {
 
 Route::get('/register', 'RegisterController@index')->name('register');
 
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

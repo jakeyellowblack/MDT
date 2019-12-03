@@ -24,7 +24,6 @@ class UserTableSeeder extends Seeder
 		$user = new User();
 		$user->firstname = "Miles";
 		$user->lastname = "Morales";
-		$user->country = "USA";
 		$user->email = "Admin@mai.com";
 		$user->password = bcrypt('query');
 		$user->save();
@@ -33,7 +32,6 @@ class UserTableSeeder extends Seeder
 		$user = new User();
 		$user->firstname = "Sue";
 		$user->lastname = "Storm";
-		$user->country = "USA";
 		$user->email = "Client@mai.com";
 		$user->password = bcrypt('query');
 		$user->save();
@@ -42,7 +40,6 @@ class UserTableSeeder extends Seeder
 		$user = new User();
 		$user->firstname = "Peter";
 		$user->lastname = "Parker";
-		$user->country = "USA";
 		$user->email = "Freelancer@mai.com";
 		$user->password = bcrypt('query');
 		$user->save();
@@ -51,7 +48,6 @@ class UserTableSeeder extends Seeder
 		$user = new User();
 		$user->firstname = "Kamala";
 		$user->lastname = "Khan";
-		$user->country = "USA";
 		$user->email = "User@mai.com";
 		$user->password = bcrypt('query');
 		$user->save();

@@ -329,25 +329,42 @@
 													</div>
 												</div>
                                                 
+                                                
+                                                
                                                 <div class="col-lg-12 no-pdd">
 													<div class="sn-field">
-														<input id="country" type="text" class="form-control @error('country') is-invalid @enderror" name="country" placeholder="Country" value="{{ old('country') }}" required autocomplete="country">
+														<select class="form-control" name="category_id">
                                                         
-                                                        @error('country')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                                               <i class="la la-globe"></i>
-    
+                                                      <option disabled selected>Select a Country</option>
+                                                                
+														@foreach($countries as $count)
+                                                                <option>{{ $count->name }}</option>
+														@endforeach
+
+														</select>
+														<i class="la la-globe"></i>
+														<span><i class="fa fa-ellipsis-h"></i></span>
 													</div>
 												</div>
                                                 
                                                 
+                                              <div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<select class="form-control" name="category_id">
+                                                        
+                                                      <option disabled selected>Select a Category</option>
+                                                                
+														@foreach($categories as $cate)
+                                                                <option>{{ $cate->name }}</option>
+														@endforeach
+
+														</select>
+														<i class="la la-dropbox"></i>
+														<span><i class="fa fa-ellipsis-h"></i></span>
+													</div>
+												</div>
                                                 
-                                                
-                             
-                              
+                                        
                               
                        
                                       <div class="col-lg-12 no-pdd">
