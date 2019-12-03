@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layout.app')
 
 @section('content')
 
@@ -7,7 +7,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>MDT</title>
+	<title>Register</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -39,7 +39,7 @@
 							<div class="cmp-info">
 								<!--<div class="cm-logo">
 									<img src="images/cm-logo.png" alt="">-->
-									<p>MDT es un proyecto en proceso programado por...</p>
+									<p>WELCOME TO MDT!!!</p>
 								<!--</div>--><!--cm-logo end-->	
 								<img src="images/cm-main-img.png" alt="">			
 							</div><!--cmp-info end-->
@@ -74,7 +74,7 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-													<i class="la la-user"></i>
+													<i class="la la-envelope-o"></i>
 												</div><!--sn-field end-->
 											</div>
                                             
@@ -109,7 +109,13 @@
 														</label>
 														<small>Remember me</small>
 													</div><!--fgt-sec end-->
-													<a href="#" title="">Forgot Password?</a>
+                                                    
+                                                    
+                                               @if (Route::has('password.request'))
+													<a href="{{ route('password.request') }}" title="">Forgot Password?</a>
+                                               @endif
+                                                    
+                                                    
 												</div>
 											</div>
                                             
@@ -197,6 +203,24 @@
     
 													</div>
 												</div>
+                                                
+                                                
+                                                <div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<select class="form-control" name="category_id">
+                                                        
+                                                       <option disabled selected>Select a Category</option>
+                                                                
+															@foreach ($categories as $cate)
+
+                                                                <option>{{$cate->name}}</option>
+                                                            
+                                                            @endforeach
+														</select>
+														<i class="la la-dropbox"></i>
+														<span><i class="fa fa-ellipsis-h"></i></span>
+													</div>
+												</div>
                               
                               
                               
@@ -210,14 +234,14 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                                               <i class="la la-user"></i>
+                                               <i class="la la-envelope-o"></i>
     
 													</div>
 												</div>       
                                                 
                                                  <div class="col-lg-12 no-pdd">
 													<div class="sn-field">
-														<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="password" value="{{ old('password') }}" required autocomplete="password">
+														<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" value="{{ old('password') }}" required autocomplete="password">
                                                         
                                                         @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -231,18 +255,14 @@
                                                 
                                                  <div class="col-lg-12 no-pdd">
 													<div class="sn-field">
-														<input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="password" value="{{ old('password') }}" required autocomplete="new-password">
+														<input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password" value="{{ old('password') }}" required autocomplete="new-password">
                                                         
                                                        
                                                <i class="la la-lock"></i>
     
 													</div>
 												</div>     
-                                                
-                                                
-                                                
-                                                
-                                                
+                                         
                                                 
                                                 
 												<!--<div class="col-lg-12 no-pdd">
@@ -359,7 +379,27 @@
     
 													</div>
 												</div>
-                              
+                                                
+                                                
+                                                
+                                                
+                                                
+                              <div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<select class="form-control" name="category_id">
+                                                        
+                                                       <option disabled selected>Select a Category</option>
+                                                                
+															@foreach ($categories as $cate)
+
+                                                                <option>{{$cate->name}}</option>
+                                                            
+                                                            @endforeach
+														</select>
+														<i class="la la-dropbox"></i>
+														<span><i class="fa fa-ellipsis-h"></i></span>
+													</div>
+												</div>
                               
                               
                        
@@ -372,14 +412,14 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                                               <i class="la la-user"></i>
+                                               <i class="la la-envelope-o"></i>
     
 													</div>
 												</div>       
                                                 
                                                  <div class="col-lg-12 no-pdd">
 													<div class="sn-field">
-														<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="password" value="{{ old('password') }}" required autocomplete="password">
+														<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" value="{{ old('password') }}" required autocomplete="password">
                                                         
                                                         @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -393,7 +433,7 @@
                                                 
                                                  <div class="col-lg-12 no-pdd">
 													<div class="sn-field">
-														<input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="password" value="{{ old('password') }}" required autocomplete="new-password">
+														<input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password" value="{{ old('password') }}" required autocomplete="new-password">
                                                         
                                                        
                                                <i class="la la-lock"></i>

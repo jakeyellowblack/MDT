@@ -12,8 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('auth/login');
+    return view('auth/register');
 });
+
+Route::get('/register', 'RegisterController@index')->name('register');
 
 Auth::routes();
 

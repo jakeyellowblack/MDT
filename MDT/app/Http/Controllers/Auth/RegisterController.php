@@ -4,6 +4,7 @@ namespace MDT\Http\Controllers\Auth;
 
 use MDT\Http\Controllers\Controller;
 use MDT\User;
+use MDT\Category;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -29,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/register';
     /**
      * Create a new controller instance.
      *
@@ -64,12 +65,26 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+				$categories = Category::all();
+
+		
         return User::create([
 			'firstname' => $data['firstname'],
 			'lastname' => $data['lastname'],
 			'country' => $data['country'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'password' => Hash::make($data['password'])
         ]);
+		
+		
     }
+	
+		public function showRegistrationForm()
+	{
+		$categories = Category::all();
+	
+		return view('auth.register', compact('categories'));
+	}
+	
+
 }
