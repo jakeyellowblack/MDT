@@ -17,7 +17,7 @@ class User extends Authenticatable
 			return $this->belongsToMany('MDT\Role');
 		}
 		
-		
+	
 		
 	public function autorizeRoles($roles)
 	{

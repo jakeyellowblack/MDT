@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use MDT\Category;
 
+
 class CategoryTableSeeder extends Seeder
 {
     /**
