@@ -8,6 +8,7 @@ use MDT\Category;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\View;
 use DB;
 
 class RegisterController extends Controller
@@ -76,14 +77,22 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password'])
         ]);
 		
+
+		
 		
     }
 	
+
+	
+	
 		public function showRegistrationForm()
 	{
-		$categories = Category::all();
 	
+		$categories = Category::all();
+		
+
 		return view('auth.register', compact('categories'));
+		
 	}
 	
 

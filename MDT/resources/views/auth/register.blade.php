@@ -217,11 +217,10 @@
                                                         
                                                       <option disabled selected>Select a Category</option>
                                                                 
-															@foreach ($categories as $cate)
+														@foreach($categories as $cate)
+                                                                <option>{{ $cate->name }}</option>
+														@endforeach
 
-                                                                <option>{{$cate->name}}</option>
-                                                            
-                                                            @endforeach
 														</select>
 														<i class="la la-dropbox"></i>
 														<span><i class="fa fa-ellipsis-h"></i></span>
@@ -268,47 +267,7 @@
     
 													</div>
 												</div>     
-                                         
-                                                
-                                                
-											  <!--<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input type="text" name="country" placeholder="Country">
-														<i class="la la-globe"></i>
-													</div>
-												</div>
-                                                -->
-                                                
-												<!--<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<select>
-															<option>Category</option>
-															<option>Category 1</option>
-															<option>Category 2</option>
-															<option>Category 3</option>
-															<option>Category 4</option>
-														</select>
-														<i class="la la-dropbox"></i>
-														<span><i class="fa fa-ellipsis-h"></i></span>
-													</div>
-												</div>-->
-                                                
-                                                
-												<!--<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input type="password" name="password" placeholder="Password">
-														<i class="la la-lock"></i>
-													</div>
-												</div>-->
-                                                
-                                                
-												<!--<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input type="password" name="repeat-password" placeholder="Repeat Password">
-														<i class="la la-lock"></i>
-													</div>
-												</div>-->
-                                                
+                                       
                                                 
 												<div class="col-lg-12 no-pdd">
 													<div class="checky-sec st2">
@@ -321,17 +280,12 @@
 														</div><!--fgt-sec end-->
 													</div>
 												</div>
-                                                
-                                                
-                                                
+                                        
 												<div class="col-lg-12 no-pdd">
 													<button type="submit" value="submit">Get Started</button>
 												</div>
 											</div>
-                                            
-                                            
-                                            
-                                            
+                                               
                                             
 										</form>
 									</div><!--dff-tab end-->
@@ -389,23 +343,7 @@
                                                 
                                                 
                                                 
-                                                
-                              <div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<select class="form-control" name="category_id">
-                                                        
-                                                       <option disabled selected>Select a Category</option>
-                                                                
-															@foreach ($categories as $cate)
-
-                                                                <option>{{$cate->name}}</option>
-                                                            
-                                                            @endforeach
-														</select>
-														<i class="la la-dropbox"></i>
-														<span><i class="fa fa-ellipsis-h"></i></span>
-													</div>
-											  </div>
+                             
                               
                               
                        

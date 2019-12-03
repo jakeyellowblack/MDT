@@ -11,11 +11,13 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/register', function () {
     return view('auth/register');
 });
 
 Route::get('/register', 'RegisterController@index')->name('register');
+
+
 
 Auth::routes();
 
