@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddCategoryIdToUsersTable extends Migration
+class AddCountryIdToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,9 +14,10 @@ class AddCategoryIdToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->unsignedInteger('category_id')->nullable()->after('id');
-			
-			$table->foreign('category_id')->references('id')->on('users')->onDelete('cascade');
+
+        $table->unsignedInteger('country_id')->nullable()->after('id');
+        $table->foreign('country_id')->references('id')->on('users')->onDelete('cascade');
+
         });
     }
 
