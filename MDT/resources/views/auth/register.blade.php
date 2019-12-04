@@ -199,12 +199,12 @@
 
                                                  <div class="col-lg-12 no-pdd">
 													<div class="sn-field">
-														<select class="form-control" name="category_id">
+														<select class="form-control" name="country_id">
                                                         
                                                       <option disabled selected>Select a Country</option>
                                                                 
 														@foreach($countries as $count)
-                                                                <option>{{ $count->name }}</option>
+                                                                <option value="{{ $count->id }}">{{ $count->name }}</option>
 														@endforeach
 
 														</select>
@@ -221,7 +221,7 @@
                                                       <option disabled selected>Select a Category</option>
                                                                 
 														@foreach($categories as $cate)
-                                                                <option>{{ $cate->name }}</option>
+                                                                <option value="{{ $cate->id }}">{{ $cate->name }}</option>
 														@endforeach
 
 														</select>
@@ -338,7 +338,7 @@
                                                       <option disabled selected>Select a Country</option>
                                                                 
 														@foreach($countries as $count)
-                                                                <option>{{ $count->name }}</option>
+                                                                <option value="{{ $count->id }}">{{ $count->name }}</option>
 														@endforeach
 
 														</select>
@@ -355,7 +355,7 @@
                                                       <option disabled selected>Select a Category</option>
                                                                 
 														@foreach($categories as $cate)
-                                                                <option>{{ $cate->name }}</option>
+                                                                <option value="{{ $cate->id }}">{{ $cate->name }}</option>
 														@endforeach
 
 														</select>
