@@ -1,1 +1,6 @@
+FORMULARIO DE REGISTRO
+>Evitar que se puedan meter numeros.
+>Agregar curriculum o link de Linkedin.
+>Corregir posicionamiento de los mensajes de error.
+>En el campo email poner exigencias como "@" o ".com" y que sean correos validos.
 
