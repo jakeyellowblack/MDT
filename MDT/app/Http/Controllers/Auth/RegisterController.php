@@ -2,6 +2,8 @@
 
 namespace MDT\Http\Controllers\Auth;
 
+use Illuminate\Http\Request;
+use Illuminate\Auth\Events\Registered;
 use MDT\Http\Controllers\Controller;
 use MDT\User;
 use MDT\Category;
@@ -27,6 +29,8 @@ class RegisterController extends Controller
 
     use RegistersUsers;
 
+
+
     /**
      * Where to redirect users after registration.
      *
@@ -38,6 +42,17 @@ class RegisterController extends Controller
      *
      * @return void
      */
+	 
+	 
+		 public function register(Request $request)
+	 {
+	 $this->validator($request->all())->validate();
+	 event(new Registered($user = $this->create($request->all())));
+	 return back()->with('status',
+		'Registered successfully, please be attentive to your email.');
+	 }
+
+	 
    public function __construct()
     {
         $this->middleware('guest');
@@ -58,14 +73,17 @@ class RegisterController extends Controller
             'category_id' => ['required', 'integer'],
             'country_id' => ['required', 'integer'],
             'password' => ['required', 'string', 'min:5', 'confirmed'],
+			'terms' => ['accepted'],
         ]);
     }
+	
     /**
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
      * @return \MDT\User
      */
+	 
     protected function create(array $data)
     {
 		
@@ -78,19 +96,16 @@ class RegisterController extends Controller
             'country_id' => $data['country_id'],
             'password' => Hash::make($data['password'])
         ]);
-		
-
-		
-		
     }
 	
+
+
 
 		public function showRegistrationForm()
 	{
 	
 		$categories = Category::all();
 		$countries = Country::all();
-		
 
 		return view('auth.register', compact('categories', 'countries'));
 		

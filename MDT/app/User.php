@@ -17,6 +17,15 @@ class User extends Authenticatable
 			return $this->belongsToMany('MDT\Role');
 		}
 		
+		public function country()
+		{
+			return $this->belongsTo(Country::class);
+		}
+		
+		public function category()
+		{
+			return $this->belongsTo(Category::class);
+		}
 	
 		
 	public function autorizeRoles($roles)

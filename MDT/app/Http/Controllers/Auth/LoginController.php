@@ -39,7 +39,7 @@ class LoginController extends Controller
 	
 	public function showLoginForm()
 {
-	return redirect('register');
+	return redirect('/register');
 
 }
 	

@@ -2,6 +2,10 @@
 
 @section('content')
 
+@include('common.success')
+
+@include('common.errors')
+
 
 <!DOCTYPE html>
 <html>
@@ -275,7 +279,7 @@
 												<div class="col-lg-12 no-pdd">
 													<div class="checky-sec st2">
 														<div class="fgt-sec">
-															<input type="checkbox" name="terms" id="c2" value="1">
+															<input id="c2" type="checkbox" name="terms" value="true" {{ !old('terms') ?: 'checked' }}>
 															<label for="c2">
 																<span></span>
 															</label>
@@ -434,7 +438,7 @@
 												<div class="col-lg-12 no-pdd">
 													<div class="checky-sec st2">
 														<div class="fgt-sec">
-															<input type="checkbox" name="cc" id="c3">
+															<input id="c3" type="checkbox" name="terms" value="true" {{ !old('terms') ?: 'checked' }}>
 															<label for="c3">
 																<span></span>
 															</label>
