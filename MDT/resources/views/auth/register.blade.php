@@ -51,7 +51,7 @@
 									<p>Welcome to My Digital Thought !!!</p>
 						
                        		</div><!--cm-logo end-->	
-								<img src="images/2014_04_digital-government.jpg" alt="">			
+								<img src="images/cm-main-img.png" alt="">			
 							</div><!--cmp-info end-->
 						</div>
 						<div class="col-lg-6">
