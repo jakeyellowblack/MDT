@@ -172,7 +172,7 @@
 											<div class="row">
 												<div class="col-lg-12 no-pdd">
 													<div class="sn-field">
-														<input id="firstname" type="text" class="form-control @error('firstname') is-invalid @enderror" name="firstname" placeholder="First Name" value="{{ old('firstname') }}" required autocomplete="firstname">
+														<input id="firstname" type="text" onkeypress="return soloLetras(event)" class="form-control @error('firstname') is-invalid @enderror" name="firstname" placeholder="First Name" value="{{ old('firstname') }}" required autocomplete="firstname">
                                                         
                                                         @error('firstname')
                                     <span class="invalid-feedback" role="alert">
@@ -188,7 +188,7 @@
                                                 
                                                 <div class="col-lg-12 no-pdd">
 													<div class="sn-field">
-														<input id="lastname" type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname" placeholder="Last Name" value="{{ old('lastname') }}" required autocomplete="lastname">
+														<input id="lastname" type="text" onkeypress="return soloLetras(event)" class="form-control @error('lastname') is-invalid @enderror" name="lastname" placeholder="Last Name" value="{{ old('lastname') }}" required autocomplete="lastname">
                                                         
                                                         @error('lastname')
                                     <span class="invalid-feedback" role="alert">
@@ -307,7 +307,7 @@
                                             
                                             <div class="col-lg-12 no-pdd">
 													<div class="sn-field">
-														<input id="firstname" type="text" class="form-control @error('firstname') is-invalid @enderror" name="firstname" placeholder="First Name" value="{{ old('firstname') }}" required autocomplete="firstname">
+														<input id="firstname" type="text" onkeypress="return soloLetras(event)" class="form-control @error('firstname') is-invalid @enderror" name="firstname" placeholder="First Name" value="{{ old('firstname') }}" required autocomplete="firstname">
                                                         
                                                         @error('firstname')
                                     <span class="invalid-feedback" role="alert">
@@ -323,7 +323,7 @@
                                                 
                                                 <div class="col-lg-12 no-pdd">
 													<div class="sn-field">
-														<input id="lastname" type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname" placeholder="Last Name" value="{{ old('lastname') }}" required autocomplete="lastname">
+														<input id="lastname" type="text" onkeypress="return soloLetras(event)" class="form-control @error('lastname') is-invalid @enderror" name="lastname" placeholder="Last Name" value="{{ old('lastname') }}" required autocomplete="lastname">
                                                         
                                                         @error('lastname')
                                     <span class="invalid-feedback" role="alert">
@@ -480,6 +480,80 @@
 
 
 	</div><!--theme-layout end-->
+  
+  
+  <!--SECCIÓN JAVASCRIPT-->  
+    
+       
+       	 <script src="{{ asset('vendor/stringToSlug/jquery.stringToSlug.min.js') }}"></script>
+
+         <script>
+		 
+		function soloLetras(e)
+		{
+			   key = e.keyCode || e.which;
+			   tecla = String.fromCharCode(key).toLowerCase();
+			   letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+			   especiales = "8-37-39-46";
+	
+			   tecla_especial = false
+				   for(var i in especiales)
+					{
+						if(key == especiales[i])
+						{
+							tecla_especial = true;
+							break;
+						}
+					}
+
+			if(letras.indexOf(tecla)==-1 && !tecla_especial)
+			{
+				return false;
+			}
+    	}
+		
+		
+		function soloNumeros(e)
+		{
+			   key = e.keyCode || e.which;
+			   tecla = String.fromCharCode(key).toLowerCase();
+			   letras = "0123456789";
+			   especiales = "8-37-39-46";
+	
+			   tecla_especial = false
+				   for(var i in especiales)
+					{
+						if(key == especiales[i])
+						{
+							tecla_especial = true;
+							break;
+						}
+					}
+
+			if(letras.indexOf(tecla)==-1 && !tecla_especial)
+			{
+				return false;
+			}
+    	}
+		
+		
+		
+	
+		 	$(document).ready(function()
+			{
+				$("#cedula, #slug").stringToSlug
+				({
+					callback: function(text)
+					{
+						$("#slug").val(text);
+					}
+				});
+				
+			});
+			
+         
+         </script>
+
 
 
 
