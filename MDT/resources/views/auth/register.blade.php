@@ -28,7 +28,6 @@
 	<style type="text/css">
 	.sign-in .wrapper .sign-in-page .signin-popup .signin-pop .row .col-lg-6 .cmp-info p {
 	text-align: center;
-	font-weight: bold;
 }
     </style>
 </head>
@@ -47,10 +46,11 @@
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="cmp-info">
-								<!--<div class="cm-logo">
-									<img src="images/cm-logo.png" alt="">-->
-									<p>WELCOME TO MDT !!!</p>
-								<!--</div>--><!--cm-logo end-->	
+								<div class="cm-logo">
+								  <img src="images/logo-square2.png" alt="">
+									<p>Welcome to My Digital Thought !!!</p>
+						
+                       		</div><!--cm-logo end-->	
 								<img src="images/2014_04_digital-government.jpg" alt="">			
 							</div><!--cmp-info end-->
 						</div>
