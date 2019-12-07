@@ -2,6 +2,8 @@
 
 namespace MDT\Http\Controllers\Auth;
 
+use Egulias\EmailValidator\EmailValidator;
+use Egulias\EmailValidator\Validation\RFCValidation;
 use Illuminate\Http\Request;
 use Illuminate\Auth\Events\Registered;
 use MDT\Http\Controllers\Controller;
@@ -82,7 +84,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
 			'firstname' => ['required', 'alpha', 'max:255'],
 			'lastname' => ['required', 'alpha', 'max:255'],
-            'email' => ['required', 'string', 'email:rfc,dns', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email:rfc', 'max:255', 'unique:users'],
             'category_id' => ['required', 'integer'],
             'country_id' => ['required', 'integer'],
             'password' => ['required', 'string', 'min:5', 'confirmed'],
