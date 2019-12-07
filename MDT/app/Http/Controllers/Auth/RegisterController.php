@@ -64,8 +64,21 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+	 
+	 
+	 
     protected function validator(array $data)
     {
+		
+		Validator::extend('domain', function($attribute, $value, $parameters)
+		{
+			$domain = $parameters[0];
+			$pattern = "#^https?://([a-z0-9-]+\.)*".preg_quote($domain)."(/.*)?$#";
+			return !! preg_match($pattern, $value);
+		});
+		
+	
+
         return Validator::make($data, [
 			'firstname' => ['required', 'alpha', 'max:255'],
 			'lastname' => ['required', 'alpha', 'max:255'],
@@ -74,6 +87,7 @@ class RegisterController extends Controller
             'country_id' => ['required', 'integer'],
             'password' => ['required', 'string', 'min:5', 'confirmed'],
 			'terms' => ['accepted'],
+			'linkedin_url' => ['required', 'domain:https://www.linkedin.com']
         ]);
     }
 	
@@ -92,6 +106,7 @@ class RegisterController extends Controller
 			'firstname' => $data['firstname'],
 			'lastname' => $data['lastname'],
             'email' => $data['email'],
+			'linkedin_url' => $data['linkedin_url'],
             'category_id' => $data['category_id'],
             'country_id' => $data['country_id'],
             'password' => Hash::make($data['password'])

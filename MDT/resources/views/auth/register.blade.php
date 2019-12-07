@@ -251,7 +251,30 @@
                                                <i class="la la-envelope-o"></i>
     
 													</div>
-											  </div>       
+											  </div>   
+                                              
+                                              
+                                              
+                                              <div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<input id="linkedin_url" type="url" class="form-control @error('linkedin_url') is-invalid @enderror" name="linkedin_url" placeholder="LinkedIn Profile URL" value="{{ old('linkedin_url') }}" required autocomplete="linkedin_url">
+                                                        
+                                                        @error('linkedin_url')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                               <i class="la la-user"></i>
+    
+													</div>
+												</div>
+                                              
+                                              
+                                              
+                                              
+                                              
+                                              
+                                                  
                                                 
                                                  <div class="col-lg-12 no-pdd">
 													<div class="sn-field">
