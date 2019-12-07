@@ -87,7 +87,7 @@ class RegisterController extends Controller
             'country_id' => ['required', 'integer'],
             'password' => ['required', 'string', 'min:5', 'confirmed'],
 			'terms' => ['accepted'],
-			'linkedin_url' => ['required', 'domain:https://www.linkedin.com']
+			'linkedin_url' => ['required', 'domain:www.linkedin.com/in']
         ]);
     }
 	
