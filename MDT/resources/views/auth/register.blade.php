@@ -161,14 +161,26 @@
 										<h2>Choose an option:</h2>
 										<ul>
 											<li data-tab="tab-3" class="current"><a href="#" title="">Client</a></li>
+                                            
+                                            
+                                            
+                                            
 											<li data-tab="tab-4"><a href="#" title="">Freelancer</a></li>
 										</ul>
 									</div><!--signup-tab end-->	
                                     
                                     
 									<div class="dff-tab current" id="tab-3">
+                                    
 										<form method="POST" action="{{ route('register') }}">
                         @csrf
+                        
+                        
+                        
+                        
+                        
+                        
+                        
 											<div class="row">
 												<div class="col-lg-12 no-pdd">
 													<div class="sn-field">
@@ -304,7 +316,7 @@
 												<div class="col-lg-12 no-pdd">
 													<div class="checky-sec st2">
 														<div class="fgt-sec">
-															<input id="c2" type="checkbox" name="terms" value="true" {{ !old('terms') ?: 'checked' }}>
+															<input id="c2" type="checkbox" name="roles" value="2">
 															<label for="c2">
 																<span></span>
 															</label>
@@ -408,7 +420,28 @@
                                                <i class="la la-envelope-o"></i>
     
 													</div>
-												</div>       
+												</div> 
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                <div class="col-lg-12 no-pdd">
+													<div class="sn-field">
+														<input id="linkedin_url" type="url" class="form-control @error('linkedin_url') is-invalid @enderror" name="linkedin_url" placeholder="LinkedIn Profile URL" value="{{ old('linkedin_url') }}" required autocomplete="linkedin_url">
+                                                        
+                                                        @error('linkedin_url')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                               <i class="la la-user"></i>
+    
+													</div>
+												</div>
+                                                
+                                                
+                                                      
                                                 
                                                  <div class="col-lg-12 no-pdd">
 													<div class="sn-field">
@@ -463,7 +496,7 @@
 												<div class="col-lg-12 no-pdd">
 													<div class="checky-sec st2">
 														<div class="fgt-sec">
-															<input id="c3" type="checkbox" name="terms" value="true" {{ !old('terms') ?: 'checked' }}>
+															<input id="c3" type="checkbox" name="roles" value="3">
 															<label for="c3">
 																<span></span>
 															</label>

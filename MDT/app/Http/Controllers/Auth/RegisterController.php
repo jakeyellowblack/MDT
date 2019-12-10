@@ -10,6 +10,7 @@ use MDT\Http\Controllers\Controller;
 use MDT\User;
 use MDT\Category;
 use MDT\Country;
+use MDT\Role;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -88,7 +89,7 @@ class RegisterController extends Controller
             'category_id' => ['required', 'integer'],
             'country_id' => ['required', 'integer'],
             'password' => ['required', 'string', 'min:5', 'confirmed'],
-			'terms' => ['accepted'],
+			'roles' => ['required'],
 			'linkedin_url' => ['required','unique:users', 'domain:www.linkedin.com/in']
         ]);
     }
@@ -104,7 +105,7 @@ class RegisterController extends Controller
     {
 		
 		
-        return User::create([
+        $user = User::create([
 			'firstname' => $data['firstname'],
 			'lastname' => $data['lastname'],
             'email' => $data['email'],
@@ -113,6 +114,10 @@ class RegisterController extends Controller
             'country_id' => $data['country_id'],
             'password' => Hash::make($data['password'])
         ]);
+		
+		$user->roles()->sync($data['roles']);
+
+    	return $user;
     }
 	
 
@@ -123,8 +128,9 @@ class RegisterController extends Controller
 	
 		$categories = Category::all();
 		$countries = Country::all();
+		$roles = Role::all();
 
-		return view('auth.register', compact('categories', 'countries'));
+		return view('auth.register', compact('categories', 'countries', 'roles'));
 		
 	}
 	
