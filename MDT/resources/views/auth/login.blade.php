@@ -11,6 +11,11 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
+        @if(session()->has('message'))
+            <p class="alert alert-info">
+                {{ session()->get('message') }}
+            </p>
+        @endif
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 

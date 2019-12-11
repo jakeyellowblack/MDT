@@ -28,6 +28,7 @@ class UserTableSeeder extends Seeder
 		$user->linkedin_url = "https://www.linkedin.com/in/spidey-a9411a195/";
 		$user->file = "spideyb.png";
 		$user->password = bcrypt('query');
+		$user->approved = 1;
 		$user->save();
 		$user->roles()->attach($role_admin);
 		

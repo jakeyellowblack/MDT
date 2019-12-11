@@ -26,4 +26,9 @@ Route::get('auth/success', [
 
 Auth::routes();
 
+
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+});
