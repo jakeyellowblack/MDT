@@ -65,6 +65,9 @@ class User extends Authenticatable
 				}
 		return false;
 	}
+	
+	
+	
 
     /**
      * The attributes that are mass assignable.
@@ -72,7 +75,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'firstname', 'lastname', 'country_id', 'category_id', 'email', 'linkedin_url', 'password',
+        'firstname', 'lastname', 'country_id', 'category_id', 'email', 'linkedin_url', 'file', 'password',
     ];
 
     /**

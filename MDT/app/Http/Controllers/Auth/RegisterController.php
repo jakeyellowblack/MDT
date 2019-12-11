@@ -19,6 +19,7 @@ use DB;
 
 class RegisterController extends Controller
 {
+
     /*
     |--------------------------------------------------------------------------
     | Register Controller
@@ -90,7 +91,8 @@ class RegisterController extends Controller
             'country_id' => ['required', 'integer'],
             'password' => ['required', 'string', 'min:5', 'confirmed'],
 			'roles' => ['required'],
-			'linkedin_url' => ['required','unique:users', 'domain:www.linkedin.com/in']
+			'linkedin_url' => ['required','unique:users', 'domain:www.linkedin.com/in'],
+			'file' => ['required'],
         ]);
     }
 	
@@ -101,6 +103,8 @@ class RegisterController extends Controller
      * @return \MDT\User
      */
 	 
+	
+	 
     protected function create(array $data)
     {
 		
@@ -110,17 +114,18 @@ class RegisterController extends Controller
 			'lastname' => $data['lastname'],
             'email' => $data['email'],
 			'linkedin_url' => $data['linkedin_url'],
+			'file' => $data['file']->getClientOriginalName(),
             'category_id' => $data['category_id'],
             'country_id' => $data['country_id'],
             'password' => Hash::make($data['password'])
         ]);
 		
+	
 		$user->roles()->sync($data['roles']);
 
     	return $user;
     }
 	
-
 
 
 		public function showRegistrationForm()

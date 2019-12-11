@@ -25,9 +25,13 @@
 	<link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/customfile.css">
 	<style type="text/css">
 	.sign-in .wrapper .sign-in-page .signin-popup .signin-pop .row .col-lg-6 .cmp-info p {
 	text-align: center;
+}
+    .sign-in .wrapper .sign-in-page .signin-popup .signin-pop .row .col-lg-6 .login-sec #tab-2 #tab-3 form .row {
+	text-align: left;
 }
     </style>
 </head>
@@ -38,7 +42,7 @@
                     
 	
 
-	<div class="wrapper">		
+<div class="wrapper">		
 
 		<div class="sign-in-page">
 			<div class="signin-popup">
@@ -172,7 +176,7 @@
                                     
 									<div class="dff-tab current" id="tab-3">
                                     
-										<form method="POST" action="{{ route('register') }}">
+										<form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
                         
                         
@@ -181,7 +185,7 @@
                         
                         
                         
-											<div class="row">
+										  <div class="row">
 												<div class="col-lg-12 no-pdd">
 													<div class="sn-field">
 														<input id="firstname" type="text" onkeypress="return soloLetras(event)" class="form-control @error('firstname') is-invalid @enderror" name="firstname" placeholder="First Name" value="{{ old('firstname') }}" required autocomplete="firstname">
@@ -246,7 +250,7 @@
 														<i class="la la-dropbox"></i>
 														<span><i class="fa fa-ellipsis-h"></i></span>
 													</div>
-												</div>
+											  </div>
                               
                               
                               
@@ -263,11 +267,11 @@
                                                <i class="la la-envelope-o"></i>
     
 													</div>
-											  </div>   
+										    </div>   
                                               
                                               
                                               
-                                              <div class="col-lg-12 no-pdd">
+                                            <div class="col-lg-12 no-pdd">
 													<div class="sn-field">
 														<input id="linkedin_url" type="url" class="form-control @error('linkedin_url') is-invalid @enderror" name="linkedin_url" placeholder="LinkedIn Profile URL" value="{{ old('linkedin_url') }}" required autocomplete="linkedin_url">
                                                         
@@ -279,13 +283,20 @@
                                                <i class="la la-user"></i>
     
 													</div>
-												</div>
-                                              
-                                              
-                                              
-                                              
-                                              
-                                              
+											  </div>
+                                  	
+<div class="col-lg-12 no-pdd">
+						<div class="sn-field">                                             
+                            <div class="file-upload">
+                                <input class="file-upload__input" type="file" name="file" id="file" multiple>
+                                <button class="file-upload__button" type="button">Choose File(s)</button>
+                                <span class="file-upload__label"></span>
+                          </div>
+						</div></div>                    
+
+                                                
+                                                
+                          
                                                   
                                                 
                                                  <div class="col-lg-12 no-pdd">
@@ -328,13 +339,13 @@
 												<div class="col-lg-12 no-pdd">
 													<button type="submit" value="submit">Get Started</button>
 												</div>
-											</div>
+										  </div>
                                                
                                             
 										</form>
 									</div><!--dff-tab end-->
 									<div class="dff-tab" id="tab-4">
-										<form method="POST" action="{{ route('register') }}">
+										<form method="POST" action="{{ route('register') }}" entype="multipart/form-data">
                         @csrf
 											<div class="row">
                                             
@@ -352,7 +363,7 @@
                                                <i class="la la-user"></i>
     
 													</div>
-												</div>
+											  </div>
                                                 
                                                 
                                                 
@@ -403,7 +414,7 @@
 														<i class="la la-dropbox"></i>
 														<span><i class="fa fa-ellipsis-h"></i></span>
 													</div>
-												</div>
+											  </div>
                                                 
                                         
                               
@@ -420,7 +431,7 @@
                                                <i class="la la-envelope-o"></i>
     
 													</div>
-												</div> 
+											  </div> 
                                                 
                                                 
                                                 
@@ -535,15 +546,17 @@
 		</div><!--sign-in-page end-->
 
 
-	</div><!--theme-layout end-->
+</div><!--theme-layout end-->
   
   
   <!--SECCIÓN JAVASCRIPT-->  
     
        
        	 <script src="{{ asset('vendor/stringToSlug/jquery.stringToSlug.min.js') }}"></script>
+         
 
-         <script>
+<script>
+	
 		 
 		function soloLetras(e)
 		{
@@ -612,7 +625,7 @@
 
 
 
-
+<script type="text/javascript" src="js/customfile.js"></script>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/popper.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
