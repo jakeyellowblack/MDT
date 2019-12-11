@@ -6,7 +6,6 @@
 
 @include('common.errors')
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +14,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
+  
+<!--ESTILOS DE CSS-->  
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/line-awesome.css">
@@ -26,6 +27,9 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
     <link rel="stylesheet" type="text/css" href="css/customfile.css">
+<!--FIN DE ESTILOS DE CSS-->
+    
+<!--SECCIÓN DE 'ESTILOS EXTRAS' PARA LA PÁGINA-->
 	<style type="text/css">
 	.sign-in .wrapper .sign-in-page .signin-popup .signin-pop .row .col-lg-6 .cmp-info p {
 	text-align: center;
@@ -34,8 +38,9 @@
 	text-align: left;
 }
     </style>
+<!--FIN DE SECCIÓN DE 'ESTILOS EXTRAS'-->
+    
 </head>
-
 
 <body class="sign-in">
 
@@ -167,10 +172,13 @@
                                     
 									<div class="dff-tab current" id="tab-3">
                                     
-										<form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+<!------------------------------------------------INICIO DEL FORM PARA CLIENTS------------------------------------>        
+
+                          
+					<form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
 
-										  <div class="row">
+							<div class="row">
 
 <!--FIRSTNAME-->
 								<div class="col-lg-12 no-pdd">
@@ -314,12 +322,19 @@
 						</div>
 <!--FIN DEL BUTTON-->										
 
-										</div>
+								</div>
                                               
                                             
-										</form>
-									</div><!--dff-tab end-->
+							</form>
+								</div><!--dff-tab end-->
 									<div class="dff-tab" id="tab-4">
+                                    
+<!-------------------------------------------------FIN DEL FORM PARA FREELANCERS------------------------------------>  
+
+
+
+<!----------------------------------------------INICIO DEL FORM PARA FREELANCERS------------------------------------>           
+                                    
 										<form method="POST" action="{{ route('register') }}" entype="multipart/form-data">
                         @csrf
 											<div class="row">
@@ -433,30 +448,6 @@
 									</div>
 								</div>  
 <!--FIN DEL CONFIRM PASSWORD-->                                           
-												<!--<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input type="text" name="company-name" placeholder="Company Name">
-														<i class="la la-building"></i>
-													</div>
-												</div>
-												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input type="text" name="country" placeholder="Country">
-														<i class="la la-globe"></i>
-													</div>
-												</div>
-												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input type="password" name="password" placeholder="Password">
-														<i class="la la-lock"></i>
-													</div>
-												</div>
-												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input type="password" name="repeat-password" placeholder="Repeat Password">
-														<i class="la la-lock"></i>
-													</div>
-												</div>-->
                                                 
 <!--CHECK TERMS & CONDITIONS-->                                                
 								<div class="col-lg-12 no-pdd">
@@ -480,6 +471,9 @@
 
 											</div>
 										</form>
+                                        
+<!----------------------------------------------FIN DEL FORM PARA FREELANCERS------------------------------------>  
+
 									</div><!--dff-tab end-->
 								</div>		
 							</div><!--login-sec end-->
@@ -487,6 +481,9 @@
 					</div>		
 				</div><!--signin-pop end-->
 			</div><!--signin-popup end-->
+            
+<!--INICIO DEL PIE DE PÁGINA-->
+
 			<div class="footy-sec">
 				<div class="container">
 					<ul>
@@ -504,14 +501,17 @@
 				</div>
 			</div><!--footy-sec end-->
 		</div><!--sign-in-page end-->
-
-
 </div><!--theme-layout end-->
   
   
-<!--SECCIÓN JAVASCRIPT-->       
-<script src="{{ asset('vendor/stringToSlug/jquery.stringToSlug.min.js') }}"></script>      
+<!--SECCIÓN JAVASCRIPT-->    
+   
+<script src="{{ asset('vendor/stringToSlug/jquery.stringToSlug.min.js') }}"></script>  
+    
 <script>
+
+
+<!--FUNCIÓN PARA TIPEAR 'SOLO LETRAS' EN INPUTS-->  
 		 
 		function soloLetras(e)
 		{
@@ -536,6 +536,10 @@
 			}
     	}
 		
+<!--FIN DE LA FUNCIÓN 'SOLO LETRAS'-->  
+
+
+<!--FUNCIÓN PARA TIPEAR 'SOLO NÚMEROS' EN INPUTS--> 
 		
 		function soloNumeros(e)
 		{
@@ -569,18 +573,22 @@
 						$("#slug").val(text);
 					}
 				});
-				
 			});
+			
+<!--FIN DE LA FUNCIÓN 'SOLO NÚMEROS'-->
+
 </script>
 <!--FIN DE SECCIÓN JAVASCRIPT--> 
 
-
+<!--LIBRERÍAS DE JAVASCRIPT-->
 <script type="text/javascript" src="js/customfile.js"></script>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/popper.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="lib/slick/slick.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+<!--FIN DE LIBRERÍAS-->
+
 </body>
 </html>
 @endsection
