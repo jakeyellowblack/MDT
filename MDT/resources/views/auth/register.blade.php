@@ -43,11 +43,8 @@
 	
 
 <div class="wrapper">		
-<<<<<<< HEAD
-=======
-=======
+
 	<div class="wrapper">		
->>>>>>> c1b0d038725c7db96f1ccec0b2532938534cba05
 
 		<div class="sign-in-page">
 			<div class="signin-popup">
