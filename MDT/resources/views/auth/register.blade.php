@@ -335,7 +335,7 @@
 
 <!----------------------------------------------INICIO DEL FORM PARA FREELANCERS------------------------------------>           
                                     
-										<form method="POST" action="{{ route('register') }}" entype="multipart/form-data">
+										<form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
 											<div class="row">
                                             
