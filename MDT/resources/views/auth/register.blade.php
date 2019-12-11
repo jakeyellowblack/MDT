@@ -39,27 +39,25 @@
 
 <body class="sign-in">
 
-                    
-	
-
 <div class="wrapper">		
-
 	<div class="wrapper">		
-
 		<div class="sign-in-page">
 			<div class="signin-popup">
 				<div class="signin-pop">
 					<div class="row">
-						<div class="col-lg-6">
+
+						<!--Inicio Logos-->
+						<div class="col-lg-6">					
 							<div class="cmp-info">
 								<div class="cm-logo">
 								  <img src="images/logo-square2.png" alt="">
 									<p>Welcome to My Digital Thought !!!</p>
-						
-                       		</div><!--cm-logo end-->	
-								<img src="images/cm-main-img.png" alt="">			
-							</div><!--cmp-info end-->
+								</div>
+								<img src="images/cm-main-img.png" alt="">
+							</div>
 						</div>
+						<!--Fin de Logos-->
+
 						<div class="col-lg-6">
 							<div class="login-sec">
 								<ul class="sign-control">
@@ -69,7 +67,7 @@
 								<div class="sign_in_sec current" id="tab-1">
 									
                                     
-          <!--INICIO DEL FORMULARIO DE LOGUEO--> 
+<!--INICIO DEL FORMULARIO DE LOGUEO--> 
   
                                     
 									<h3>Sign in</h3>
@@ -77,43 +75,39 @@
                                     
 									<form method="POST" action="{{ route('login') }}">
                                     @csrf
-                                    
 										<div class="row">
-											<div class="col-lg-12 no-pdd">
-												<div class="sn-field">
-													<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+											
+<!--EMAIL--> 
+								<div class="col-lg-12 no-pdd">
+									<div class="sn-field">
+										<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                                     
-                                		@error('email')
+                        		@error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-													<i class="la la-envelope-o"></i>
-												</div><!--sn-field end-->
-											</div>
-                                            
-                                            
-                                    
-                                            
-                                            
-											<div class="col-lg-12 no-pdd">
-												<div class="sn-field">
-													<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" required autocomplete="current-password">
-                                                    
+										<i class="la la-envelope-o"></i>
+									</div><!--sn-field end-->
+								</div>
+<!--FIN DEL EMAIL-->                                           
+                                                         
+<!--PASSWORD-->                                            
+								<div class="col-lg-12 no-pdd">
+									<div class="sn-field">
+										<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" required autocomplete="current-password">        
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
-                                                  
-													<i class="la la-lock"></i>
-												</div>
-											</div>
-                                            
-                                            
+                                @enderror               
+									<i class="la la-lock"></i>
+									</div>
+								</div>                                          
+<!--FIN DEL PASSWORD-->                                             
                                    
                                         
-                                            
+<!--REMEMBER PASSWORD-->                                            
 											<div class="col-lg-12 no-pdd">
 												<div class="checky-sec">
 													<div class="fgt-sec">
@@ -124,28 +118,25 @@
 														<small>Remember me</small>
 													</div><!--fgt-sec end-->
                                                     
-                                                    
+<!--FORGOT PASSWORD-->                                                      
                                                @if (Route::has('password.request'))
 													<a href="{{ route('password.request') }}" title="">Forgot Password?</a>
                                                @endif
-                                                    
+<!--FIN DEL FORGOT PASSWORD-->                                                     
                                                     
 												</div>
 											</div>
-                                            
-                                
-                                
-                                            
+<!--FIN DEL REMEMBER PASSWORD-->                                            
+                                                               
+<!--BUTTON-->                                            
 											<div class="col-lg-12 no-pdd">
 												<button type="submit" value="submit">Sign in</button>
 											</div>
-										</div>
-                                        
-                                        
-                                        
+<!--FIN DEL BUTTON-->
+										</div>  
 									</form>
                                     
-             <!--LOGUEO POR MEDIO DE REDES SOCIALES--> 
+<!--LOGUEO POR MEDIO DE REDES SOCIALES--> 
                                     
 									<!--<div class="login-resources">
 										<h4>Login Via Social Account</h4>
@@ -157,7 +148,7 @@
                                     
                                 </div><!--sign_in_sec end-->
                                 
-                                
+<!--FIN DE LOGUEO POR MEDIO DE REDES SOCIALES-->                                
                                 
 								<div class="sign_in_sec" id="tab-2">
 									<div class="signup-tab">
@@ -178,169 +169,153 @@
                                     
 										<form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+
 										  <div class="row">
-												<div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input id="firstname" type="text" onkeypress="return soloLetras(event)" class="form-control @error('firstname') is-invalid @enderror" name="firstname" placeholder="First Name" value="{{ old('firstname') }}" required autocomplete="firstname">
-                                                        
+
+<!--FIRSTNAME-->
+								<div class="col-lg-12 no-pdd">
+									<div class="sn-field">
+										<input id="firstname" type="text" onkeypress="return soloLetras(event)" class="form-control @error('firstname') is-invalid @enderror" name="firstname" placeholder="First Name" value="{{ old('firstname') }}" required autocomplete="firstname">                                                        
                                 @error('firstname')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                                               <i class="la la-user"></i>
-    
-													</div>
-												</div>
-                                                
-                                                
-                                                
-                                                <div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input id="lastname" type="text" onkeypress="return soloLetras(event)" class="form-control @error('lastname') is-invalid @enderror" name="lastname" placeholder="Last Name" value="{{ old('lastname') }}" required autocomplete="lastname">
-                                                        
+                               		<i class="la la-user"></i>    
+									</div>
+								</div>
+<!--FIN DEL FIRSTNAME-->                                                 
+                                
+<!--LASTNAME--> 
+                                <div class="col-lg-12 no-pdd">
+									<div class="sn-field">
+										<input id="lastname" type="text" onkeypress="return soloLetras(event)" class="form-control @error('lastname') is-invalid @enderror" name="lastname" placeholder="Last Name" value="{{ old('lastname') }}" required autocomplete="lastname">               
                                 @error('lastname')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                                               <i class="la la-user"></i>
-    
-													</div>
-												</div>
+                                    <i class="la la-user"></i>
+									</div>
+								</div>
+<!--FIN DEL LASTNAME-->                                                 
                                                 
-                                                
-           
+<!--COUNTRY-->           
 
-                                                 <div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<select class="form-control" name="country_id">
-                                                        
-                                                      <option disabled selected>Select a Country</option>
-                                                                
-														@foreach($countries as $count)
-                                                                <option value="{{ $count->id }}">{{ $count->name }}</option>
-														@endforeach
+                                <div class="col-lg-12 no-pdd">
+									<div class="sn-field">
+										<select class="form-control" name="country_id">
+                                      	<option disabled selected>Select a Country</option>
+										@foreach($countries as $count)
+                                                <option value="{{ $count->id }}">{{ $count->name }}</option>
+										@endforeach
+										</select>
+										<i class="la la-globe"></i>
+										<span><i class="fa fa-ellipsis-h"></i></span>
+									</div>
+								</div>
+<!--FIN DEL COUNTRY-->
 
-														</select>
-														<i class="la la-globe"></i>
-														<span><i class="fa fa-ellipsis-h"></i></span>
-													</div>
-												</div>
-                                                
-                                                
-                                              <div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<select class="form-control" name="category_id">
-                                                        
-                                                      <option disabled selected>Select a Category</option>
-                                                                
-														@foreach($categories as $cate)
-                                                                <option value="{{ $cate->id }}">{{ $cate->name }}</option>
-														@endforeach
-
-														</select>
-														<i class="la la-dropbox"></i>
-														<span><i class="fa fa-ellipsis-h"></i></span>
-													</div>
-											  </div>
+<!--CATEGORY-->                                                
+	                            <div class="col-lg-12 no-pdd">
+									<div class="sn-field">
+										<select class="form-control" name="category_id">
+                                      	<option disabled selected>Select a Category</option>      
+										@foreach($categories as $cate)
+                                                <option value="{{ $cate->id }}">{{ $cate->name }}</option>
+										@endforeach
+										</select>
+										<i class="la la-dropbox"></i>
+										<span><i class="fa fa-ellipsis-h"></i></span>
+									</div>
+								</div>
+<!--FIN DEL CATEGORY-->                              
                               
-                              
-                              
-                       
-                                      <div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email">
-                                                        
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                                               <i class="la la-envelope-o"></i>
-    
-													</div>
-										    </div>   
+<!--EMAIL-->                               
+                              	<div class="col-lg-12 no-pdd">
+									<div class="sn-field">
+										<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email">                                      
+				                @error('email')
+					                    <span class="invalid-feedback" role="alert">
+					                        <strong>{{ $message }}</strong>
+					                    </span>
+				                @enderror
+                               		<i class="la la-envelope-o"></i>
+									</div>
+							    </div>   
+<!--FIN DEL EMAIL-->                                              
                                               
-                                              
-                                              
-                                            <div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input id="linkedin_url" type="url" class="form-control @error('linkedin_url') is-invalid @enderror" name="linkedin_url" placeholder="LinkedIn Profile URL" value="{{ old('linkedin_url') }}" required autocomplete="linkedin_url">
-                                                        
-                                                        @error('linkedin_url')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                                               <i class="la la-user"></i>
-    
-													</div>
-											  </div>
-                                  	
-<div class="col-lg-12 no-pdd">
-						<div class="sn-field">                                             
-                            <div class="file-upload">
-                                <input class="file-upload__input" type="file" name="file" id="file" multiple>
-                                <button class="file-upload__button" type="button">Choose File(s)</button>
-                                <span class="file-upload__label"></span>
-                          </div>
-						</div></div>                    
+<!--LINKEDIN-->                                              
+                                <div class="col-lg-12 no-pdd">
+									<div class="sn-field">
+										<input id="linkedin_url" type="url" class="form-control @error('linkedin_url') is-invalid @enderror" name="linkedin_url" placeholder="LinkedIn Profile URL" value="{{ old('linkedin_url') }}" required autocomplete="linkedin_url">
+			                    @error('linkedin_url')
+			                        <span class="invalid-feedback" role="alert">
+			                            <strong>{{ $message }}</strong>
+			                        </span>
+			                    @enderror
+                                    <i class="la la-user"></i>
+									</div>
+							    </div>
+<!--FIN DEL LINKEDIN-->
 
+<!--FILE-->                                  	
+						<div class="col-lg-12 no-pdd">
+							<div class="sn-field">                                             
+	                            <div class="file-upload">
+	                                <input class="file-upload__input" type="file" name="file" id="file" multiple>
+	                                <button class="file-upload__button" type="button">Choose File(s)</button>
+	                                <span class="file-upload__label"></span>
+		                        </div>
+							</div>
+						</div>                    
+<!--FIN DEL FILE-->
+                                                                                               
+<!--PASSWORD-->                                                                              
+                        <div class="col-lg-12 no-pdd">
+							<div class="sn-field">
+								<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" value="{{ old('password') }}" required autocomplete="password">     
+                        @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                        <i class="la la-lock"></i>
+							</div>
+						</div>   
+<!--FIN DEL PASSWORD-->                                                
+                                                 
+<!--CONFIRM PASSWORD-->
+                        <div class="col-lg-12 no-pdd">
+							<div class="sn-field">
+								<input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password" value="{{ old('password') }}" required autocomplete="new-password">  
+                        <i class="la la-lock"></i>
+							</div>
+						</div>     
+<!--FIN DEL CONFIRM PASSWORD-->                                        
                                                 
-                                                
-                          
-                                                  
-                                                
-                                                 <div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" value="{{ old('password') }}" required autocomplete="password">
-                                                        
-                                                        @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                                               <i class="la la-lock"></i>
-    
-													</div>
-												</div>   
-                                                
-                                                 <div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password" value="{{ old('password') }}" required autocomplete="new-password">
-                                                        
-                                                       
-                                               <i class="la la-lock"></i>
-    
-													</div>
-												</div>     
-                                       
-                                                
-												<div class="col-lg-12 no-pdd">
-													<div class="checky-sec st2">
-														<div class="fgt-sec">
-															<input id="c2" type="checkbox" name="roles" value="2">
-															<label for="c2">
-																<span></span>
-															</label>
-															<small>Yes, I understand and agree to the workwise Terms & Conditions.</small>
-														</div><!--fgt-sec end-->
-													</div>
-												</div>
-                                        
-												<div class="col-lg-12 no-pdd">
-													<button type="submit" value="submit">Get Started</button>
-												</div>
-										  </div>
-                                               
+<!--CHECK TERMS & CONDITIONS-->												
+						<div class="col-lg-12 no-pdd">
+							<div class="checky-sec st2">
+								<div class="fgt-sec">
+									<input id="c2" type="checkbox" name="roles" value="2">
+									<label for="c2">
+										<span></span>
+									</label>
+									<small>Yes, I understand and agree to the workwise Terms & Conditions.</small>
+								</div><!--fgt-sec end-->
+							</div>
+						</div>
+<!--FIN DEL CHECK TERMS & CONDITIONS-->
+
+<!--BUTTON-->
+						<div class="col-lg-12 no-pdd">
+								<button type="submit" value="submit">Get Started</button>
+						</div>
+<!--FIN DEL BUTTON-->										
+
+										</div>
+                                              
                                             
 										</form>
 									</div><!--dff-tab end-->
@@ -350,132 +325,114 @@
 											<div class="row">
                                             
                                             
-                                            
-                                            <div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input id="firstname" type="text" onkeypress="return soloLetras(event)" class="form-control @error('firstname') is-invalid @enderror" name="firstname" placeholder="First Name" value="{{ old('firstname') }}" required autocomplete="firstname">
-                                                        
+<!--FIRSTNAME-->                                              
+                                <div class="col-lg-12 no-pdd">
+									<div class="sn-field">
+										<input id="firstname" type="text" onkeypress="return soloLetras(event)" class="form-control @error('firstname') is-invalid @enderror" name="firstname" placeholder="First Name" value="{{ old('firstname') }}" required autocomplete="firstname">                                                      
                                 @error('firstname')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                                               <i class="la la-user"></i>
-    
-													</div>
-											  </div>
-                                                
-                                                
-                                                
-                                                <div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input id="lastname" type="text" onkeypress="return soloLetras(event)" class="form-control @error('lastname') is-invalid @enderror" name="lastname" placeholder="Last Name" value="{{ old('lastname') }}" required autocomplete="lastname">
-                                                        
+                                    <i class="la la-user"></i>
+    								</div>
+							    </div>
+<!--FIN DEL FIRSTNAME-->                                                  
+
+<!--LASTNAME-->                                                                    
+                                <div class="col-lg-12 no-pdd">
+									<div class="sn-field">
+										<input id="lastname" type="text" onkeypress="return soloLetras(event)" class="form-control @error('lastname') is-invalid @enderror" name="lastname" placeholder="Last Name" value="{{ old('lastname') }}" required autocomplete="lastname">                    
                                 @error('lastname')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                                               <i class="la la-user"></i>
-    
-													</div>
-												</div>
+                                    <i class="la la-user"></i>
+    								</div>
+								</div>
+<!--FIN DEL LASTNAME-->                                                  
                                                 
-                                                
-                                                
-                                                <div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<select class="form-control" name="country_id">
-                                                        
-                                                      <option disabled selected>Select a Country</option>
-                                                                
-														@foreach($countries as $count)
-                                                                <option value="{{ $count->id }}">{{ $count->name }}</option>
-														@endforeach
+<!--COUNTRY-->                                                 
+                                <div class="col-lg-12 no-pdd">
+									<div class="sn-field">
+										<select class="form-control" name="country_id">                                
+                                        <option disabled selected>Select a Country</option>  
+											@foreach($countries as $count)
+	                                                <option value="{{ $count->id }}">{{ $count->name }}</option>
+											@endforeach
+										</select>
+										<i class="la la-globe"></i>
+										<span><i class="fa fa-ellipsis-h"></i></span>
+									</div>
+								</div>
+<!--FIN DEL COUNTRY-->                                                  
 
-														</select>
-														<i class="la la-globe"></i>
-														<span><i class="fa fa-ellipsis-h"></i></span>
-													</div>
-												</div>
+<!--CATEGORY-->                                               
+	                            <div class="col-lg-12 no-pdd">
+									<div class="sn-field">
+										<select class="form-control" name="category_id"> 
+	                                    <option disabled selected>Select a Category</option>          
+											@foreach($categories as $cate)
+		                                            <option value="{{ $cate->id }}">{{ $cate->name }}</option>
+											@endforeach
+										</select>
+										<i class="la la-dropbox"></i>
+										<span><i class="fa fa-ellipsis-h"></i></span>
+									</div>
+								</div>
+<!--FIN DEL CATEGORY-->                                               
+                                                                     
+<!--EMAIL-->                         
+                                <div class="col-lg-12 no-pdd">
+									<div class="sn-field">
+										<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email">   
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                    <i class="la la-envelope-o"></i>
+									</div>
+							    </div> 
+<!--FIN DEL EMAIL-->                                                
                                                 
-                                                
-                                              <div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<select class="form-control" name="category_id">
-                                                        
-                                                      <option disabled selected>Select a Category</option>
-                                                                
-														@foreach($categories as $cate)
-                                                                <option value="{{ $cate->id }}">{{ $cate->name }}</option>
-														@endforeach
+<!--LINKEDIN-->                                                             
+                                <div class="col-lg-12 no-pdd">
+									<div class="sn-field">
+										<input id="linkedin_url" type="url" class="form-control @error('linkedin_url') is-invalid @enderror" name="linkedin_url" placeholder="LinkedIn Profile URL" value="{{ old('linkedin_url') }}" required autocomplete="linkedin_url">                    
+                                @error('linkedin_url')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                    <i class="la la-user"></i>
+									</div>
+								</div>                                               
+<!--FIN DEL LINKEDIN-->                                               
 
-														</select>
-														<i class="la la-dropbox"></i>
-														<span><i class="fa fa-ellipsis-h"></i></span>
-													</div>
-											  </div>
-                                                
-                                        
-                              
-                       
-                                      <div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email">
-                                                        
-                                                        @error('email')
+<!--PASSWORD-->                                            
+                                <div class="col-lg-12 no-pdd">
+									<div class="sn-field">
+										<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" value="{{ old('password') }}" required autocomplete="password"> 
+                                @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                                               <i class="la la-envelope-o"></i>
-    
-													</div>
-											  </div> 
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                <div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input id="linkedin_url" type="url" class="form-control @error('linkedin_url') is-invalid @enderror" name="linkedin_url" placeholder="LinkedIn Profile URL" value="{{ old('linkedin_url') }}" required autocomplete="linkedin_url">
-                                                        
-                                                        @error('linkedin_url')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                                               <i class="la la-user"></i>
-    
-													</div>
-												</div>
-                                                
-                                                
-                                             
-                                                 <div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" value="{{ old('password') }}" required autocomplete="password"> 
-                                                        @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                                               <i class="la la-lock"></i>
-    
-													</div>
-												</div>   
-                                                
-                                                 <div class="col-lg-12 no-pdd">
-													<div class="sn-field">
-														<input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password" value="{{ old('password') }}" required autocomplete="new-password">
-                                                        
-                                                       
-                                               <i class="la la-lock"></i>
-    
-													</div>
-												</div>  
-                                            
+                                    <i class="la la-lock"></i>
+									</div>
+								</div>   
+<!--FIN DEL PASSWORD-->                                                
+
+<!--CONFIRM PASSWORD-->
+                                <div class="col-lg-12 no-pdd">
+									<div class="sn-field">
+										<input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password" value="{{ old('password') }}" required autocomplete="new-password">
+                                <i class="la la-lock"></i>
+									</div>
+								</div>  
+<!--FIN DEL CONFIRM PASSWORD-->                                           
 												<!--<div class="col-lg-12 no-pdd">
 													<div class="sn-field">
 														<input type="text" name="company-name" placeholder="Company Name">
@@ -501,21 +458,26 @@
 													</div>
 												</div>-->
                                                 
-                                                
-												<div class="col-lg-12 no-pdd">
-													<div class="checky-sec st2">
-														<div class="fgt-sec">
-															<input id="c3" type="checkbox" name="roles" value="3">
-															<label for="c3">
-																<span></span>
-															</label>
-															<small>Yes, I understand and agree to the workwise Terms & Conditions.</small>
-														</div><!--fgt-sec end-->
-													</div>
-												</div>
-												<div class="col-lg-12 no-pdd">
-													<button type="submit" value="submit">Get Started</button>
-												</div>
+<!--CHECK TERMS & CONDITIONS-->                                                
+								<div class="col-lg-12 no-pdd">
+									<div class="checky-sec st2">
+										<div class="fgt-sec">
+											<input id="c3" type="checkbox" name="roles" value="3">
+											<label for="c3">
+												<span></span>
+											</label>
+											<small>Yes, I understand and agree to the workwise Terms & Conditions.</small>
+										</div><!--fgt-sec end-->
+									</div>
+								</div>
+<!--FIN DEL CHECK TERMS & CONDITIONS-->
+										
+<!--BUTTON-->												
+								<div class="col-lg-12 no-pdd">
+									<button type="submit" value="submit">Get Started</button>
+								</div>
+<!--FIN DEL BUTTON-->
+
 											</div>
 										</form>
 									</div><!--dff-tab end-->
@@ -547,14 +509,9 @@
 </div><!--theme-layout end-->
   
   
-  <!--SECCIÓN JAVASCRIPT-->  
-    
-       
-       	 <script src="{{ asset('vendor/stringToSlug/jquery.stringToSlug.min.js') }}"></script>
-         
-
+<!--SECCIÓN JAVASCRIPT-->       
+<script src="{{ asset('vendor/stringToSlug/jquery.stringToSlug.min.js') }}"></script>      
 <script>
-	
 		 
 		function soloLetras(e)
 		{
@@ -602,10 +559,7 @@
 				return false;
 			}
     	}
-		
-		
-		
-	
+				
 		 	$(document).ready(function()
 			{
 				$("#cedula, #slug").stringToSlug
@@ -617,10 +571,8 @@
 				});
 				
 			});
-			
-         
-         </script>
-
+</script>
+<!--FIN DE SECCIÓN JAVASCRIPT--> 
 
 
 <script type="text/javascript" src="js/customfile.js"></script>
