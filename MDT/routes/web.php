@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/register', function () {
-    return view('auth/register');
+Route::get('/home', function () {
+    return view('home');
 });
 
 Route::get('/register', 'RegisterController@index')->name('register');
