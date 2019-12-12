@@ -19,6 +19,9 @@ Route::get('/register', 'RegisterController@index')->name('register');
 Route::get('/category/{category}/register', 'RegisterController@index');
 Route::get('/country/{country}/register', 'RegisterController@index');
 
+
+
+
 Route::get('auth/success', [
     'as'   => 'auth.success',
     'uses' => 'Auth\AuthController@success'

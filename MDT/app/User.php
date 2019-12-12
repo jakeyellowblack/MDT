@@ -66,6 +66,15 @@ class User extends Authenticatable
 		return false;
 	}
 	
+	/*public function hasFile($file)
+	{
+			if($this->file()->where('file',$file)->first())
+				{
+					return true;
+				}
+		return false;
+	}*/
+	
 	
 	
 

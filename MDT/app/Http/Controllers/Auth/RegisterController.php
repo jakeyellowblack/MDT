@@ -14,7 +14,9 @@ use MDT\Role;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\File;
 use DB;
 
 class RegisterController extends Controller
@@ -108,6 +110,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 		
+
 		
         $user = User::create([
 			'firstname' => $data['firstname'],
@@ -120,6 +123,12 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password'])
         ]);
 		
+		
+		
+		
+
+		
+        
 	
 		$user->roles()->sync($data['roles']);
 
