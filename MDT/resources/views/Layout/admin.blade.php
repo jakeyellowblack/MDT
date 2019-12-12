@@ -179,12 +179,21 @@
 					<div class="menu-btn">
 						<a href="#" title=""><i class="fa fa-bars"></i></a>
 					</div><!--menu-btn end-->
+                    
+                    
 					<div class="user-account">
 						<div class="user-info">
 							<img src="images/resources/user.png" alt="">
-							<a href="#" title="">John</a>
+                            
+                            <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->firstname }} <span class="caret"></span>
+                                    
+                                </a>
+                            
 							<i class="la la-sort-down"></i>
 						</div>
+                        
+                        
 						<div class="user-account-settingss" id="users">
 							<h3>Online Status</h3>
 							<ul class="on-off-status">
@@ -221,7 +230,19 @@
 								<li><a href="#" title="">Faqs</a></li>
 								<li><a href="#" title="">Terms & Conditions</a></li>
 							</ul>
-							<h3 class="tc"><a href="sign-in.html" title="">Logout</a></h3>
+                            
+                            
+                            <h3 class="tc"><a class="dropdown-item" href="{{ route('register') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a></h3>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                            
+							
 						</div><!--user-account-settingss end-->
 					</div>
 				</div><!--header-data end-->
@@ -249,8 +270,8 @@
 												</div>
 											</div><!--username-dt end-->
 											<div class="user-specs">
-												<h3>John Doe</h3>
-												<span>Graphic Designer at Self Employed</span>
+												<h3>{{Auth::user()->firstname}} {{Auth::user()->lastname}}</h3>
+												<span>{{Auth::user()->category_id}}</span>
 											</div>
 										</div><!--user-profile end-->
 										<ul class="user-fw-status">

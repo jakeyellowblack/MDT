@@ -17,6 +17,14 @@ class User extends Authenticatable
 			return $this->belongsToMany('MDT\Role');
 		}
 		
+	public function categories() {
+    return $this->belongsTo('MDT\Category', 'category_id');
+	}
+	
+	public function countries() {
+    return $this->belongsTo('MDT\Country', 'country_id');
+	}
+		
 		
 	
 		

@@ -4,6 +4,10 @@ namespace MDT\Http\Controllers\Auth;
 
 use MDT\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use MDT\User;
+use MDT\Category;
+use MDT\Country;
+use MDT\Role;
 
 class LoginController extends Controller
 {
@@ -25,7 +29,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = 'register';
 
     /**
      * Create a new controller instance.
@@ -39,7 +43,8 @@ class LoginController extends Controller
 	
 	public function showLoginForm()
 {
-	return redirect('/home');
+	
+	return redirect('register');
 
 }
 	

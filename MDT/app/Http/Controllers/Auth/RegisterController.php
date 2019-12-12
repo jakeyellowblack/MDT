@@ -147,6 +147,5 @@ class RegisterController extends Controller
 		return view('auth.register', compact('categories', 'countries', 'roles'));
 		
 	}
-	
 
 }
