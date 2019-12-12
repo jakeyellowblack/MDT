@@ -85,13 +85,9 @@
 <!--EMAIL--> 
 								<div class="col-lg-12 no-pdd">
 									<div class="sn-field">
-										<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+										<input id="email" type="email" class="form-control" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                                     
-                        		@error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                        		
 										<i class="la la-envelope-o"></i>
 									</div><!--sn-field end-->
 								</div>
@@ -100,12 +96,8 @@
 <!--PASSWORD-->                                            
 								<div class="col-lg-12 no-pdd">
 									<div class="sn-field">
-										<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" required autocomplete="current-password">        
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror               
+										<input id="password" type="password" class="form-control" name="password" placeholder="Password" required autocomplete="current-password">        
+                                            
 									<i class="la la-lock"></i>
 									</div>
 								</div>                                          
@@ -242,12 +234,8 @@
 <!--EMAIL-->                               
                               	<div class="col-lg-12 no-pdd">
 									<div class="sn-field">
-										<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email">                                      
-				                @error('email')
-					                    <span class="invalid-feedback" role="alert">
-					                        <strong>{{ $message }}</strong>
-					                    </span>
-				                @enderror
+										<input id="email" type="email" class="form-control" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email">                                      
+				                
                                		<i class="la la-envelope-o"></i>
 									</div>
 							    </div>   
@@ -256,12 +244,8 @@
 <!--LINKEDIN-->                                              
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
-										<input id="linkedin_url" type="url" class="form-control @error('linkedin_url') is-invalid @enderror" name="linkedin_url" placeholder="LinkedIn Profile URL" value="{{ old('linkedin_url') }}" required autocomplete="linkedin_url">
-			                    @error('linkedin_url')
-			                        <span class="invalid-feedback" role="alert">
-			                            <strong>{{ $message }}</strong>
-			                        </span>
-			                    @enderror
+										<input id="linkedin_url" type="url" class="form-control" name="linkedin_url" placeholder="LinkedIn Profile URL" value="{{ old('linkedin_url') }}" required autocomplete="linkedin_url">
+			                    
                                     <i class="la la-user"></i>
 									</div>
 							    </div>
@@ -282,12 +266,8 @@
 <!--PASSWORD-->                                                                              
                         <div class="col-lg-12 no-pdd">
 							<div class="sn-field">
-								<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" value="{{ old('password') }}" required autocomplete="password">     
-                        @error('password')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
+								<input id="password" type="password" class="form-control" name="password" placeholder="Password" value="{{ old('password') }}" required autocomplete="password">     
+                        
                         <i class="la la-lock"></i>
 							</div>
 						</div>   
@@ -401,12 +381,8 @@
 <!--EMAIL-->                         
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
-										<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email">   
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+										<input id="email" type="email" class="form-control" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email">   
+                                
                                     <i class="la la-envelope-o"></i>
 									</div>
 							    </div> 
@@ -415,12 +391,8 @@
 <!--LINKEDIN-->                                                             
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
-										<input id="linkedin_url" type="url" class="form-control @error('linkedin_url') is-invalid @enderror" name="linkedin_url" placeholder="LinkedIn Profile URL" value="{{ old('linkedin_url') }}" required autocomplete="linkedin_url">                    
-                                @error('linkedin_url')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+										<input id="linkedin_url" type="url" class="form-control" name="linkedin_url" placeholder="LinkedIn Profile URL" value="{{ old('linkedin_url') }}" required autocomplete="linkedin_url">                    
+                                
                                     <i class="la la-user"></i>
 									</div>
 								</div>                                               
@@ -429,12 +401,8 @@
 <!--PASSWORD-->                                            
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
-										<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" value="{{ old('password') }}" required autocomplete="password"> 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+										<input id="password" type="password" class="form-control" name="password" placeholder="Password" value="{{ old('password') }}" required autocomplete="password"> 
+                                
                                     <i class="la la-lock"></i>
 									</div>
 								</div>   
