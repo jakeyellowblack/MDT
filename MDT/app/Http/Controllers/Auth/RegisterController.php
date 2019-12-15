@@ -92,9 +92,10 @@ class RegisterController extends Controller
             'category_id' => ['required', 'integer'],
             'country_id' => ['required', 'integer'],
             'password' => ['required', 'string', 'min:5', 'confirmed'],
-			'roles' => ['required'],
 			'linkedin_url' => ['required','unique:users', 'domain:www.linkedin.com/in'],
 			'file' => ['required'],
+			'roles' => ['required'],
+			
         ]);
     }
 	
@@ -104,6 +105,9 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \MDT\User
      */
+	 
+	 
+		
 	 
 	
 	 
@@ -123,12 +127,6 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password'])
         ]);
 		
-		
-		
-		
-
-		
-        
 	
 		$user->roles()->sync($data['roles']);
 

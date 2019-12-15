@@ -10,4 +10,9 @@ class Role extends Model
 		{
 			return $this->belongsToMany('MDT\User');
 		}
+		
+		public function clients()
+		{
+			return $this->belongsToMany('MDT\Client');
+		}
 }

@@ -9,7 +9,12 @@ class Category extends Model
 	
 	public function users()
 		{
-			return $this->hasMany(User::class, 'category_id');
+			return $this->hasMany(User::class);
+		}
+		
+		public function clients()
+		{
+			return $this->hasMany(Client::class);
 		}
 
 }

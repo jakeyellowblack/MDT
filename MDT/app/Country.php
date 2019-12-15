@@ -10,4 +10,9 @@ class Country extends Model
 		{
 			return $this->hasMany(User::class);
 		}
+		
+		public function clients()
+		{
+			return $this->hasMany(Client::class);
+		}
 }
