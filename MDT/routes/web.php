@@ -19,8 +19,9 @@ Route::get('/register', 'RegisterController@index')->name('register');
 Route::get('/category/{category}/register', 'RegisterController@index');
 Route::get('/country/{country}/register', 'RegisterController@index');
 
-
-
+Route::get('/my-profile', function () {
+	return view('Layout/my-profile');
+});
 
 Route::get('auth/success', [
     'as'   => 'auth.success',
