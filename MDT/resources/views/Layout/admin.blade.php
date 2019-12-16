@@ -414,7 +414,7 @@
                                                         <div class="suggestion-usd">
                                                             <img src="images/resources/s1.png" alt="">
                                                             <div class="sgt-text">
-                                                            <h4>{{ $us->firstname }}</h4>
+                                                            <h4>{{ $us->firstname }} {{ $us->lastname }}</h4>
                                                             <span>{{ $us->categories->name }}</span>
                                                         </div>
                                                     <span><i class="la la-plus"></i></span>
