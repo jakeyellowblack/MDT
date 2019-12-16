@@ -175,6 +175,7 @@ return [
         MDT\Providers\EventServiceProvider::class,
         MDT\Providers\RouteServiceProvider::class,
 		Collective\Html\HtmlServiceProvider::class,
+		MDT\Providers\ComposerServiceProvider::class,
 
     ],
 

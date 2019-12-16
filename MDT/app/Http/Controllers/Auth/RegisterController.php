@@ -111,11 +111,10 @@ class RegisterController extends Controller
 	 
 	
 	 
-    protected function create(array $data)
+    protected function create(Request $request)
     {
-		
+		$data = $request->all();
 
-		
         $user = User::create([
 			'firstname' => $data['firstname'],
 			'lastname' => $data['lastname'],
@@ -127,23 +126,25 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password'])
         ]);
 		
-	
+		
+		
 		$user->roles()->sync($data['roles']);
 
     	return $user;
     }
 	
-
-
+	
 		public function showRegistrationForm()
 	{
 	
 		$categories = Category::all();
 		$countries = Country::all();
 		$roles = Role::all();
+		$users = User::all();
 
-		return view('auth.register', compact('categories', 'countries', 'roles'));
+		return view('auth.register', compact('users', 'categories', 'countries', 'roles'));
 		
-	}
-
+		
+	}	
+	
 }
