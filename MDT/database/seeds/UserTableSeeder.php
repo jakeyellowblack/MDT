@@ -29,6 +29,7 @@ class UserTableSeeder extends Seeder
 		$user->file = "spideyb.png";
 		$user->password = bcrypt('query');
 		$user->approved = 1;
+		$user->category_id= 1;
 		$user->save();
 		$user->roles()->attach($role_admin);
 		
@@ -39,6 +40,7 @@ class UserTableSeeder extends Seeder
 		$user->linkedin_url = "https://www.linkedin.com/in/invisible-woman-a9411b295/";
 		$user->file = "invisible.png";
 		$user->password = bcrypt('query');
+		$user->category_id= 2;
 		$user->save();
 		$user->roles()->attach($role_client);
 		
@@ -49,6 +51,7 @@ class UserTableSeeder extends Seeder
 		$user->linkedin_url = "https://www.linkedin.com/in/spidey-theoriginal-a9411a185/";
 		$user->file = "parker.png";
 		$user->password = bcrypt('query');
+		$user->category_id= 3;
 		$user->save();
 		$user->roles()->attach($role_freelancer);
 		
@@ -59,6 +62,7 @@ class UserTableSeeder extends Seeder
 		$user->linkedin_url = "https://www.linkedin.com/in/ms-marvel-a9411a155/";
 		$user->file = "msmarvel.png";		
 		$user->password = bcrypt('query');
+		$user->category_id= 4;
 		$user->save();
 		$user->roles()->attach($role_user);
     }
