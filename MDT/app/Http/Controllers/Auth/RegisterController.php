@@ -35,14 +35,14 @@ class RegisterController extends Controller
 
     use RegistersUsers;
 
-
-
     /**
      * Where to redirect users after registration.
      *
      * @var string
      */
+	 
     protected $redirectTo = '/register';
+	
     /**
      * Create a new controller instance.
      *
@@ -50,18 +50,21 @@ class RegisterController extends Controller
      */
 	 
 	 
-		 public function register(Request $request)
-	 {
-	 $this->validator($request->all())->validate();
-	 event(new Registered($user = $this->create($request->all())));
-	 return back()->with('status',
-		'Registered successfully, please be attentive to your email.');
-	 }
+	public function register(Request $request)
+	{
+		 
+		$this->validator($request->all())->validate();
+		event(new Registered($user = $this->create($request->all())));
+		return back()->with('status', 'Registered successfully, please be attentive to your email.');
+		
+	}
 
 	 
-   public function __construct()
+    public function __construct()
     {
+		
         $this->middleware('guest');
+		
     }
 
     /**
@@ -71,20 +74,19 @@ class RegisterController extends Controller
      * @return \Illuminate\Contracts\Validation\Validator
      */
 	 
-	 
-	 
     protected function validator(array $data)
     {
 		
 		Validator::extend('domain', function($attribute, $value, $parameters)
 		{
+			
 			$domain = $parameters[0];
 			$pattern = "#^https?://([a-z0-9-]+\.)*".preg_quote($domain)."(/.*)?$#";
 			return !! preg_match($pattern, $value);
+			
 		});
 		
-	
-
+		
         return Validator::make($data, [
 			'firstname' => ['required', 'alpha', 'max:255'],
 			'lastname' => ['required', 'alpha', 'max:255'],
@@ -95,8 +97,8 @@ class RegisterController extends Controller
 			'linkedin_url' => ['required','unique:users', 'domain:www.linkedin.com/in'],
 			'file' => ['required'],
 			'roles' => ['required'],
-			
         ]);
+		
     }
 	
     /**
@@ -106,14 +108,8 @@ class RegisterController extends Controller
      * @return \MDT\User
      */
 	 
-	 
-		
-	 
-	
-	 
-    protected function create(Request $request)
+    protected function create(array $data)
     {
-		$data = $request->all();
 
         $user = User::create([
 			'firstname' => $data['firstname'],
@@ -126,11 +122,10 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password'])
         ]);
 		
-		
-		
 		$user->roles()->sync($data['roles']);
 
     	return $user;
+		
     }
 	
 	
@@ -143,7 +138,6 @@ class RegisterController extends Controller
 		$users = User::all();
 
 		return view('auth.register', compact('users', 'categories', 'countries', 'roles'));
-		
 		
 	}	
 	

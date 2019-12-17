@@ -19,6 +19,10 @@
 	<link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+    
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tagmanager/3.0.2/tagmanager.min.css">
+    
 <!--FIN DE ESTILOS DE CSS-->
 
 </head>
@@ -1251,45 +1255,59 @@
 		<div class="post-popup job_post">
 			<div class="post-project">
 				<h3>Post a job</h3>
+                
 				<div class="post-project-fields">
-					<form>
+					<form method="POST" action="{{ route('post.store') }}">
+                    	@csrf
 						<div class="row">
 							<div class="col-lg-12">
 								<input type="text" name="title" placeholder="Title">
 							</div>
+                            
+                            {!! Form::hidden('user_id', auth()->user()->id) !!}
+                            
 							<div class="col-lg-12">
 								<div class="inp-field">
-									<select>
-										<option>Category</option>
-										<option>Category 1</option>
-										<option>Category 2</option>
-										<option>Category 3</option>
+									<select class="form-control" name="category_id">
+										<option disabled selected>Select a Category</option>
+										@foreach($pcategories as $pcate)
+                                                <option value="{{ $pcate->id }}">{{ $pcate->name }}</option>
+										@endforeach
 									</select>
 								</div>
 							</div>
-							<div class="col-lg-12">
-								<input type="text" name="skills" placeholder="Skills">
-							</div>
+                            
+                                <div class="col-lg-12">
+                                	<div class="inp-field">
+									<input type="text" name="skill_id" placeholder="Tags" class="tm-input form-control tm-input-info"/>
+                                </div>
+                            </div>
+                            
 							<div class="col-lg-6">
 								<div class="price-br">
-									<input type="text" name="price1" placeholder="Price">
+									<input type="text" name="price" onkeypress="return soloNumeros(event)" placeholder="Price">
 									<i class="la la-dollar"></i>
 								</div>
 							</div>
+                            
 							<div class="col-lg-6">
 								<div class="inp-field">
-									<select>
-										<option>Full Time</option>
-										<option>Half time</option>
+									<select class="form-control" name="time_id">
+										<option disabled selected>Select the Time</option>
+										@foreach($times as $ti)
+                                                <option value="{{ $ti->id }}">{{ $ti->name }}</option>
+										@endforeach
 									</select>
 								</div>
 							</div>
+                            
 							<div class="col-lg-12">
 								<textarea name="description" placeholder="Description"></textarea>
 							</div>
 							<div class="col-lg-12">
+                            
 								<ul>
-									<li><button class="active" type="submit" value="post">Post</button></li>
+									<li><button class="active" type="submit" value="submit">Post</button></li>
 									<li><a href="#" title="">Cancel</a></li>
 								</ul>
 							</div>
@@ -1471,6 +1489,101 @@
 	</div><!--theme-layout end-->
     
 <!---------------------------------------FIN DE LA SECCIÓN DE "CONTENIDO"----------------------------------------------->
+
+
+<!--SECCIÓN JAVASCRIPT-->    
+   
+  
+<script src="{{ asset('vendor/stringToSlug/jquery.stringToSlug.min.js') }}"></script> 
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tagmanager/3.0.2/tagmanager.min.js"></script>
+
+<script type="text/javascript">
+		$(".tm-input").tagsManager();
+</script>   
+   
+    
+<script>
+
+
+<!--FUNCIÓN PARA TIPEAR 'SOLO LETRAS' EN INPUTS-->  
+		 
+		function soloLetras(e)
+		{
+			   key = e.keyCode || e.which;
+			   tecla = String.fromCharCode(key).toLowerCase();
+			   letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+			   especiales = "8-37-39-46";
+	
+			   tecla_especial = false
+				   for(var i in especiales)
+					{
+						if(key == especiales[i])
+						{
+							tecla_especial = true;
+							break;
+						}
+					}
+
+			if(letras.indexOf(tecla)==-1 && !tecla_especial)
+			{
+				return false;
+			}
+    	}
+		
+<!--FIN DE LA FUNCIÓN 'SOLO LETRAS'-->  
+
+
+<!--FUNCIÓN PARA TIPEAR 'SOLO NÚMEROS' EN INPUTS--> 
+		
+		function soloNumeros(e)
+		{
+			   key = e.keyCode || e.which;
+			   tecla = String.fromCharCode(key).toLowerCase();
+			   letras = "0123456789";
+			   especiales = "8-37-39-46";
+	
+			   tecla_especial = false
+				   for(var i in especiales)
+					{
+						if(key == especiales[i])
+						{
+							tecla_especial = true;
+							break;
+						}
+					}
+
+			if(letras.indexOf(tecla)==-1 && !tecla_especial)
+			{
+				return false;
+			}
+    	}
+				
+		 	$(document).ready(function()
+			{
+				$("#cedula, #slug").stringToSlug
+				({
+					callback: function(text)
+					{
+						$("#slug").val(text);
+					}
+				});
+			});
+			
+<!--FIN DE LA FUNCIÓN 'SOLO NÚMEROS'-->
+
+
+<!--FUNCIÓN PARA SELECCIONAR 'SKILS'-->  
+
+    
+    
+    
+<!--FIN DE LA FUNCIÓN 'SELECCIONAR SKILLS'-->
+
+</script>
+<!--FIN DE SECCIÓN JAVASCRIPT--> 
 
 
 <!--LIBRERÍAS DE JAVASCRIPT-->

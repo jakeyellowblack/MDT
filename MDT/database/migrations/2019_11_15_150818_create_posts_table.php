@@ -13,11 +13,21 @@ class CreatePostsTable extends Migration
      */
      public function up()
     {
+		Schema::dropIfExists('posts');
         Schema::create('posts', function (Blueprint $table) {
-            $table->bigIncrements('id');
-			$table->string('name');
-			$table->string('description');
+            $table->increments('id');
+			$table->string('title');
+			$table->integer('price');
+			$table->text('description');
+			
+			$table->integer('user_id')->unsigned();
+			$table->integer('category_id')->unsigned();
+			$table->integer('time_id')->unsigned();
             $table->timestamps();
+			
+			$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+			$table->foreign('category_id')->references('id')->on('p_categories')->onDelete('cascade')->onUpdate('cascade');
+			$table->foreign('time_id')->references('id')->on('times')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

@@ -23,6 +23,11 @@ Route::get('/my-profile', function () {
 	return view('Layout/my-profile');
 });
 
+
+Route::post('/home','PostController@store')->name('post.store');
+Route::get('/home','PostController@create')->name('post.create');
+
+
 Route::get('auth/success', [
     'as'   => 'auth.success',
     'uses' => 'Auth\AuthController@success'

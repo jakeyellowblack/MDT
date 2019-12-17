@@ -21,6 +21,11 @@ class User extends Authenticatable
 	{
 		return $this->hasOne('MDT\Category', 'id', 'category_id');
 	}
+	
+	public function post()
+	{
+		return $this->belongsTo(Post::class);
+	}
 		
 		
 	public function countries() {
