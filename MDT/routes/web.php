@@ -23,8 +23,8 @@ Route::get('/my-profile', function () {
 	return view('Layout/my-profile');
 });
 
-
 Route::post('/home','PostController@store')->name('post.store');
+Route::get('/home','PostController@index')->name('post.index');
 Route::get('/home','PostController@create')->name('post.create');
 
 

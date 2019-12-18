@@ -7,6 +7,7 @@ use MDT\Category;
 use MDT\Time;
 use MDT\Post;
 use MDT\Skill;
+use DB;
 
 class PostController extends Controller
 {
@@ -17,13 +18,28 @@ class PostController extends Controller
 	
     }
 	
+	public function index()
+    {
+	
+    	$post = Post::all();
+		$post = Post::orderby('id', 'DESC');
+
+		
+		return view('layout.admin', compact('post'));
+    }
+	
+	
 	public function create()
     {
 		$categories = Category::all();
 		$times = Time::all();
 		$skills = Skill::all();
+		$post = Post::all()->sortByDesc('id');
+			
 		
-		return view('layout.admin', compact('categories', 'times', 'skills'));
+		return view('layout.admin', compact('categories', 'times', 'skills', 'post'));
+		
+		
 	
     }
 	

@@ -20,8 +20,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
     
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tagmanager/3.0.2/tagmanager.min.css">
+   
     
 <!--FIN DE ESTILOS DE CSS-->
 
@@ -45,9 +44,9 @@
 
         
 			<div class="main-section">
-				<div class="container">
-					<div class="main-section-data">
-						<div class="row">
+			  <div class="container">
+				<div class="main-section-data">
+				  <div class="row">
 							<div class="col-lg-3 col-md-4 pd-left-none no-pd">
 								<div class="main-left-sidebar no-margin">
 									<div class="user-data full-width">
@@ -156,7 +155,7 @@
 <!-----------------------------------------INICIO DE BARRA CENTRAL PARA POSTEOS-------------------------------------->
 
 <!------------------------------------------------------PRIMER POST-------------------------------------------------->                            
-
+		
 				<!--Imagen de Perfil del Usuario Logueado-->
                 
 							<div class="col-lg-6 col-md-8 no-pd">
@@ -173,7 +172,6 @@
                                  
 										<div class="post-st">
 											<ul>
-												<li><a class="post_project" href="#" title="">Post a Project</a></li>
 												<li><a class="post-jb active" href="#" title="">Post a Job</a></li>
 											</ul>
 										</div><!--post-st end-->
@@ -181,7 +179,7 @@
                                     
               <!--Fin Sección de botones "pop-up" para postear "Projects" o "Jobs"-->
                                     
-                                    
+             		@foreach ($post as $po)                       
               <!--Inicio Recuadro Informativo de Posteos --> 
                           <!--Imagen de Perfil del Usuario Posteador--> 
                           
@@ -197,8 +195,8 @@
                            <!--Nombre y Apellido del Usuario Posteador-->
                            
 													<div class="usy-name">
-														<h3>John Doe</h3>
-														<span><img src="images/clock.png" alt="">3 min ago</span>
+														<h3>{{ $po->user->firstname }} {{ $po->user->lastname }}</h3>
+														<span><img src="images/clock.png" alt="">{{ $po->created_at }}</span>
 													</div>
 												</div>
                                                 
@@ -227,12 +225,13 @@
 											<div class="epi-sec">
 												<ul class="descp">
 													<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-													<li><img src="images/icon9.png" alt=""><span>India</span></li>
+													<li><img src="images/icon9.png" alt=""><span>{{ $po->user->countries->name }}</span></li>
 												</ul>
                                                 
 												<ul class="bk-links">
 													<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
 													<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
+                                                    <li><a href="#" title="" class="bid_now">Bid Now</a></li>
 												</ul>
 											</div>
                                             
@@ -244,18 +243,18 @@
 											<div class="job_descp">
                                             
                                             <!--Nombre del Trabajo-->
-												<h3>Senior Wordpress Developer</h3>
+												<h3>{{ $po->title }}</h3>
                                                 
                                                 
                                             <!--Tiempo y Paga del Trabajo-->
 												<ul class="job-dt">
-													<li><a href="#" title="">Full Time</a></li>
-													<li><span>$30 / hr</span></li>
+													<li><a href="#" title="">{{ $po->time->name }}</a></li>
+													<li><span>${{ $po->price }} / hr</span></li>
 												</ul>
                                             
                                             
                                             <!--Descripción del Trabajo-->
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
+<p>{{ $po->description }} <a href="#" title="">view more</a></p>
                                                 
                                                 
                                             <!--Tags relacionados con el Trabajo-->
@@ -295,6 +294,7 @@
 										</div><!--post-bar end-->
                                         
                     <!--Fin Sección de "Status" del Trabajo (Likes, comentarios y vistas) y Recuadro de Posts--> 
+              @endforeach
                     
                     
 <!------------------------------------------------FIN DE PRIMER POST-------------------------------------------------->
@@ -415,136 +415,10 @@
 										</div><!--top-profiles end-->
                                         
 <!-------------------------------------FIN BARRA DESLIZABLE DE PERFILES "TOP"---------------------------------------->
-                                        
-                                        
-<!-----------------------------------------------------SEGUNDO POST-------------------------------------------------->                                        
-										<div class="post-bar">
-											<div class="post_topbar">
-												<div class="usy-dt">
-													<img src="images/resources/us-pic.png" alt="">
-													<div class="usy-name">
-														<h3>John Doe</h3>
-														<span><img src="images/clock.png" alt="">3 min ago</span>
-													</div>
-												</div>
-												<div class="ed-opts">
-													<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-													<ul class="ed-options">
-														<li><a href="#" title="">Edit Post</a></li>
-														<li><a href="#" title="">Unsaved</a></li>
-														<li><a href="#" title="">Unbid</a></li>
-														<li><a href="#" title="">Close</a></li>
-														<li><a href="#" title="">Hide</a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="epi-sec">
-												<ul class="descp">
-													<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-													<li><img src="images/icon9.png" alt=""><span>India</span></li>
-												</ul>
-												<ul class="bk-links">
-													<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-													<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-													<li><a href="#" title="" class="bid_now">Bid Now</a></li>
-												</ul>
-											</div>
-											<div class="job_descp">
-												<h3>Senior Wordpress Developer</h3>
-												<ul class="job-dt">
-													<li><a href="#" title="">Full Time</a></li>
-													<li><span>$30 / hr</span></li>
-												</ul>
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
-												<ul class="skill-tags">
-													<li><a href="#" title="">HTML</a></li>
-													<li><a href="#" title="">PHP</a></li>
-													<li><a href="#" title="">CSS</a></li>
-													<li><a href="#" title="">Javascript</a></li>
-													<li><a href="#" title="">Wordpress</a></li> 	
-												</ul>
-											</div>
-											<div class="job-status-bar">
-												<ul class="like-com">
-													<li>
-														<a href="#"><i class="fas fa-heart"></i> Like</a>
-														<img src="images/liked-img.png" alt="">
-														<span>25</span>
-													</li> 
-													<li><a href="#" class="com"><i class="fas fa-comment-alt"></i> Comment 15</a></li>
-												</ul>
-												<a href="#"><i class="fas fa-eye"></i>Views 50</a>
-											</div>
-										</div><!--post-bar end-->
-                                        
-<!-----------------------------------------------FIN DEL SEGUNDO POST-------------------------------------------------->
-
-
-<!---------------------------------------------------TERCER POST------------------------------------------------------->                                        
-										<div class="posty">
-											<div class="post-bar no-margin">
-												<div class="post_topbar">
-													<div class="usy-dt">
-														<img src="images/resources/us-pc2.png" alt="">
-														<div class="usy-name">
-															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
-														</div>
-													</div>
-													<div class="ed-opts">
-														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-														<ul class="ed-options">
-															<li><a href="#" title="">Edit Post</a></li>
-															<li><a href="#" title="">Unsaved</a></li>
-															<li><a href="#" title="">Unbid</a></li>
-															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="epi-sec">
-													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
-													</ul>
-													<ul class="bk-links">
-														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-													</ul>
-												</div>
-												<div class="job_descp">
-													<h3>Senior Wordpress Developer</h3>
-													<ul class="job-dt">
-														<li><a href="#" title="">Full Time</a></li>
-														<li><span>$30 / hr</span></li>
-													</ul>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
-													<ul class="skill-tags">
-														<li><a href="#" title="">HTML</a></li>
-														<li><a href="#" title="">PHP</a></li>
-														<li><a href="#" title="">CSS</a></li>
-														<li><a href="#" title="">Javascript</a></li>
-														<li><a href="#" title="">Wordpress</a></li> 	
-													</ul>
-												</div>
-												<div class="job-status-bar">
-													<ul class="like-com">
-														<li>
-															<a href="#"><i class="fas fa-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
-															<span>25</span>
-														</li> 
-														<li><a href="#" class="com"><i class="fas fa-comment-alt"></i> Comment 15</a></li>
-													</ul>
-													<a href="#"><i class="fas fa-eye"></i>Views 50</a>
-												</div>
-											</div><!--post-bar end-->
-
-<!-----------------------------------------------FIN DEL TERCER POST----------------------------------------------------->
-                                            
+                                       
                                             
 <!-----------------------------------------------SECCIÓN DE COMENTARIOS-------------------------------------------------->                                           
-											<div class="comment-section">
+											<!--<div class="comment-section">
                                             
 												<a href="#" class="plus-ic">
 													<i class="la la-plus"></i>
@@ -564,10 +438,10 @@
 																	<p>Lorem ipsum dolor sit amet, </p>
 																	<a href="#" title="" class="active"><i class="fa fa-reply-all"></i>Reply</a>
 																</div>
-															</div><!--comment-list end-->
+															</div>--><!--comment-list end-->
                                                             
                                                             
-															<ul>
+															<!--<ul>
 																<li>
 																	<div class="comment-list">
 																		<div class="bg-img">
@@ -579,8 +453,8 @@
 																			<p>Hi John </p>
 																			<a href="#" title=""><i class="fa fa-reply-all"></i>Reply</a>
 																		</div>
-																	</div><!--comment-list end-->
-																</li>
+																	</div>--><!--comment-list end-->
+																<!--</li>
 															</ul>
 														</li>
                                                         
@@ -595,16 +469,16 @@
 																	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at.</p>
 																	<a href="#" title=""><i class="fa fa-reply-all"></i>Reply</a>
 																</div>
-															</div><!--comment-list end-->
-														</li>
+															</div>--><!--comment-list end-->
+														<!--</li>
 													</ul>
-												</div><!--comment-sec end-->
+												</div>--><!--comment-sec end-->
                                                 
 <!--------------------------------------------FIN SECCIÓN DE COMENTARIOS-------------------------------------------------->
                                                 
                                                 
 <!--------------------------------------------SECCIÓN "POSTEAR COMENTARIOS"----------------------------------------------->                                                
-												<div class="post-comment">
+												<!--<div class="post-comment">
 													<div class="cm_img">
 														<img src="images/resources/bg-img4.png" alt="">
 													</div>
@@ -614,21 +488,21 @@
 															<button type="submit">Send</button>
 														</form>
 													</div>
-												</div><!--post-comment end-->
-											</div><!--comment-section end-->
-										</div><!--posty end-->
+												</div>
+											</div>
+										</div>--><!--posty end-->
                                         
 <!----------------------------------------FIN SECCIÓN "POSTEAR COMENTARIOS"-----------------------------------------------> 
  
  
 <!------------------------------------------BARRA DE CARGA DE COMENTARIOS------------------------------------------------->                                       
-										<div class="process-comm">
+										<!--<div class="process-comm">
 											<div class="spinner">
 												<div class="bounce1"></div>
 												<div class="bounce2"></div>
 												<div class="bounce3"></div>
 											</div>
-										</div><!--process-comm end-->
+										</div>--><!--process-comm end-->
                                         
 <!--------------------------------------FIN BARRA DE CARGA DE COMENTARIOS------------------------------------------------->
 
@@ -871,8 +745,8 @@
 											<div class="view-more">
 												<a href="#" title="">View More</a>
 											</div>
-										</div><!--suggestions-list end-->
-									</div>
+									  </div><!--suggestions-list end-->
+								  </div>
 								</div><!--right-sidebar end-->
                                 
                            <!--Fin Sección "Most Viewed People" de la Página-->
@@ -887,60 +761,6 @@
         
 <!------------------------------------------FIN SECCIÓN PRINCIPAL DE LA PÁGINA------------------------------------------->
 
-<!------------------------------------------FORMULARIO "POP UP" PARA PROYECTOS------------------------------------------->
-
-		<div class="post-popup pst-pj">
-			<div class="post-project">
-				<h3>Post a project</h3>
-				<div class="post-project-fields">
-					<form>
-						<div class="row">
-							<div class="col-lg-12">
-								<input type="text" name="title" placeholder="Title">
-							</div>
-							<div class="col-lg-12">
-								<div class="inp-field">
-									<select>
-										<option>Category</option>
-										<option>Category 1</option>
-										<option>Category 2</option>
-										<option>Category 3</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-12">
-								<input type="text" name="skills" placeholder="Skills">
-							</div>
-							<div class="col-lg-12">
-								<div class="price-sec">
-									<div class="price-br">
-										<input type="text" name="price1" placeholder="Price">
-										<i class="la la-dollar"></i>
-									</div>
-									<span>To</span>
-									<div class="price-br">
-										<input type="text" name="price1" placeholder="Price">
-										<i class="la la-dollar"></i>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-12">
-								<textarea name="description" placeholder="Description"></textarea>
-							</div>
-							<div class="col-lg-12">
-								<ul>
-									<li><button class="active" type="submit" value="post">Post</button></li>
-									<li><a href="#" title="">Cancel</a></li>
-								</ul>
-							</div>
-						</div>
-					</form>
-				</div><!--post-project-fields end-->
-				<a href="#" title=""><i class="la la-times-circle-o"></i></a>
-			</div><!--post-project end-->
-		</div><!--post-project-popup end-->
-
-<!--------------------------------------FIN FORMULARIO "POP UP" PARA PROYECTOS------------------------------------------->
 
 
 <!------------------------------------------FORMULARIO "POP UP" PARA TRABAJOS-------------------------------------------->
