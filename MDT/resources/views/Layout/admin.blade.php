@@ -107,6 +107,7 @@
                                         
 										<div class="suggestions-list">
                                         
+                                        
 											@foreach ($users as $us)
                                                         <div class="suggestion-usd">
                                                             <img src="images/resources/s1.png" alt="">
@@ -158,7 +159,7 @@
 		
 				<!--Imagen de Perfil del Usuario Logueado-->
                 
-							<div class="col-lg-6 col-md-8 no-pd">
+					<div class="col-lg-6 col-md-8 no-pd">
 								<div class="main-ws-sec">
 									<div class="post-topbar">
 										<div class="user-picy">
@@ -178,8 +179,10 @@
 									</div><!--post-topbar end-->
                                     
               <!--Fin Sección de botones "pop-up" para postear "Projects" o "Jobs"-->
-                                    
-             		@foreach ($post as $po)                       
+                 
+             
+                             
+             		@forelse ($post as $po)                       
               <!--Inicio Recuadro Informativo de Posteos --> 
                           <!--Imagen de Perfil del Usuario Posteador--> 
                           
@@ -294,7 +297,40 @@
 										</div><!--post-bar end-->
                                         
                     <!--Fin Sección de "Status" del Trabajo (Likes, comentarios y vistas) y Recuadro de Posts--> 
-              @endforeach
+                    
+                    @empty
+                          
+                           <!--Inicio Recuadro Informativo de Posteos --> 
+                          <!--Imagen de Perfil del Usuario Posteador--> 
+                          
+									<div class="posts-section">
+										<div class="post-bar">
+											<div class="post_topbar">
+												<div class="usy-dt">
+													
+												</div>
+                        
+												<div class="ed-opts">
+													
+												</div>
+											</div>
+                    
+											<div class="epi-sec">
+												
+											</div>
+                                           
+											<div class="job_descp">
+                                            
+                                          			<img src="images/postnew.png" alt="">
+											</div>
+                                          
+											
+										</div>
+                    
+                    
+              @endforelse
+              
+        
                     
                     
 <!------------------------------------------------FIN DE PRIMER POST-------------------------------------------------->
@@ -514,7 +550,7 @@
 <!------------------------------------------FIN DE BARRA CENTRAL PARA POSTEO--------------------------------------------->                           
 
 <!------------------------------------------INICIO DE BARRAS LATERALES DERECHAS------------------------------------------>                   
-							<div class="col-lg-3 pd-right-none no-pd">
+					<div class="col-lg-3 pd-right-none no-pd">
 								<div class="right-sidebar">
                                 
                                 
@@ -753,9 +789,9 @@
                                 
 <!------------------------------------------FIN DE BARRAS LATERALES DERECHAS---------------------------------------------->                             
 							</div>
-						</div>
-					</div><!-- main-section-data end-->
-				</div> 
+				  </div>
+				</div><!-- main-section-data end-->
+			  </div> 
 			</div>
 		</main>
         
