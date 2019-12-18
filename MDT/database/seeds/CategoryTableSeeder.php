@@ -14,11 +14,11 @@ class CategoryTableSeeder extends Seeder
     public function run()
     {
         $category = new Category();
-        $category->name= "Audiovisual Production";
+        $category->name= "Audio-video Production";
         $category->save();
 
         $category = new Category();
-        $category->name= "Programming/Web Design";
+        $category->name= "Development / Programming";
         $category->save();
 
         $category = new Category();
@@ -26,7 +26,7 @@ class CategoryTableSeeder extends Seeder
         $category->save();
 
         $category = new Category();
-        $category->name= "Graphic Design";
+        $category->name= "Graphic & Design";
         $category->save();
     }
 }
