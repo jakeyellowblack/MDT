@@ -215,22 +215,7 @@
 									</div>
 								</div>
 <!--FIN DEL COUNTRY-->
-
-<!--CATEGORY-->                                                
-	                            <div class="col-lg-12 no-pdd">
-									<div class="sn-field">
-										<select class="form-control" name="category_id">
-                                      	<option disabled selected>Select a Category</option>      
-										@foreach($categories as $cate)
-                                                <option value="{{ $cate->id }}">{{ $cate->name }}</option>
-										@endforeach
-										</select>
-										<i class="la la-dropbox"></i>
-										<span><i class="fa fa-ellipsis-h"></i></span>
-									</div>
-								</div>
-<!--FIN DEL CATEGORY-->                              
-                              
+                         
 <!--EMAIL-->                               
                               	<div class="col-lg-12 no-pdd">
 									<div class="sn-field">
@@ -240,29 +225,7 @@
 									</div>
 							    </div>   
 <!--FIN DEL EMAIL-->                                              
-                                              
-<!--LINKEDIN-->                                              
-                                <div class="col-lg-12 no-pdd">
-									<div class="sn-field">
-										<input id="linkedin_url" type="url" class="form-control" name="linkedin_url" placeholder="LinkedIn Profile URL" value="{{ old('linkedin_url') }}" required autocomplete="linkedin_url">
-			                    
-                                    <i class="la la-user"></i>
-									</div>
-							    </div>
-<!--FIN DEL LINKEDIN-->
-
-<!--FILE-->                                  	
-						<div class="col-lg-12 no-pdd">
-							<div class="sn-field">                                             
-	                            <div class="file-upload">
-	                                <input class="file-upload__input" type="file" name="file" id="file" multiple>
-	                                <button class="file-upload__button" type="button">Choose File(s)</button>
-	                                <span class="file-upload__label"></span>
-		                        </div>
-							</div>
-						</div>                    
-<!--FIN DEL FILE-->
-                                                                                               
+                                                                                              
 <!--PASSWORD-->                                                                              
                         <div class="col-lg-12 no-pdd">
 							<div class="sn-field">
@@ -362,22 +325,7 @@
 									</div>
 								</div>
 <!--FIN DEL COUNTRY-->                                                  
-
-<!--CATEGORY-->                                               
-	                            <div class="col-lg-12 no-pdd">
-									<div class="sn-field">
-										<select class="form-control" name="category_id"> 
-	                                    <option disabled selected>Select a Category</option>          
-											@foreach($categories as $cate)
-		                                            <option value="{{ $cate->id }}">{{ $cate->name }}</option>
-											@endforeach
-										</select>
-										<i class="la la-dropbox"></i>
-										<span><i class="fa fa-ellipsis-h"></i></span>
-									</div>
-								</div>
-<!--FIN DEL CATEGORY-->                                               
-                                                                     
+                                                                   
 <!--EMAIL-->                         
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
@@ -387,17 +335,7 @@
 									</div>
 							    </div> 
 <!--FIN DEL EMAIL-->                                                
-                                                
-<!--LINKEDIN-->                                                             
-                                <div class="col-lg-12 no-pdd">
-									<div class="sn-field">
-										<input id="linkedin_url" type="url" class="form-control" name="linkedin_url" placeholder="LinkedIn Profile URL" value="{{ old('linkedin_url') }}" required autocomplete="linkedin_url">                    
-                                
-                                    <i class="la la-user"></i>
-									</div>
-								</div>                                               
-<!--FIN DEL LINKEDIN-->                                               
-
+       
 <!--PASSWORD-->                                            
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">

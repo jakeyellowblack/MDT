@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use Illuminate\Auth\Events\Registered;
 use MDT\Http\Controllers\Controller;
 use MDT\User;
-use MDT\Category;
 use MDT\Country;
 use MDT\Role;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -91,11 +90,8 @@ class RegisterController extends Controller
 			'firstname' => ['required', 'alpha', 'max:255'],
 			'lastname' => ['required', 'alpha', 'max:255'],
             'email' => ['required', 'string', 'email:rfc', 'max:255', 'unique:users'],
-            'category_id' => ['required', 'integer'],
             'country_id' => ['required', 'integer'],
             'password' => ['required', 'string', 'min:5', 'confirmed'],
-			'linkedin_url' => ['required','unique:users', 'domain:www.linkedin.com/in'],
-			'file' => ['required'],
 			'roles' => ['required'],
         ]);
 		
@@ -115,9 +111,6 @@ class RegisterController extends Controller
 			'firstname' => $data['firstname'],
 			'lastname' => $data['lastname'],
             'email' => $data['email'],
-			'linkedin_url' => $data['linkedin_url'],
-			'file' => $data['file']->getClientOriginalName(),
-            'category_id' => $data['category_id'],
             'country_id' => $data['country_id'],
             'password' => Hash::make($data['password'])
         ]);
@@ -132,12 +125,11 @@ class RegisterController extends Controller
 		public function showRegistrationForm()
 	{
 	
-		$categories = Category::all();
 		$countries = Country::all();
 		$roles = Role::all();
 		$users = User::all();
 
-		return view('auth.register', compact('users', 'categories', 'countries', 'roles'));
+		return view('auth.register', compact('users', 'countries', 'roles'));
 		
 	}	
 	

@@ -375,7 +375,6 @@
                     
 											<div class="user-specs">
 												<h3>{{Auth::user()->firstname}} {{Auth::user()->lastname}}</h3>
-												<span>{{Auth::user()->categories->name}}</span>
 											</div>
 										</div><!--user-profile end-->
                                         
@@ -419,7 +418,6 @@
                                                             <img src="images/resources/s1.png" alt="">
                                                             <div class="sgt-text">
                                                             <h4>{{ $us->firstname }} {{ $us->lastname }}</h4>
-                                                            <span>{{ $us->categories->name }}</span>
                                                         </div>
                                                     <span><i class="la la-plus"></i></span>
                                                </div>
@@ -1270,8 +1268,8 @@
 								<div class="inp-field">
 									<select class="form-control" name="category_id">
 										<option disabled selected>Select a Category</option>
-										@foreach($pcategories as $pcate)
-                                                <option value="{{ $pcate->id }}">{{ $pcate->name }}</option>
+										@foreach($categories as $cate)
+                                                <option value="{{ $cate->id }}">{{ $cate->name }}</option>
 										@endforeach
 									</select>
 								</div>
@@ -1279,8 +1277,9 @@
                             
                                 <div class="col-lg-12">
                                 	<div class="inp-field">
-									<input type="text" name="skill_id" placeholder="Tags" class="tm-input form-control tm-input-info"/>
-                                </div>
+									    <input type="text" name="skill_id" placeholder="Tags" class="tm-input form-control tm-input-info"/>
+									  <p>&nbsp;</p>
+                           	      </div>
                             </div>
                             
 							<div class="col-lg-6">
@@ -1293,7 +1292,7 @@
 							<div class="col-lg-6">
 								<div class="inp-field">
 									<select class="form-control" name="time_id">
-										<option disabled selected>Select the Time</option>
+										<option disabled selected>Select Time...</option>
 										@foreach($times as $ti)
                                                 <option value="{{ $ti->id }}">{{ $ti->name }}</option>
 										@endforeach

@@ -18,7 +18,6 @@ class CreateUsersTable extends Migration
 			$table->string('firstname');
 			$table->string('lastname');
             $table->string('email')->unique();
-			$table->string('linkedin_url')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->boolean('approved')->default(0)->nullable();

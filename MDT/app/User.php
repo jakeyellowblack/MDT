@@ -13,14 +13,10 @@ class User extends Authenticatable
     use Notifiable;
 	
 	public function roles()
-		{
-			return $this->belongsToMany('MDT\Role');
-		}
-		
-		public function categories()
 	{
-		return $this->hasOne('MDT\Category', 'id', 'category_id');
+		return $this->belongsToMany('MDT\Role');
 	}
+		
 	
 	public function post()
 	{
@@ -28,13 +24,12 @@ class User extends Authenticatable
 	}
 		
 		
-	public function countries() {
-    return $this->belongsTo('MDT\Country', 'country_id');
+	public function countries() 
+	{
+    	return $this->belongsTo('MDT\Country', 'country_id');
 	}
-		
-		
 	
-		
+	
 	public function autorizeRoles($roles)
 	{
 			if($this->hasAnyRole($roles))
@@ -44,6 +39,7 @@ class User extends Authenticatable
 			
 		abort(401, 'No estás autorizado para entrar a esta área');	
 	}
+	
 	
 	public function hasAnyRole($roles)
 	{
@@ -78,10 +74,10 @@ class User extends Authenticatable
 				{
 					return true;
 				}
+				
 		return false;
 	}
 	
-
 	
 	/*public function hasFile($file)
 	{
@@ -92,8 +88,6 @@ class User extends Authenticatable
 		return false;
 	}*/
 	
-	
-	
 
     /**
      * The attributes that are mass assignable.
@@ -101,7 +95,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'firstname', 'lastname', 'country_id', 'category_id', 'email', 'linkedin_url', 'file', 'password',
+        'firstname', 'lastname', 'country_id', 'email', 'password',
     ];
 
     /**

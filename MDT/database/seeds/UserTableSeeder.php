@@ -25,11 +25,8 @@ class UserTableSeeder extends Seeder
 		$user->firstname = "Miles";
 		$user->lastname = "Morales";
 		$user->email = "Admin@mail.com";
-		$user->linkedin_url = "https://www.linkedin.com/in/spidey-a9411a195/";
-		$user->file = "spideyb.png";
 		$user->password = bcrypt('query');
 		$user->approved = 1;
-		$user->category_id= 1;
 		$user->save();
 		$user->roles()->attach($role_admin);
 		
@@ -37,10 +34,7 @@ class UserTableSeeder extends Seeder
 		$user->firstname = "Sue";
 		$user->lastname = "Storm";
 		$user->email = "Client@mail.com";
-		$user->linkedin_url = "https://www.linkedin.com/in/invisible-woman-a9411b295/";
-		$user->file = "invisible.png";
 		$user->password = bcrypt('query');
-		$user->category_id= 2;
 		$user->save();
 		$user->roles()->attach($role_client);
 		
@@ -48,21 +42,15 @@ class UserTableSeeder extends Seeder
 		$user->firstname = "Peter";
 		$user->lastname = "Parker";
 		$user->email = "Freelancer@mail.com";
-		$user->linkedin_url = "https://www.linkedin.com/in/spidey-theoriginal-a9411a185/";
-		$user->file = "parker.png";
 		$user->password = bcrypt('query');
-		$user->category_id= 3;
 		$user->save();
 		$user->roles()->attach($role_freelancer);
 		
 		$user = new User();
 		$user->firstname = "Kamala";
 		$user->lastname = "Khan";
-		$user->email = "User@mail.com";
-		$user->linkedin_url = "https://www.linkedin.com/in/ms-marvel-a9411a155/";
-		$user->file = "msmarvel.png";		
+		$user->email = "User@mail.com";	
 		$user->password = bcrypt('query');
-		$user->category_id= 4;
 		$user->save();
 		$user->roles()->attach($role_user);
     }

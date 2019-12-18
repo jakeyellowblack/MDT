@@ -21,9 +21,9 @@ class Post extends Model
 		return $this->belongsTo(User::class);
 	}
 	
-	public function pcategory()
+	public function category()
 	{
-		return $this->belongsTo(PCategory::class);
+		return $this->belongsTo(Category::class);
 	}
 	
 	public function time()

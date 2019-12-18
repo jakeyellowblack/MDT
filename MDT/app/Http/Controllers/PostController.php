@@ -3,7 +3,7 @@
 namespace MDT\Http\Controllers;
 
 use Illuminate\Http\Request;
-use MDT\PCategory;
+use MDT\Category;
 use MDT\Time;
 use MDT\Post;
 use MDT\Skill;
@@ -19,11 +19,11 @@ class PostController extends Controller
 	
 	public function create()
     {
-		$pcategories = PCategory::all();
+		$categories = Category::all();
 		$times = Time::all();
 		$skills = Skill::all();
 		
-		return view('layout.admin', compact('pcategories', 'times', 'skills'));
+		return view('layout.admin', compact('categories', 'times', 'skills'));
 	
     }
 	
@@ -40,9 +40,9 @@ class PostController extends Controller
 	
 	 public function show(Post $post)
     {
-		$pcategories = PCategory::all();
+		$pcategories = Category::all();
 		
-        return view('layout.admin', compact('pcategories'));
+        return view('layout.admin', compact('categories'));
     }
 	
 }
