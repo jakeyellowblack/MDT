@@ -3,6 +3,8 @@
 use Illuminate\Database\Seeder;
 use MDT\Role;
 use MDT\User;
+use MDT\Country;
+
 
 class UserTableSeeder extends Seeder
 {
@@ -22,7 +24,7 @@ class UserTableSeeder extends Seeder
 		$role_user = Role::where('name','user')->first();
 		
 		$user = new User();
-		$user->country_id = "15";
+		$user->country_id = 15;
 		$user->firstname = "Miles";
 		$user->lastname = "Morales";
 		$user->email = "Admin@mail.com";
@@ -32,7 +34,7 @@ class UserTableSeeder extends Seeder
 		$user->roles()->attach($role_admin);
 		
 		$user = new User();
-		$user->country_id = "11";
+		$user->country_id = 11;
 		$user->firstname = "Sue";
 		$user->lastname = "Storm";
 		$user->email = "Client@mail.com";
@@ -41,7 +43,7 @@ class UserTableSeeder extends Seeder
 		$user->roles()->attach($role_client);
 		
 		$user = new User();
-		$user->country_id = "16";
+		$user->country_id = 16;
 		$user->firstname = "Peter";
 		$user->lastname = "Parker";
 		$user->email = "Freelancer@mail.com";
@@ -50,7 +52,7 @@ class UserTableSeeder extends Seeder
 		$user->roles()->attach($role_freelancer);
 		
 		$user = new User();
-		$user->country_id = "37";
+		$user->country_id = 37;
 		$user->firstname = "Kamala";
 		$user->lastname = "Khan";
 		$user->email = "User@mail.com";	
