@@ -4,6 +4,7 @@ namespace MDT\Http\Controllers\Auth;
 
 use MDT\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 use MDT\User;
 use MDT\Category;
 use MDT\Country;
@@ -22,7 +23,9 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
+    use AuthenticatesUsers {
+    logout as performLogout;
+	}	
 
     /**
      * Where to redirect users after login.
@@ -41,13 +44,18 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 	
+	public function logout(Request $request)
+	{
+		$this->performLogout($request);
+		return redirect()->route('register');
+	}
+	
+	
 	public function showLoginForm()
-{
+	{
+		
+		return redirect('register');
 	
-	return redirect('register');
-
-}
-	
-	
+	}
 	
 }
