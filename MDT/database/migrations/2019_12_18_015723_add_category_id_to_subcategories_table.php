@@ -17,7 +17,7 @@ class AddCategoryIdToSubcategoriesTable extends Migration
             
 
             $table->unsignedInteger('category_id')->nullable()->after('id');
-            $table->foreign('category_id')->references('id')->on('subcategories')->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
 
         });
     }
