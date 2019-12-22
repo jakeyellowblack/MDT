@@ -10,6 +10,7 @@ use MDT\Http\Controllers\Controller;
 use MDT\User;
 use MDT\Country;
 use MDT\Role;
+use MDT\Category;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -40,7 +41,7 @@ class RegisterController extends Controller
      * @var string
      */
 	 
-    protected $redirectTo = '/register';
+    protected $redirectTo = '/complete';
 	
     /**
      * Create a new controller instance.
@@ -53,8 +54,25 @@ class RegisterController extends Controller
 	{
 		 
 		$this->validator($request->all())->validate();
+		if($request->roles==3)
+		$request->approved==0;
 		event(new Registered($user = $this->create($request->all())));
-		return back()->with('status', 'Registered successfully, please be attentive to your email.');
+		
+		
+		
+		if($request->roles==2)
+		 
+			{
+				
+				return redirect()->route('register')->with('status', 'No pasó');
+			}
+		else	
+			{
+				
+				return redirect()->route('complete')->with('status', 'Pasó');
+			}
+			
+		
 		
 	}
 
@@ -106,17 +124,20 @@ class RegisterController extends Controller
 	 
     protected function create(array $data)
     {
-
+		
         $user = User::create([
 			'firstname' => $data['firstname'],
 			'lastname' => $data['lastname'],
             'email' => $data['email'],
             'country_id' => $data['country_id'],
+			'approved' => $data['approved'],
             'password' => Hash::make($data['password'])
         ]);
 		
+	
 		$user->roles()->sync($data['roles']);
-
+		
+		
     	return $user;
 		
     }
@@ -128,7 +149,7 @@ class RegisterController extends Controller
 		$countries = Country::all();
 		$roles = Role::all();
 		$users = User::all();
-
+		
 		return view('auth.register', compact('users', 'countries', 'roles'));
 		
 	}	

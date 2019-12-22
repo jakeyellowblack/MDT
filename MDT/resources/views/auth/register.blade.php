@@ -224,7 +224,9 @@
                                		<i class="la la-envelope-o"></i>
 									</div>
 							    </div>   
-<!--FIN DEL EMAIL-->                                              
+<!--FIN DEL EMAIL--> 
+
+                   {!! Form::hidden('approved', '1') !!}                          
                                                                                               
 <!--PASSWORD-->                                                                              
                         <div class="col-lg-12 no-pdd">
@@ -334,7 +336,9 @@
                                     <i class="la la-envelope-o"></i>
 									</div>
 							    </div> 
-<!--FIN DEL EMAIL-->                                                
+<!--FIN DEL EMAIL-->  
+
+				 {!! Form::hidden('approved') !!}                                                
        
 <!--PASSWORD-->                                            
                                 <div class="col-lg-12 no-pdd">

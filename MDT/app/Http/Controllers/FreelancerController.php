@@ -11,6 +11,7 @@ use MDT\Http\Requests\StoreFreelancerRequest;
 class FreelancerController extends Controller
 {
 	
+	
 	public function index()
     {
 	
@@ -44,7 +45,7 @@ class FreelancerController extends Controller
 		$freelancer->category_id=$request->input('category_id');
 		$freelancer->save();
 
-		return redirect()->route('complete.store')->with('status',
+		return redirect()->route('register')->with('status',
 		'Registered successfully, please be attentive to your email.');
     }
 
