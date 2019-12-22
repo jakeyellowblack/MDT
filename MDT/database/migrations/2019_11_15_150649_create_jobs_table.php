@@ -14,11 +14,19 @@ class CreateJobsTable extends Migration
     public function up()
     {
         Schema::create('jobs', function (Blueprint $table) {
-            $table->bigIncrements('id');
-			$table->string('name');
-			$table->string('description');
-			$table->integer('price');
+            $table->increments('id');
+			$table->string('title');
+            $table->integer('price');
+			$table->text('description');
             $table->timestamps();
+
+            $table->integer('user_id')->unsigned();
+            $table->integer('category_id')->unsigned();
+            $table->integer('time_id')->unsigned();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('time_id')->references('id')->on('times')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

@@ -338,7 +338,7 @@
 							    </div> 
 <!--FIN DEL EMAIL-->  
 
-				 {!! Form::hidden('approved') !!}                                                
+				 {!! Form::hidden('approved','0') !!}                                                
        
 <!--PASSWORD-->                                            
                                 <div class="col-lg-12 no-pdd">

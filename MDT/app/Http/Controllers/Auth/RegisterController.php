@@ -54,8 +54,7 @@ class RegisterController extends Controller
 	{
 		 
 		$this->validator($request->all())->validate();
-		if($request->roles==3)
-		$request->approved==0;
+
 		event(new Registered($user = $this->create($request->all())));
 		
 		
