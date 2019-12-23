@@ -22,6 +22,11 @@ class User extends Authenticatable
 	{
 		return $this->belongsTo(Post::class);
 	}
+
+	public function job()
+	{
+		return $this->belongsTo(Job::class);
+	}
 		
 		
 	public function countries() 

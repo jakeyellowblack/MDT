@@ -48,7 +48,7 @@ class JobController extends Controller
         $job = Job::create($request->all());
         $job->skill()->sync($request['skill']);
 		
-		return redirect()->route('post.store')->with('status',
+		return redirect()->route('job.store')->with('status',
 		'Se han guardado los datos correctamente');
     }
 	

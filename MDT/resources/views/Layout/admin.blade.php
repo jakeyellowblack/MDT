@@ -182,7 +182,7 @@
                  
              
                              
-             		@forelse ($post as $po)                       
+             		@forelse ($job as $jo)                       
               <!--Inicio Recuadro Informativo de Posteos --> 
                           <!--Imagen de Perfil del Usuario Posteador--> 
                           
@@ -198,8 +198,8 @@
                            <!--Nombre y Apellido del Usuario Posteador-->
                            
 													<div class="usy-name">
-														<h3>{{ $po->user->firstname }} {{ $po->user->lastname }}</h3>
-														<span><img src="images/clock.png" alt="">{{ $po->created_at }}</span>
+														<h3>{{ $jo->user->firstname }} {{ $jo->user->lastname }}</h3>
+														<span><img src="images/clock.png" alt="">{{ $jo->created_at }}</span>
 													</div>
 												</div>
                                                 
@@ -228,7 +228,7 @@
 											<div class="epi-sec">
 												<ul class="descp">
 													<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-													<li><img src="images/icon9.png" alt=""><span>{{ $po->user->countries->name }}</span></li>
+													<li><img src="images/icon9.png" alt=""><span>{{ $jo->user->countries->name }}</span></li>
 												</ul>
                                                 
 												<ul class="bk-links">
@@ -246,18 +246,18 @@
 											<div class="job_descp">
                                             
                                             <!--Nombre del Trabajo-->
-												<h3>{{ $po->title }}</h3>
+												<h3>{{ $jo->title }}</h3>
                                                 
                                                 
                                             <!--Tiempo y Paga del Trabajo-->
 												<ul class="job-dt">
-													<li><a href="#" title="">{{ $po->time->name }}</a></li>
-													<li><span>${{ $po->price }} / hr</span></li>
+													<li><a href="#" title="">{{ $jo->time->name }}</a></li>
+													<li><span>${{ $jo->price }} / hr</span></li>
 												</ul>
                                             
                                             
                                             <!--Descripción del Trabajo-->
-<p>{{ $po->description }} <a href="#" title="">view more</a></p>
+<p>{{ $jo->description }} <a href="#" title="">view more</a></p>
                                                 
                                                 
                                             <!--Tags relacionados con el Trabajo-->
@@ -806,7 +806,7 @@
 				<h3>Post a job</h3>
                 
 				<div class="post-project-fields">
-					<form method="POST" action="{{ route('post.store') }}">
+					<form method="POST" action="{{ route('job.store') }}">
                     	@csrf
 						<div class="row">
 							<div class="col-lg-12">

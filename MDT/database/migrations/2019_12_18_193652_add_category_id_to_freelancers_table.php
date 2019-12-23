@@ -16,7 +16,7 @@ class AddCategoryIdToFreelancersTable extends Migration
         Schema::table('freelancers', function (Blueprint $table) {
 			
             $table->unsignedInteger('category_id')->nullable()->after('id');
-            $table->foreign('category_id')->references('id')->on('freelancers')->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('category')->onDelete('cascade');
         });
     }
 

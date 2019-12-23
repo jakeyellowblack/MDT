@@ -14,4 +14,9 @@ class Time extends Model
 	{
 		return $this->belongsTo(Post::class);
 	}
+
+	public function job()
+	{
+		return $this->belongsTo(Job::class);
+	}
 }

@@ -14,7 +14,7 @@ class ApprovalMiddleware
             if (!auth()->user()->approved) {
                 auth()->logout();
 
-                return redirect()->route('login')->with('message', trans('global.yourAccountNeedsAdminApproval'));
+                return redirect()->route('register')->with('status', 'Your account is waiting for our administrator approval.');
             }
         }
 

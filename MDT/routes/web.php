@@ -33,10 +33,9 @@ Route::get('/my-profile', function () {
 	return view('Layout/my-profile');
 });
 
-Route::post('/home','PostController@store')->name('post.store');
-Route::get('/home','PostController@index')->name('post.index');
-Route::get('/home','PostController@create')->name('post.create');
-
+Route::post('/home','JobController@store')->name('job.store');
+Route::get('/home','JobController@index')->name('job.index');
+Route::get('/home','JobController@create')->name('job.create');
 
 Route::get('auth/success', [
     'as'   => 'auth.success',
@@ -45,9 +44,9 @@ Route::get('auth/success', [
 
 Auth::routes();
 
-
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
 
-Route::get('/home', 'HomeController@index')->name('home');
-
+Route::middleware(['auth'])->group(function () {
+    Route::get('/home', 'HomeController@index')->name('home');
+});
 });

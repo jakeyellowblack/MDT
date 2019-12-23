@@ -30,4 +30,9 @@ class Job extends Model
 	{
 		return $this->belongsTo(Time::class);
 	}
+
+	public function skill()
+	{
+		return $this->belongsToMany(Skill::class, 'post_skill');
+	}
 }

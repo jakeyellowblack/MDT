@@ -40,7 +40,7 @@ class StoreFreelancerRequest extends FormRequest
 		
         return [
             'linkedin_url' => 'required|unique:freelancers|domain:www.linkedin.com/in',
-			'file' => 'required',
+			'file' => ['required','mimes:docx,pdf,xml,doc'],
 			'category_id' => 'required',
         ];
     }

@@ -37,7 +37,7 @@ class PostController extends Controller
 		$post = Post::all()->sortByDesc('id');
 			
 		
-		return view('layout.admin', compact('categories', 'times', 'skills', 'post'));
+		//return view('layout.admin', compact('categories', 'times', 'skills', 'post'));
 		
 		
 	
