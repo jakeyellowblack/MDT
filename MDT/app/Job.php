@@ -33,6 +33,6 @@ class Job extends Model
 
 	public function skill()
 	{
-		return $this->belongsToMany(Skill::class, 'post_skill');
+		return $this->belongsToMany(Skill::class, 'job_skill');
 	}
 }
