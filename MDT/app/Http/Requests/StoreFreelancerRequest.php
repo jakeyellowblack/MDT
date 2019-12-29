@@ -44,4 +44,18 @@ class StoreFreelancerRequest extends FormRequest
 			'category_id' => 'required',
         ];
     }
+	
+	public function messages()
+    {
+        return [
+			'linkedin_url.required' => 'You must enter a URL of your LinkedIn profile',
+			'linkedin_url.unique' => 'The URL entered has already been registered',
+			'linkedin_url.domain' => 'Enter a valid LinkedIn profile URL',
+			'file.required' => 'Upload a File',
+			'file.mimes' => 'Files must be a formatted file: docx, pdf, xml, doc',
+			'category_id.required' => 'Please select a Category',
+        ];
+    
+	$this->validate($request, $rules, $messages);
+	}
 }

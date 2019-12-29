@@ -63,12 +63,12 @@ class RegisterController extends Controller
 		 
 			{
 				
-				return redirect()->route('register')->with('status', 'No pasó');
+				return redirect()->route('register')->with('status', 'Successful registration! Welcome to MDT!');
 			}
 		else	
 			{
 				
-				return redirect()->route('complete')->with('status', 'Pasó');
+				return redirect()->route('complete')->with('status', 'Your registration is almost complete! Fill in the missing fields!');
 			}
 			
 		
@@ -102,6 +102,15 @@ class RegisterController extends Controller
 			
 		});
 		
+		$message = array(
+			'roles.required' => 'You must accept the Terms and Conditions',
+			'password.required' => 'Enter a valid Password',
+			'password.min' => 'Password must contain more than 5 Characters',
+			'password.confirmed' => 'Password confirmation does not match.',
+			'country_id.required' => 'Please select a Country',
+			'email.required' => 'Please enter a valid E-Mail',
+			'email.unique' => 'The email has already been registered',
+		);
 		
         return Validator::make($data, [
 			'firstname' => ['required', 'alpha', 'max:255'],
@@ -110,9 +119,10 @@ class RegisterController extends Controller
             'country_id' => ['required', 'integer'],
             'password' => ['required', 'string', 'min:5', 'confirmed'],
 			'roles' => ['required'],
-        ]);
+        ],$message);
 		
     }
+	
 	
     /**
      * Create a new user instance after a valid registration.

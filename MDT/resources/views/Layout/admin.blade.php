@@ -826,12 +826,12 @@
 								</div>
 							</div>
                             
-                                <div class="col-lg-12">
+                                <!--<div class="col-lg-12">
                                 	<div class="inp-field">
 									    <input type="text" name="skill_id" placeholder="Tags" class="tm-input form-control tm-input-info"/>
 									  <p>&nbsp;</p>
                            	      </div>
-                            </div>
+                            </div>-->
                             
 							<div class="col-lg-6">
 								<div class="price-br">
