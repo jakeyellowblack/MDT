@@ -133,7 +133,7 @@
 									<div class="tags-sec full-width">
 										<ul>
 											<li><a href="#" title="">Help Center</a></li>
-											<li><a href="#" title="">About</a></li>
+											<li><a href="about" title="">About</a></li>
 											<li><a href="#" title="">Privacy Policy</a></li>
 											<li><a href="#" title="">Community Guidelines</a></li>
 											<li><a href="#" title="">Cookies Policy</a></li>

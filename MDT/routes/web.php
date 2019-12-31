@@ -24,6 +24,10 @@ Route::get('account_setting', function () {
 	return view('account_setting');
 });
 
+Route::get('about', function () {
+	return view('about');
+});
+
 Route::post('/complete','FreelancerController@store')->name('complete.store');
 Route::get('/complete','FreelancerController@index')->name('complete.index');
 Route::get('/complete','FreelancerController@create')->name('complete.create');
