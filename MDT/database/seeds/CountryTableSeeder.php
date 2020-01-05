@@ -12,72 +12,67 @@ class CountryTableSeeder extends Seeder
      */
     public function run()
     {
-        $country = new Country();
-        $country->name= "Afganistán";
-        $country->save();
         
+    //A	
+        $country = new Country();
+        $country->name= "Afghanistan";
+        $country->save();
+        //LISTO
 		$country = new Country();
         $country->name= "Akrotiri";
         $country->save();
-        
+        //LISTO
 	    $country = new Country();
         $country->name= "Albania";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Alemania";
+        $country->name= "Algeria";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Andorra";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Angola";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Anguila";
+        $country->name= "Anguilla";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Antártida";
+        $country->name= "Antarctica";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Antigua y Barbuda";
+        $country->name= "Antigua and Barbuda";
         $country->save();
-        
-        $country = new Country();
-        $country->name= "Antillas Neerlandesas";
-        $country->save();
-        
-        $country = new Country();
-        $country->name= "Arabia Saudí";
-        $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Arctic Ocean";
         $country->save();
         
-        $country = new Country();
-        $country->name= "Argelia";
-        $country->save();
         
+        $country = new Country();
+        $country->name= "American Samoa";
+        $country->save();
+        //LISTO
         $country = new Country();
         $country->name= "Argentina";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Armenia";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Aruba";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Ashmore andCartier Islands";
+        $country->name= "Ashmore and Cartier Islands";
         $country->save();
         
         $country = new Country();
@@ -87,123 +82,134 @@ class CountryTableSeeder extends Seeder
         $country = new Country();
         $country->name= "Australia";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Austria";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Azerbaiyán";
+        $country->name= "Azerbaijan";
         $country->save();
-        
+        //LISTO
+    //B    
         $country = new Country();
-        $country->name= "Bahamas";
+        $country->name= "Bahamas, The";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Bahráin";
+        $country->name= "Bahrain";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Bangladesh";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Barbados";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Bélgica";
+        $country->name= "Belarus";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Belice";
+        $country->name= "Belgium";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Benín";
+        $country->name= "Belize";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Bermudas";
+        $country->name= "Benin";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Bielorrusia";
+        $country->name= "Bermuda";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Birmania Myanmar";
+        $country->name= "Bhutan";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Bolivia";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Bosnia y Hercegovina";
+        $country->name= "Bosnia and Herzegovina";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Botsuana";
+        $country->name= "Botswana";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Brasil";
+        $country->name= "Brazil";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Brunéi";
+        $country->name= "Brunei";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Bulgaria";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Burkina Faso";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Burundi";
         $country->save();
+        //LISTO
         
+    //C    
         $country = new Country();
-        $country->name= "Bután";
+        $country->name= "Cape Verde";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Cabo Verde";
+        $country->name= "Cambodia";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Camboya";
+        $country->name= "Cameroon";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Camerún";
+        $country->name= "Canada";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Canadá";
+        $country->name= "Cayman Islands";
         $country->save();
-        
+        //LISTO
+        $country = new Country();
+        $country->name= "Central African Republic";
+        $country->save();
+        //LISTO
         $country = new Country();
         $country->name= "Chad";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Chile";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "China";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Chipre";
+        $country->name= "Christmas Island";
         $country->save();
-        
+        //LISTO
+        $country = new Country();
+        $country->name= "Cocos Islands";
+        $country->save();
+        //LISTO
         $country = new Country();
         $country->name= "Clipperton Island";
         $country->save();
@@ -211,127 +217,133 @@ class CountryTableSeeder extends Seeder
         $country = new Country();
         $country->name= "Colombia";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Comoras";
+        $country->name= "Comoros";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Congo";
+        $country->name= "Congo, Republic of";
         $country->save();
-        
+        //LISTO
+        $country = new Country();
+        $country->name= "Cook Islands";
+        $country->save();
+        //LISTO
         $country = new Country();
         $country->name= "Coral Sea Islands";
         $country->save();
         
         $country = new Country();
-        $country->name= "Corea del Norte";
+        $country->name= "Cote d'Ivoire";
         $country->save();
-        
-        $country = new Country();
-        $country->name= "Corea del Sur";
-        $country->save();
-        
-        $country = new Country();
-        $country->name= "Costa de Marfil";
-        $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Costa Rica";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Croacia";
+        $country->name= "Croatia";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Cuba";
         $country->save();
-        
+        //LISTO
+        $country = new Country();
+        $country->name= "Cyprus";
+        $country->save();
+        //LISTO
+    //D    
         $country = new Country();
         $country->name= "Dhekelia";
         $country->save();
         
         $country = new Country();
-        $country->name= "Dinamarca";
+        $country->name= "Denmark";
         $country->save();
-        
+        //LISTO
+        $country = new Country();
+        $country->name= "Democratic Republic of the Congo";
+        $country->save();
+        //LISTO
         $country = new Country();
         $country->name= "Dominica";
         $country->save();
-        
+        //LISTO     
+        $country = new Country();
+        $country->name= "Dominican Republic";
+        $country->save();
+        //LISTO
+        $country = new Country();
+        $country->name= "Djibouti";
+        $country->save();
+        //LISTO
+    //E    
         $country = new Country();
         $country->name= "Ecuador";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Egipto";
+        $country->name= "Egypt";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "El Salvador";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "El Vaticano";
+        $country->name= "Equatorial Guinea";
         $country->save();
-        
-        $country = new Country();
-        $country->name= "Emiratos Árabes Unidos";
-        $country->save();
+        //LISTO
         
         $country = new Country();
         $country->name= "Eritrea";
         $country->save();
-        
-        $country = new Country();
-        $country->name= "Eslovaquia";
-        $country->save();
-        
-        $country = new Country();
-        $country->name= "Eslovenia";
-        $country->save();
-        
-        $country = new Country();
-        $country->name= "España";
-        $country->save();
-        
-        $country = new Country();
-        $country->name= "Estados Unidos";
-        $country->save();
+        //LISTO
         
         $country = new Country();
         $country->name= "Estonia";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Etiopía";
+        $country->name= "Ethiopia";
         $country->save();
-        
+        //LISTO
+    //F 
+    	$country = new Country();
+        $country->name= "Falkland Islands";
+        $country->save();
+        //LISTO   
         $country = new Country();
-        $country->name= "Filipinas";
+        $country->name= "Finland";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Finlandia";
+        $country->name= "Fiji";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Fiyi";
+        $country->name= "France";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Francia";
+        $country->name= "French Polynesia";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Gabón";
+        $country->name= "French Southern Territories";
         $country->save();
-        
+        //LISTO
+    //G    
+        $country = new Country();
+        $country->name= "Gabon";
+        $country->save();
+        //LISTO
         $country = new Country();
         $country->name= "Gambia";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Gaza Strip";
         $country->save();
@@ -339,35 +351,39 @@ class CountryTableSeeder extends Seeder
         $country = new Country();
         $country->name= "Georgia";
         $country->save();
-        
+        //LISTO
+        $country = new Country();
+        $country->name= "Germany";
+        $country->save();
+        //LISTO
         $country = new Country();
         $country->name= "Ghana";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Gibraltar";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Granada";
+        $country->name= "Grenada";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Grecia";
+        $country->name= "Greece";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Groenlandia";
+        $country->name= "Greenland";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Guam";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Guatemala";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Guernsey";
         $country->save();
@@ -375,39 +391,41 @@ class CountryTableSeeder extends Seeder
         $country = new Country();
         $country->name= "Guinea";
         $country->save();
-        
-        $country = new Country();
-        $country->name= "Guinea Ecuatorial";
-        $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Guinea-Bissau";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Guyana";
         $country->save();
-        
+        //LISTO
+    //H    
         $country = new Country();
-        $country->name= "Haití";
+        $country->name= "Haiti";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Honduras";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Hong Kong";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Hungría";
+        $country->name= "Hungary";
         $country->save();
-        
+        //LISTO
+    //I 
+    	$country = new Country();
+        $country->name= "Iceland";
+        $country->save();
+        //LISTO   
         $country = new Country();
         $country->name= "India";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Indian Ocean";
         $country->save();
@@ -415,46 +433,31 @@ class CountryTableSeeder extends Seeder
         $country = new Country();
         $country->name= "Indonesia";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Irán";
+        $country->name= "Iran";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Iraq";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Irlanda";
+        $country->name= "Ireland";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Isla Bouvet";
         $country->save();
         
-        $country = new Country();
-        $country->name= "Isla Christmas";
-        $country->save();
         
         $country = new Country();
         $country->name= "Isla Norfolk";
         $country->save();
         
-        $country = new Country();
-        $country->name= "Islandia";
-        $country->save();
         
-        $country = new Country();
-        $country->name= "Islas Caimán";
-        $country->save();
         
-        $country = new Country();
-        $country->name= "Islas Cocos";
-        $country->save();
         
-        $country = new Country();
-        $country->name= "Islas Cook";
-        $country->save();
         
         $country = new Country();
         $country->name= "Islas Feroe";
@@ -468,210 +471,197 @@ class CountryTableSeeder extends Seeder
         $country->name= "Islas Heard y McDonald";
         $country->save();
         
-        $country = new Country();
-        $country->name= "Islas Malvinas";
-        $country->save();
         
-        $country = new Country();
-        $country->name= "Islas Marianas del Norte";
-        $country->save();
         
-        $country = new Country();
-        $country->name= "IslasMarshall";
-        $country->save();
         
-        $country = new Country();
-        $country->name= "Islas Pitcairn";
-        $country->save();
         
-        $country = new Country();
-        $country->name= "Islas Salomón";
-        $country->save();
         
-        $country = new Country();
-        $country->name= "Islas Turcas y Caicos";
-        $country->save();
-        
-        $country = new Country();
-        $country->name= "Islas Vírgenes Americanas";
-        $country->save();
-        
-        $country = new Country();
-        $country->name= "Islas Vírgenes Británicas";
-        $country->save();
         
         $country = new Country();
         $country->name= "Israel";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Italia";
+        $country->name= "Italy";
         $country->save();
-        
+        //LISTO
+    //J    
         $country = new Country();
         $country->name= "Jamaica";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Jan Mayen";
         $country->save();
         
         $country = new Country();
-        $country->name= "Japón";
+        $country->name= "Japan";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Jersey";
         $country->save();
         
         $country = new Country();
-        $country->name= "Jordania";
+        $country->name= "Jordan";
         $country->save();
-        
+        //LISTO
+    //K    
         $country = new Country();
-        $country->name= "Kazajistán";
+        $country->name= "Kazakhstan";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Kenia";
+        $country->name= "Kenya";
         $country->save();
-        
-        $country = new Country();
-        $country->name= "Kirguizistán";
-        $country->save();
-        
+        //LISTO        
         $country = new Country();
         $country->name= "Kiribati";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Kuwait";
         $country->save();
-        
+        //LISTO
+        $country = new Country();
+        $country->name= "Kyrgyzstan";
+        $country->save();
+        //LISTO
+    //L    
         $country = new Country();
         $country->name= "Laos";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Lesoto";
+        $country->name= "Lesotho";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Letonia";
+        $country->name= "Latvia";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Líbano";
+        $country->name= "Lebanon";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Liberia";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Libia";
+        $country->name= "Libya";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Liechtenstein";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Lituania";
+        $country->name= "Lithuania";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Luxemburgo";
+        $country->name= "Luxembourg";
         $country->save();
-        
+        //LISTO
+    //M    
         $country = new Country();
-        $country->name= "Macao";
+        $country->name= "Macau";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Macedonia";
+        $country->name= "Macedonia, Republic of";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Madagascar";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Malasia";
+        $country->name= "Malaysia";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Malaui";
+        $country->name= "Malawi";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Maldivas";
+        $country->name= "Maldives";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Malí";
+        $country->name= "Mali";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Malta";
         $country->save();
-        
+        //LISTO
+        $country = new Country();
+        $country->name= "Marshall Islands";
+        $country->save();
+        //LISTO
+        $country = new Country();
+        $country->name= "Myanmar, Burma";
+        $country->save();
+        //LISTO
         $country = new Country();
         $country->name= "Man, Isle of";
         $country->save();
         
         $country = new Country();
-        $country->name= "Marruecos";
+        $country->name= "Morocco";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Mauricio";
+        $country->name= "Mauritius";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Mauritania";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Mayotte";
         $country->save();
         
         $country = new Country();
-        $country->name= "México";
+        $country->name= "Mexico";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Micronesia";
+        $country->name= "Micronesia, Federal States of";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Moldavia";
+        $country->name= "Moldova, Republic of";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Mónaco";
+        $country->name= "Monaco";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Mongolia";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Montserrat";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Mozambique";
         $country->save();
-        
+        //LISTO
+    //N    
         $country = new Country();
         $country->name= "Namibia";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Nauru";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Navassa Island";
         $country->save();
@@ -679,63 +669,78 @@ class CountryTableSeeder extends Seeder
         $country = new Country();
         $country->name= "Nepal";
         $country->save();
-        
+        //LISTO
+        $country = new Country();
+        $country->name= "Netherlands";
+        $country->save();
+        //LISTO
+        $country = new Country();
+        $country->name= "Netherlands Antilles";
+        $country->save();
+        //LISTO
         $country = new Country();
         $country->name= "Nicaragua";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Níger";
+        $country->name= "Niger";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Nigeria";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Niue";
         $country->save();
+        //LISTO
+        $country = new Country();
+        $country->name= "Northern Mariana Islands";
+        $country->save();
+        //LISTO
         
         $country = new Country();
-        $country->name= "Noruega";
+        $country->name= "North Korea";
+        $country->save();
+        //LISTO
+        $country = new Country();
+        $country->name= "Norway";
+        $country->save();
+        //LISTO
+        $country = new Country();
+        $country->name= "New Caledonia";
         $country->save();
         
         $country = new Country();
-        $country->name= "Nueva Caledonia";
+        $country->name= "New Zealand";
         $country->save();
-        
+        //LISTO
+    //O    
         $country = new Country();
-        $country->name= "Nueva Zelanda";
+        $country->name= "Oman";
         $country->save();
-        
-        $country = new Country();
-        $country->name= "Omán";
-        $country->save();
-        
+        //LISTO
+    //P    
         $country = new Country();
         $country->name= "Pacific Ocean";
         $country->save();
         
         $country = new Country();
-        $country->name= "Países Bajos";
+        $country->name= "Pakistan";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Pakistán";
+        $country->name= "Palau";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Palaos";
+        $country->name= "Panama";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Panamá";
+        $country->name= "Papua New Guinea";
         $country->save();
-        
-        $country = new Country();
-        $country->name= "Papúa-Nueva Guinea";
-        $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Paracel Islands";
         $country->save();
@@ -743,131 +748,148 @@ class CountryTableSeeder extends Seeder
         $country = new Country();
         $country->name= "Paraguay";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Perú";
+        $country->name= "Peru";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Polinesia Francesa";
+        $country->name= "Philippines";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Polonia";
+        $country->name= "Pitcairn Island";
         $country->save();
-        
+        //LISTO
+        $country = new Country();
+        $country->name= "Poland";
+        $country->save();
+        //LISTO
         $country = new Country();
         $country->name= "Portugal";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Puerto Rico";
         $country->save();
-        
+    //Q    
         $country = new Country();
         $country->name= "Qatar";
         $country->save();
-        
-        $country = new Country();
-        $country->name= "Reino Unido";
-        $country->save();
-        
-        $country = new Country();
-        $country->name= "República Centroafricana";
-        $country->save();
+        //LISTO
+    //R    
         
         $country = new Country();
         $country->name= "República Checa";
         $country->save();
         
-        $country = new Country();
-        $country->name= "República Democrática del Congo";
-        $country->save();
         
         $country = new Country();
-        $country->name= "República Dominicana";
+        $country->name= "Rwanda";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Ruanda";
+        $country->name= "Romania";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Rumania";
+        $country->name= "Russia";
         $country->save();
-        
-        $country = new Country();
-        $country->name= "Rusia";
-        $country->save();
-        
+        //LISTO
+    //S    
         $country = new Country();
         $country->name= "Sáhara Occidental";
         $country->save();
-        
+        $country = new Country();
+        $country->name= "Saint Kitts and Nevis";
+        $country->save();
+        //LISTO
+        $country = new Country();
+        $country->name= "Saint Lucia";
+        $country->save();
+        //LISTO
+        $country = new Country();
+        $country->name= "Saint Vincent and the Grenadines";
+        $country->save();
+        //LISTO
         $country = new Country();
         $country->name= "Samoa";
         $country->save();
-        
-        $country = new Country();
-        $country->name= "Samoa Americana";
-        $country->save();
-        
-        $country = new Country();
-        $country->name= "San Cristóbal y Nieves";
-        $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "San Marino";
         $country->save();
-        
+        //LISTO
+        $country = new Country();
+        $country->name= "Sao Tome and Principe";
+        $country->save();
+        //LISTO
+        $country = new Country();
+        $country->name= "Saudi Arabia";
+        $country->save();
+        //LISTO
+
         $country = new Country();
         $country->name= "San Pedro y Miquelón";
         $country->save();
-        
-        $country = new Country();
-        $country->name= "San Vicente y las Granadinas";
-        $country->save();
-        
+
         $country = new Country();
         $country->name= "Santa Helena";
         $country->save();
-        
-        $country = new Country();
-        $country->name= "Santa Lucía";
-        $country->save();
-        
-        $country = new Country();
-        $country->name= "Santo Tomé y Príncipe";
-        $country->save();
+
         
         $country = new Country();
         $country->name= "Senegal";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Seychelles";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Sierra Leona";
+        $country->name= "Sierra Leone";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Singapur";
+        $country->name= "Singapore";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Siria";
+        $country->name= "Slovakia";
         $country->save();
-        
+        //LISTO
+        $country = new Country();
+        $country->name= "Slovenia";
+        $country->save();
+        //LISTO
+        $country = new Country();
+        $country->name= "Syria";
+        $country->save();
+        //LISTO
+        $country = new Country();
+        $country->name= "Solomon Island";
+        $country->save();
+        //LISTO
         $country = new Country();
         $country->name= "Somalia";
         $country->save();
-        
+        //LISTO
+        $country = new Country();
+        $country->name= "South Africa";
+        $country->save();
+        //LISTO
+        $country = new Country();
+        $country->name= "South Korea";
+        $country->save();
+        //LISTO
         $country = new Country();
         $country->name= "Southern Ocean";
         $country->save();
-        
+
+        $country = new Country();
+        $country->name= "Spain";
+        $country->save();
+        //LISTO
         $country = new Country();
         $country->name= "Spratly Islands";
         $country->save();
@@ -875,135 +897,160 @@ class CountryTableSeeder extends Seeder
         $country = new Country();
         $country->name= "Sri Lanka";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Suazilandia";
+        $country->name= "Swaziland";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Sudáfrica";
+        $country->name= "Sudan";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Sudán";
+        $country->name= "Sweden";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Suecia";
+        $country->name= "Switzerland";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Suiza";
+        $country->name= "Suriname";
         $country->save();
-        
-        $country = new Country();
-        $country->name= "Surinam";
-        $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Svalbard y Jan Mayen";
         $country->save();
-        
-        $country = new Country();
-        $country->name= "Tailandia";
+    //T 
+    	$country = new Country();
+        $country->name= "Taiwan";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Taiwán";
+        $country->name= "Tajikistan";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Tanzania";
         $country->save();
-        
+        //LISTO   
         $country = new Country();
-        $country->name= "Tayikistán";
+        $country->name= "Thailand";
+        $country->save();
+        //LISTO
+
+        $country = new Country();
+        $country->name= "Territorio Británico del Océano Indico";
         $country->save();
         
         $country = new Country();
-        $country->name= "TerritorioBritánicodel Océano Indico";
+        $country->name= "Timor-Leste";
         $country->save();
-        
-        $country = new Country();
-        $country->name= "Territorios Australes Franceses";
-        $country->save();
-        
-        $country = new Country();
-        $country->name= "Timor Oriental";
-        $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Togo";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Tokelau";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Tonga";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Trinidad y Tobago";
+        $country->name= "Trinidad and Tobago";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Túnez";
+        $country->name= "Tunisia";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Turkmenistán";
+        $country->name= "Turkmenistan";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Turquía";
+        $country->name= "Turkey";
         $country->save();
-        
+        //LISTO
+        $country = new Country();
+        $country->name= "Turks and Caicos Islands";
+        $country->save();
+        //LISTO
         $country = new Country();
         $country->name= "Tuvalu";
         $country->save();
-        
+        //LISTO
+    //U    
         $country = new Country();
-        $country->name= "Ucrania";
+        $country->name= "Ukraine";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Uganda";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Unión Europea";
         $country->save();
-        
+
+        $country = new Country();
+        $country->name= "United Arab Emirates";
+        $country->save();
+        //LISTO
+        $country = new Country();
+        $country->name= "United Kingdom";
+        $country->save();
+        //LISTO
+        $country = new Country();
+        $country->name= "United States of America";
+        $country->save();
+        //LISTO
         $country = new Country();
         $country->name= "Uruguay";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Uzbekistán";
+        $country->name= "Uzbekistan";
         $country->save();
-        
+        //LISTO
+    //V    
         $country = new Country();
         $country->name= "Vanuatu";
         $country->save();
-        
+        //LISTO
+        $country = new Country();
+        $country->name= "Vatican City";
+        $country->save();
+        //LISTO
         $country = new Country();
         $country->name= "Venezuela";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Vietnam";
         $country->save();
-        
+        //LISTO
+        $country = new Country();
+        $country->name= "Virgin Islands (U.S.)";
+        $country->save();
+        //LISTO
+        $country = new Country();
+        $country->name= "Virgin Islands (British)";
+        $country->save();
+        //LISTO
+
+    //W    
         $country = new Country();
         $country->name= "Wake Island";
         $country->save();
         
         $country = new Country();
-        $country->name= "Wallis y Futuna";
+        $country->name= "Wallis and Futuna Islands";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "West Bank";
         $country->save();
@@ -1011,21 +1058,19 @@ class CountryTableSeeder extends Seeder
         $country = new Country();
         $country->name= "World";
         $country->save();
-        
+    //Y    
         $country = new Country();
         $country->name= "Yemen";
         $country->save();
-        
-        $country = new Country();
-        $country->name= "Yibuti";
-        $country->save();
-        
+        //LISTO
+    //Z    
         $country = new Country();
         $country->name= "Zambia";
         $country->save();
-        
+        //LISTO
         $country = new Country();
-        $country->name= "Zimbabue";
+        $country->name= "Zimbabwe";
         $country->save();
+        //LISTO
     }
 }
