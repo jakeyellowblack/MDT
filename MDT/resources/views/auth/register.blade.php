@@ -149,10 +149,9 @@
                                 
 								<div class="sign_in_sec" id="tab-2">
 									<div class="signup-tab">
-										<!--<i class="fa fa-long-arrow-left"></i>-->
 										<h2>Choose an option:</h2>
 										<ul>
-											<li data-tab="tab-3" class="current"><a href="#" title="">Client</a></li>
+											<li data-tab="tab-3" class="current"><a href="#" title="">Project Manager</a></li>
                                             
                                             
                                             

@@ -15,7 +15,7 @@ class CreateFreelancersTable extends Migration
     {
         Schema::create('freelancers', function (Blueprint $table) {
             $table->increments('id');
-			$table->string('linkedin_url');
+			$table->string('linkedin_url')->nullable();
 			$table->string('file');
             $table->timestamps();
         });

@@ -21,11 +21,11 @@ class JobController extends Controller
 	public function index()
     {
 	
-    	$job = Job::all();
-		$job = Job::orderby('id', 'DESC');
+    	$job = Job::all()->where('user_id', auth()->user()->id);
+		
 
 		
-		return view('layout.admin', compact('job'));
+		return view('layout.my-profile', compact('job'));
     }
 	
 	

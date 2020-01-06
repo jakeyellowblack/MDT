@@ -42,7 +42,7 @@ Route::get('/my-profile', function () {
 });
 
 Route::post('/home','JobController@store')->name('job.store');
-Route::get('/home','JobController@index')->name('job.index');
+Route::get('/my-profile','JobController@index')->name('job.index');
 Route::get('/home','JobController@create')->name('job.create');
 
 Route::get('auth/success', [

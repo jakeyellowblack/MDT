@@ -83,7 +83,7 @@
 <!--LINKEDIN-->                                                             
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
-										<input id="linkedin_url" type="url" class="form-control" name="linkedin_url" placeholder="LinkedIn Profile URL" value="{{ old('linkedin_url') }}" required autocomplete="linkedin_url">                    
+										<input id="linkedin_url" type="url" class="form-control" name="linkedin_url" placeholder="LinkedIn Profile URL" >                    
                                 
                                     <i class="la la-user"></i>
 									</div>
