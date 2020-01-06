@@ -151,21 +151,17 @@
 									<div class="signup-tab">
 										<h2>Choose an option:</h2>
 										<ul>
-											<li data-tab="tab-3" class="current"><a href="#" title="">Project Manager</a></li>
+											<li data-tab="tab-3" class="current"><a href="#" title=""><img src="images/project_manager.png" alt=""></a></li>
                                             
-                                            
-                                            
-                                            
-											<li data-tab="tab-4"><a href="#" title="">Freelancer</a></li>
+											<li data-tab="tab-4"><a href="#" title=""><img src="images/freelancer.png" alt=""></a></li>
 										</ul>
-									</div><!--signup-tab end-->	
-                                    
-                                    
-									<div class="dff-tab current" id="tab-3">
+									</div><!--signup-tab end-->
+
+				<div class="dff-tab" id="tab-3">
+
                                     
 <!------------------------------------------------INICIO DEL FORM PARA CLIENTS------------------------------------>        
 
-                          
 					<form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
 
@@ -271,6 +267,8 @@
                                             
 							</form>
 								</div><!--dff-tab end-->
+                                
+                                
 									<div class="dff-tab" id="tab-4">
                                     
 <!-------------------------------------------------FIN DEL FORM PARA FREELANCERS------------------------------------>  
