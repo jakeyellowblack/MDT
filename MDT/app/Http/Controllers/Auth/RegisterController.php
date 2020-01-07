@@ -103,13 +103,13 @@ class RegisterController extends Controller
 		});
 		
 		$message = array(
-			'roles.required' => 'You must accept the Terms and Conditions',
-			'password.required' => 'Enter a valid Password',
-			'password.min' => 'Password must contain more than 5 Characters',
+			'roles.required' => 'You must accept the Terms and Conditions.',
+			'password.required' => 'Enter a valid Password.',
+			'password.min' => 'Password must contain more than 5 Characters.',
 			'password.confirmed' => 'Password confirmation does not match.',
-			'country_id.required' => 'Please select a Country',
-			'email.required' => 'Please enter a valid E-Mail',
-			'email.unique' => 'The email has already been registered',
+			'country_id.required' => 'Please select a Country.',
+			'email.required' => 'Please enter a valid E-Mail.',
+			'email.unique' => 'The E-mail has already been registered.',
 		);
 		
         return Validator::make($data, [

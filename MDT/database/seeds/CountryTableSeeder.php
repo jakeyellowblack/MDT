@@ -53,8 +53,7 @@ class CountryTableSeeder extends Seeder
         $country = new Country();
         $country->name= "Arctic Ocean";
         $country->save();
-        
-        
+                
         $country = new Country();
         $country->name= "American Samoa";
         $country->save();
@@ -145,7 +144,15 @@ class CountryTableSeeder extends Seeder
         $country->save();
         //LISTO
         $country = new Country();
+        $country->name= "Bouvet Island";
+        $country->save();
+        //LISTO  
+        $country = new Country();
         $country->name= "Brazil";
+        $country->save();
+        //LISTO
+        $country = new Country();
+        $country->name= "British Indian Ocean Territory";
         $country->save();
         //LISTO
         $country = new Country();
@@ -254,6 +261,10 @@ class CountryTableSeeder extends Seeder
         $country->name= "Cyprus";
         $country->save();
         //LISTO
+        $country = new Country();
+        $country->name= "Czech Republic";
+        $country->save();
+        //LISTO
     //D    
         $country = new Country();
         $country->name= "Dhekelia";
@@ -296,12 +307,10 @@ class CountryTableSeeder extends Seeder
         $country->name= "Equatorial Guinea";
         $country->save();
         //LISTO
-        
         $country = new Country();
         $country->name= "Eritrea";
         $country->save();
-        //LISTO
-        
+        //LISTO       
         $country = new Country();
         $country->name= "Estonia";
         $country->save();
@@ -313,6 +322,10 @@ class CountryTableSeeder extends Seeder
     //F 
     	$country = new Country();
         $country->name= "Falkland Islands";
+        $country->save();
+        //LISTO
+        $country = new Country();
+        $country->name= "Faroe Islands";
         $country->save();
         //LISTO   
         $country = new Country();
@@ -406,6 +419,10 @@ class CountryTableSeeder extends Seeder
         $country->save();
         //LISTO
         $country = new Country();
+        $country->name= "Heard Island and McDonald Islands";
+        $country->save();
+        //LISTO
+        $country = new Country();
         $country->name= "Honduras";
         $country->save();
         //LISTO
@@ -447,37 +464,6 @@ class CountryTableSeeder extends Seeder
         $country->save();
         //LISTO
         $country = new Country();
-        $country->name= "Isla Bouvet";
-        $country->save();
-        
-        
-        $country = new Country();
-        $country->name= "Isla Norfolk";
-        $country->save();
-        
-        
-        
-        
-        
-        $country = new Country();
-        $country->name= "Islas Feroe";
-        $country->save();
-        
-        $country = new Country();
-        $country->name= "Islas Georgia del Sur y Sandwich del Sur";
-        $country->save();
-        
-        $country = new Country();
-        $country->name= "Islas Heard y McDonald";
-        $country->save();
-        
-        
-        
-        
-        
-        
-        
-        $country = new Country();
         $country->name= "Israel";
         $country->save();
         //LISTO
@@ -493,7 +479,7 @@ class CountryTableSeeder extends Seeder
         $country = new Country();
         $country->name= "Jan Mayen";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Japan";
         $country->save();
@@ -501,7 +487,7 @@ class CountryTableSeeder extends Seeder
         $country = new Country();
         $country->name= "Jersey";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Jordan";
         $country->save();
@@ -665,7 +651,7 @@ class CountryTableSeeder extends Seeder
         $country = new Country();
         $country->name= "Navassa Island";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Nepal";
         $country->save();
@@ -695,10 +681,13 @@ class CountryTableSeeder extends Seeder
         $country->save();
         //LISTO
         $country = new Country();
+        $country->name= "Norfolk Island";
+        $country->save();
+        //LISTO
+        $country = new Country();
         $country->name= "Northern Mariana Islands";
         $country->save();
         //LISTO
-        
         $country = new Country();
         $country->name= "North Korea";
         $country->save();
@@ -710,12 +699,16 @@ class CountryTableSeeder extends Seeder
         $country = new Country();
         $country->name= "New Caledonia";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "New Zealand";
         $country->save();
         //LISTO
-    //O    
+    //O 
+    	$country = new Country();
+        $country->name= "Occidental Sahara";
+        $country->save();
+
         $country = new Country();
         $country->name= "Oman";
         $country->save();
@@ -744,7 +737,7 @@ class CountryTableSeeder extends Seeder
         $country = new Country();
         $country->name= "Paracel Islands";
         $country->save();
-        
+        //LISTO
         $country = new Country();
         $country->name= "Paraguay";
         $country->save();
@@ -772,18 +765,13 @@ class CountryTableSeeder extends Seeder
         $country = new Country();
         $country->name= "Puerto Rico";
         $country->save();
+        //LISTO
     //Q    
         $country = new Country();
         $country->name= "Qatar";
         $country->save();
         //LISTO
     //R    
-        
-        $country = new Country();
-        $country->name= "República Checa";
-        $country->save();
-        
-        
         $country = new Country();
         $country->name= "Rwanda";
         $country->save();
@@ -797,9 +785,6 @@ class CountryTableSeeder extends Seeder
         $country->save();
         //LISTO
     //S    
-        $country = new Country();
-        $country->name= "Sáhara Occidental";
-        $country->save();
         $country = new Country();
         $country->name= "Saint Kitts and Nevis";
         $country->save();
@@ -828,16 +813,14 @@ class CountryTableSeeder extends Seeder
         $country->name= "Saudi Arabia";
         $country->save();
         //LISTO
-
         $country = new Country();
-        $country->name= "San Pedro y Miquelón";
+        $country->name= "Saint Pierre and Miquelon";
         $country->save();
-
+        //LISTO
         $country = new Country();
-        $country->name= "Santa Helena";
+        $country->name= "Saint Helena";
         $country->save();
-
-        
+        //LISTO
         $country = new Country();
         $country->name= "Senegal";
         $country->save();
@@ -883,6 +866,10 @@ class CountryTableSeeder extends Seeder
         $country->save();
         //LISTO
         $country = new Country();
+        $country->name= "South Georgia and the South Sandwich Islands";
+        $country->save();
+        //LISTO
+        $country = new Country();
         $country->name= "Southern Ocean";
         $country->save();
 
@@ -919,7 +906,7 @@ class CountryTableSeeder extends Seeder
         $country->save();
         //LISTO
         $country = new Country();
-        $country->name= "Svalbard y Jan Mayen";
+        $country->name= "Svalbard and Jan Mayen";
         $country->save();
     //T 
     	$country = new Country();
@@ -938,11 +925,6 @@ class CountryTableSeeder extends Seeder
         $country->name= "Thailand";
         $country->save();
         //LISTO
-
-        $country = new Country();
-        $country->name= "Territorio Británico del Océano Indico";
-        $country->save();
-        
         $country = new Country();
         $country->name= "Timor-Leste";
         $country->save();
