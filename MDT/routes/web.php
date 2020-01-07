@@ -41,6 +41,10 @@ Route::get('/my-profile', function () {
 	return view('Layout/my-profile');
 });
 
+Route::get('/', function () {
+	return view('/');
+});
+
 Route::post('/home','JobController@store')->name('job.store');
 Route::get('/my-profile','JobController@index')->name('job.index');
 Route::get('/home','JobController@create')->name('job.create');
