@@ -34,9 +34,8 @@
 
 <!---------------------------------------INICIO DE LA SECCIÓN DE "CONTENIDO"-------------------------------------------->
     
-
-    <div class="container">
-        <div class="row justify-content-center">
+<div class="container">
+    <div align="center">
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Users List to Approve</div>
@@ -51,18 +50,22 @@
 
                         <table class="table">
                             <tr>
-                                <th>User name</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
                                 <th>Email</th>
                                 <th>Registered at</th>
                                 <th></th>
                             </tr>
                             @forelse ($users as $user)
                                 <tr>
-                                    <td>{{ $user->name }}</td>
+                                    <td>{{ $user->firstname}}</td>
+                                    <td>{{ $user->lastname}}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->created_at }}</td>
                                     <td><a href="{{ route('users.approve', $user->id) }}"
                                            class="btn btn-primary btn-sm">Approve</a></td>
+                                    <td><a href="{{ route('users.disapprove', $user->id) }}"
+                                           class="btn btn-danger btn-sm">Disapprove</a></td>
                                 </tr>
                             @empty
                                 <tr>
@@ -74,7 +77,8 @@
                 </div>
             </div>
         </div>
-    </div>
+</div>
+            
 <!--LIBRERÍAS DE JAVASCRIPT-->
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/popper.js"></script>
