@@ -54,6 +54,10 @@ Route::get('auth/success', [
     'uses' => 'Auth\AuthController@success'
 ]);
 
+Route::get('/users', 'UserController@index')->name('users.index');
+Route::get('/users/{user_id}/approve', 'UserController@approve')->name('users.approve');
+
+
 Auth::routes();
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
