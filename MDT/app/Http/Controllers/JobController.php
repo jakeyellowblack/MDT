@@ -48,8 +48,7 @@ class JobController extends Controller
         $job = Job::create($request->all());
         $job->skill()->sync($request['skill']);
 		
-		return redirect()->route('job.store')->with('status',
-		'Se han guardado los datos correctamente');
+		return redirect()->route('job.store');
     }
 	
 	
@@ -65,8 +64,8 @@ class JobController extends Controller
 		$job = Job::find($id);
 		$job->delete();
 		
-		return redirect()->to('home')->with('status',
-		'El Post se ha borrado correctamente');
+		return redirect()->to('home')->with('status2',
+		'The Post has been deleted successfully');
     }
 	
 	

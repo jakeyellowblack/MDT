@@ -162,9 +162,13 @@
 <!------------------------------------------------------PRIMER POST-------------------------------------------------->                            
 		
 				<!--Imagen de Perfil del Usuario Logueado-->
-                
+                                                            
+
 					<div class="col-lg-6 col-md-8 no-pd">
 								<div class="main-ws-sec">
+                                
+                                    @include('common.success2')
+
 									<div class="post-topbar">
 										<div class="user-picy">
 											<img src="images/resources/user-pic.png" alt="">
@@ -185,7 +189,7 @@
               <!--Fin Sección de botones "pop-up" para postear "Projects" o "Jobs"-->
                  
              
-                             
+     
              		@forelse ($job as $jo)                       
               <!--Inicio Recuadro Informativo de Posteos --> 
                           <!--Imagen de Perfil del Usuario Posteador--> 
@@ -305,6 +309,8 @@
                     <!--Fin Sección de "Status" del Trabajo (Likes, comentarios y vistas) y Recuadro de Posts--> 
                     
                     @empty
+                    
+
                           
                            <!--Inicio Recuadro Informativo de Posteos --> 
                           <!--Imagen de Perfil del Usuario Posteador--> 
