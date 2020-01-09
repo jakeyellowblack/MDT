@@ -1,8 +1,13 @@
+@extends('layout.app')
+
+@section('content')
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>About Us</title>
+    <link rel="icon" href="images/logo-mdt.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -42,7 +47,7 @@
 						  <li>
 						    <a href="register" title="">
 						      <span><img src="images/icon4.png" alt=""></span>
-						      Register
+						      Sign In/Sign Up
 						      </a>
 					      </li>
                             

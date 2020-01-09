@@ -7,6 +7,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>My Profile</title>
+    <link rel="icon" href="images/logo-mdt.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />

@@ -59,4 +59,17 @@ class JobController extends Controller
 		
         return view('layout.admin', compact('categories'));
     }
+	
+	public function destroy($id)
+    {
+		$job = Job::find($id);
+		$job->delete();
+		
+		return redirect()->route('job.destroy')->with('status',
+		'El Post se ha borrado correctamente');
+		
+
+    }
+	
+	
 }

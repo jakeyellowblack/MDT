@@ -219,7 +219,10 @@
 														<li><a href="#" title="">Unsaved</a></li>
 														<li><a href="#" title="">Unbid</a></li>
 														<li><a href="#" title="">Close</a></li>
-														<li><a href="#" title="">Hide</a></li>
+                                                        <form action='{{ route('job.destroy', $jo->id) }}' method='DELETE'>
+                                                        @csrf
+														<li><a href="home" title="">Hide</a></li>
+                                                        </form>
 													</ul>
 												</div>
 											</div>
@@ -261,9 +264,10 @@
                                             
                                             
                                             <!--Descripción del Trabajo-->
-<p>{{ $jo->description }} <a href="#" title="">view more</a></p>
+												<p>{{ $jo->description }} 
+                                                <a href="#" title="">view more</a></p>
                                                 
-                                                
+                                          
                                             <!--Tags relacionados con el Trabajo-->
 												<ul class="skill-tags">
 													<li><a href="#" title="">HTML</a></li>

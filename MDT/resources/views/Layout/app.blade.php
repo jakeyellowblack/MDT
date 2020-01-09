@@ -1,7 +1,8 @@
 <html>
 	<head>
 		@yield('title')
-        <link rel="icon" href="{!! asset('images/logo-mdt.png') !!}"/>
+        
+        <link rel="icon" href="images/logo-mdt.png">
 	</head>
 
 	<body>

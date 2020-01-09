@@ -48,6 +48,8 @@ Route::get('/', function () {
 Route::post('/home','JobController@store')->name('job.store');
 Route::get('/my-profile','JobController@index')->name('job.index');
 Route::get('/home','JobController@create')->name('job.create');
+Route::delete('/home/{id}','JobController@destroy')->name('job.destroy');
+
 
 Route::get('auth/success', [
     'as'   => 'auth.success',
