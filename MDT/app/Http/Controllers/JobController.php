@@ -65,10 +65,8 @@ class JobController extends Controller
 		$job = Job::find($id);
 		$job->delete();
 		
-		return redirect()->route('job.destroy')->with('status',
+		return redirect()->to('home')->with('status',
 		'El Post se ha borrado correctamente');
-		
-
     }
 	
 	

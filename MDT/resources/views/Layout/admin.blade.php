@@ -219,10 +219,8 @@
 														<li><a href="#" title="">Unsaved</a></li>
 														<li><a href="#" title="">Unbid</a></li>
 														<li><a href="#" title="">Close</a></li>
-                                                        <form action='{{ route('job.destroy', $jo->id) }}' method='DELETE'>
-                                                        @csrf
-														<li><a href="home" title="">Hide</a></li>
-                                                        </form>
+                                                       
+														<li><a href="{{ route('job.destroy', $jo->id) }}" title="">Hide</a></li>
 													</ul>
 												</div>
 											</div>
