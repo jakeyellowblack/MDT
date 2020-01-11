@@ -39,14 +39,7 @@
 
 <!---------------------------------------INICIO DE LA SECCIÓN DE "CONTENIDO"-------------------------------------------->
         
-        <main class="container">
-            @yield('content')
-        </main>
-
 		<main>
-        
-
-        
 			<div class="main-section">
 			  <div class="container">
 				<div class="main-section-data">
