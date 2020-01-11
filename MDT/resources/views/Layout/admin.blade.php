@@ -223,8 +223,9 @@
 														<li><a href="#" title="">Unsaved</a></li>
 														<li><a href="#" title="">Unbid</a></li>
 														<li><a href="#" title="">Close</a></li>
-                                                       
+                                                       @if(Auth::user()->id == $jo->user->id )
 														<li><a href="{{ route('job.destroy', $jo->id) }}" title="">Hide</a></li>
+                                                        @endif
 													</ul>
 												</div>
 											</div>
