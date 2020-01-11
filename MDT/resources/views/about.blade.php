@@ -1,3 +1,7 @@
+@extends('layout.app')
+
+@section('content')
+@endsection
 
 <!DOCTYPE html>
 <html>
