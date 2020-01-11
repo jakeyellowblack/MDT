@@ -75,7 +75,7 @@ class JobController extends Controller
 					
 					else{
 				return redirect()->to('home')->with('status2',
-				'You cant do this mamahuevo');
+				'You dont have permission to do this');
 			}
 				
 	
