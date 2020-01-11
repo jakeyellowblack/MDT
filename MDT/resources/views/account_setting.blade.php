@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>WorkWise Html Template</title>
+	<title>MDT Account Settings</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -17,7 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
-</head>
+	</head>
 
 
 <body>	
@@ -47,7 +47,7 @@
 								    <a class="nav-item nav-link" id="nav-privacy-tab" data-toggle="tab" href="#privacy" role="tab" aria-controls="privacy" aria-selected="false"><i class="fa fa-paw"></i>Privacy</a>
 								    <a class="nav-item nav-link" id="nav-blockking-tab" data-toggle="tab" href="#blockking" role="tab" aria-controls="blockking" aria-selected="false"><i class="fa fa-cc-diners-club"></i>Blocking</a>
 								    <a class="nav-item nav-link" id="nav-deactivate-tab" data-toggle="tab" href="#nav-deactivate" role="tab" aria-controls="nav-deactivate" aria-selected="false"><i class="fa fa-random"></i>Deactivate Account</a>
-							    </div>
+								  </div>
 							</div><!--acc-leftbar end-->
 						</div>
 						<div class="col-lg-9">
@@ -271,41 +271,103 @@
 							  			</div><!--notifications-list end-->
 							  		</div><!--acc-setting end-->
 							  	</div>
-                                
-                                
 							  	<div class="tab-pane fade" id="privcy" role="tabpanel" aria-labelledby="nav-privcy-tab">
 							  		<div class="acc-setting">
 							  			<h3>Requests</h3>
-                                        
 							  			<div class="requests-list">
 							  				<div class="request-details">
-                                            
 							  					<div class="noty-user-img">
 							  						<img src="images/resources/r-img1.png" alt="">
 							  					</div>
-                                                
 							  					<div class="request-info">
 							  						<h3>Jessica William</h3>
 							  						<span>Graphic Designer</span>
 							  					</div>
-                                                
 							  					<div class="accept-feat">
 							  						<ul>
 							  							<li><button type="submit" class="accept-req">Accept</button></li>
 							  							<li><button type="submit" class="close-req"><i class="la la-close"></i></button></li>
 							  						</ul>
 							  					</div><!--accept-feat end-->
-                                                
 							  				</div><!--request-detailse end-->
-                                            
-							  				
+							  				<div class="request-details">
+							  					<div class="noty-user-img">
+							  						<img src="images/resources/r-img2.png" alt="">
+							  					</div>
+							  					<div class="request-info">
+							  						<h3>John Doe</h3>
+							  						<span>PHP Developer</span>
+							  					</div>
+							  					<div class="accept-feat">
+							  						<ul>
+							  							<li><button type="submit" class="accept-req">Accept</button></li>
+							  							<li><button type="submit" class="close-req"><i class="la la-close"></i></button></li>
+							  						</ul>
+							  					</div><!--accept-feat end-->
+							  				</div><!--request-detailse end-->
+							  				<div class="request-details">
+							  					<div class="noty-user-img">
+							  						<img src="images/resources/r-img3.png" alt="">
+							  					</div>
+							  					<div class="request-info">
+							  						<h3>Poonam</h3>
+							  						<span>Wordpress Developer</span>
+							  					</div>
+							  					<div class="accept-feat">
+							  						<ul>
+							  							<li><button type="submit" class="accept-req">Accept</button></li>
+							  							<li><button type="submit" class="close-req"><i class="la la-close"></i></button></li>
+							  						</ul>
+							  					</div><!--accept-feat end-->
+							  				</div><!--request-detailse end-->
+							  				<div class="request-details">
+							  					<div class="noty-user-img">
+							  						<img src="images/resources/r-img4.png" alt="">
+							  					</div>
+							  					<div class="request-info">
+							  						<h3>Bill Gates</h3>
+							  						<span>C & C++ Developer</span>
+							  					</div>
+							  					<div class="accept-feat">
+							  						<ul>
+							  							<li><button type="submit" class="accept-req">Accept</button></li>
+							  							<li><button type="submit" class="close-req"><i class="la la-close"></i></button></li>
+							  						</ul>
+							  					</div><!--accept-feat end-->
+							  				</div><!--request-detailse end-->
+							  				<div class="request-details">
+							  					<div class="noty-user-img">
+							  						<img src="images/resources/r-img5.png" alt="">
+							  					</div>
+							  					<div class="request-info">
+							  						<h3>Jessica William</h3>
+							  						<span>Graphic Designer</span>
+							  					</div>
+							  					<div class="accept-feat">
+							  						<ul>
+							  							<li><button type="submit" class="accept-req">Accept</button></li>
+							  							<li><button type="submit" class="close-req"><i class="la la-close"></i></button></li>
+							  						</ul>
+							  					</div><!--accept-feat end-->
+							  				</div><!--request-detailse end-->
+							  				<div class="request-details">
+							  					<div class="noty-user-img">
+							  						<img src="images/resources/r-img6.png" alt="">
+							  					</div>
+							  					<div class="request-info">
+							  						<h3>John Doe</h3>
+							  						<span>PHP Developer</span>
+							  					</div>
+							  					<div class="accept-feat">
+							  						<ul>
+							  							<li><button type="submit" class="accept-req">Accept</button></li>
+							  							<li><button type="submit" class="close-req"><i class="la la-close"></i></button></li>
+							  						</ul>
+							  					</div><!--accept-feat end-->
+							  				</div><!--request-detailse end-->
 							  			</div><!--requests-list end-->
 							  		</div><!--acc-setting end-->
 							  	</div>
-                                
-                                
-                                
-                                
 							  	<div class="tab-pane fade" id="security-login" role="tabpanel" aria-labelledby="security">
 							  		<div class="privacy security">
 			                     <div class="row">

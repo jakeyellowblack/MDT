@@ -57,8 +57,8 @@ Route::get('auth/success', [
 ]);
 
 Route::get('/users', 'UserController@index')->name('users.index');
-Route::get('/users/{user_id}/approve', 'UserController@approve')->name('users.approve');
-Route::get('/users/{user_id}/disapprove', 'UserController@disapprove')->name('users.disapprove');
+Route::post('/users/{user_id}/approve', 'UserController@approve')->name('users.approve');
+Route::delete('/users/{user_id}/disapprove', 'UserController@disapprove')->name('users.disapprove');
 
 Auth::routes();
 

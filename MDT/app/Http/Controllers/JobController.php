@@ -60,12 +60,28 @@ class JobController extends Controller
     }
 	
 	public function destroy($id)
-    {
-		$job = Job::find($id);
-		$job->delete();
+    {	
+			
+		//$job = Job::where('user_id', 1)->select("user_id")->first();
+	
+		//$job=DB::table('jobs')->find('user_id');
 		
-		return redirect()->to('home')->with('status2',
-		'The Post has been deleted successfully');
+		 //$job=Job::pluck('user_id');
+		 
+		 //$job = Job::where("user_id",$user_id)->firstOrFail(); 
+
+		 dd($job);
+				
+		if($job->user_id == auth()->user()->id){
+				
+				return redirect()->to('home')->with('status2',
+				'The Post has been deleted successfully');
+		}
+		else{
+				return redirect()->to('home')->with('status2',
+				'aaaa');
+			}
+		
     }
 	
 	
