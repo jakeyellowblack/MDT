@@ -221,7 +221,7 @@
 							    </div>   
 <!--FIN DEL EMAIL--> 
 
-                   {!! Form::hidden('approved', '1') !!}                          
+                   {!! Form::hidden('roles', '2') !!}                          
                                                                                               
 <!--PASSWORD-->                                                                              
                         <div class="col-lg-12 no-pdd">
@@ -246,7 +246,7 @@
 						<div class="col-lg-12 no-pdd">
 							<div class="checky-sec st2">
 								<div class="fgt-sec">
-									<input id="c2" type="checkbox" name="roles" value="2">
+									<input id="c2" type="checkbox" name="approved" value="1">
 									<label for="c2">
 										<span></span>
 									</label>
@@ -335,7 +335,7 @@
 							    </div> 
 <!--FIN DEL EMAIL-->  
 
-				 {!! Form::hidden('approved','0') !!}                                                
+				 {!! Form::hidden('roles','3') !!}                                                
        
 <!--PASSWORD-->                                            
                                 <div class="col-lg-12 no-pdd">
@@ -356,11 +356,51 @@
 								</div>  
 <!--FIN DEL CONFIRM PASSWORD-->                                           
                                                 
+
+
+<!--LINKEDIN-->                                                             
+                                <div class="col-lg-12 no-pdd">
+									<div class="sn-field">
+										<input id="linkedin_url" type="url" class="form-control" name="linkedin_url" placeholder="LinkedIn Profile URL" >                    
+                                
+                                    <i class="la la-user"></i>
+									</div>
+								</div>                                               
+<!--FIN DEL LINKEDIN-->                                          
+                                                         
+<!--FILE-->                                  	
+						<div class="col-lg-12 no-pdd">
+							<div class="sn-field">                                             
+	                            <div class="file-upload">
+	                                <input class="file-upload__input" type="file" name="file" id="file" multiple>
+	                                <button class="file-upload__button" type="button">Choose File(s)</button>
+	                                <span class="file-upload__label"></span>
+		                        </div>
+							</div>
+						</div>                    
+<!--FIN DEL FILE-->
+
+
+<!--CATEGORY-->                                                
+	                            <div class="col-lg-12 no-pdd">
+									<div class="sn-field">
+										<select class="form-control" name="category_id">
+                                      	<option disabled selected>Select a Category</option>      
+										@foreach($categories as $cate)
+                                                <option value="{{ $cate->id }}">{{ $cate->name }}</option>
+										@endforeach
+										</select>
+										<i class="la la-dropbox"></i>
+										<span><i class="fa fa-ellipsis-h"></i></span>
+									</div>
+								</div>
+<!--FIN DEL CATEGORY-->
+
 <!--CHECK TERMS & CONDITIONS-->                                                
 								<div class="col-lg-12 no-pdd">
 									<div class="checky-sec st2">
 										<div class="fgt-sec">
-											<input id="c3" type="checkbox" name="roles" value="3">
+											<input id="c3" type="checkbox" name="approved" value="0">
 											<label for="c3">
 												<span></span>
 											</label>
@@ -368,8 +408,8 @@
 										</div><!--fgt-sec end-->
 									</div>
 								</div>
-<!--FIN DEL CHECK TERMS & CONDITIONS-->
-										
+<!--FIN DEL CHECK TERMS & CONDITIONS-->	
+									
 <!--BUTTON-->												
 								<div class="col-lg-12 no-pdd">
 									<button type="submit" value="submit">Get Started</button>

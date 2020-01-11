@@ -53,26 +53,26 @@ class RegisterController extends Controller
 	public function register(Request $request)
 	{
 		 
-		$this->validator($request->all())->validate();
+		if($request->roles==3)
+		{
+			$this->validatordos($request->all())->validate();
+		}
+		else
+		{
+			$this->validator($request->all())->validate();
+		}
 
 		event(new Registered($user = $this->create($request->all())));
-		
-		
-		
-		if($request->roles==2)
-		 
-			{
-				
-				return redirect()->route('register')->with('status', 'Successful registration! Welcome to MDT!');
-			}
-		else	
-			{
-				
-				return redirect()->route('complete')->with('status', 'Your registration is almost complete! Fill in the missing fields!');
-			}
+
+		if($request->roles==3)
+		{
+			return redirect()->route('register')->with('status', 'Registered successfully, please be attentive to your email.');
+		}
+		else
+		{
+			return redirect()->route('register')->with('status', 'Successful registration! Welcome to MDT!');
+		}
 			
-		
-		
 	}
 
 	 
@@ -103,7 +103,7 @@ class RegisterController extends Controller
 		});
 		
 		$message = array(
-			'roles.required' => 'You must accept the Terms and Conditions.',
+			'approved.required' => 'You must accept the Terms and Conditions.',
 			'password.required' => 'Enter a valid Password.',
 			'password.min' => 'Password must contain more than 5 Characters.',
 			'password.confirmed' => 'Password confirmation does not match.',
@@ -118,9 +118,50 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email:rfc', 'max:255', 'unique:users'],
             'country_id' => ['required', 'integer'],
             'password' => ['required', 'string', 'min:5', 'confirmed'],
-			'roles' => ['required'],
+			'approved' => ['required'],
         ],$message);
 		
+    }
+
+    protected function validatordos(array $data)
+    {
+		
+		Validator::extend('domain', function($attribute, $value, $parameters)
+		{
+			
+			$domain = $parameters[0];
+			$pattern = "#^https?://([a-z0-9-]+\.)*".preg_quote($domain)."(/.*)?$#";
+			return !! preg_match($pattern, $value);
+			
+		});
+		
+		$message = array(
+			'approved.required' => 'You must accept the Terms and Conditions.',
+			'password.required' => 'Enter a valid Password.',
+			'password.min' => 'Password must contain more than 5 Characters.',
+			'password.confirmed' => 'Password confirmation does not match.',
+			'country_id.required' => 'Please select a Country.',
+			'email.required' => 'Please enter a valid E-Mail.',
+			'email.unique' => 'The E-mail has already been registered.',
+			'linkedin_url.required' => 'You must enter a URL of your LinkedIn profile',
+			'linkedin_url.unique' => 'The URL entered has already been registered',
+			'linkedin_url.domain' => 'Enter a valid LinkedIn profile URL',
+			'file.required' => 'Upload a File',
+			'file.mimes' => 'Files must be a formatted file: docx, pdf, xml, doc',
+			'category_id.required' => 'Please select a Category',
+		);
+		
+        return Validator::make($data, [
+        	'firstname' => ['required', 'alpha', 'max:255'],
+			'lastname' => ['required', 'alpha', 'max:255'],
+            'email' => ['required', 'string', 'email:rfc', 'max:255', 'unique:users'],
+            'country_id' => ['required', 'integer'],
+            'password' => ['required', 'string', 'min:5', 'confirmed'],
+			'approved' => ['required'],
+			'linkedin_url' => ['nullable|unique:freelancers|domain:www.linkedin.com/in'],
+			'file' => ['required|mimes:docx,pdf,xml,doc'],
+			'category_id' => ['required'],
+        ],$message);
     }
 	
 	
@@ -154,12 +195,12 @@ class RegisterController extends Controller
 	
 		public function showRegistrationForm()
 	{
-	
+		$categories = Category::all();
 		$countries = Country::all();
 		$roles = Role::all();
 		$users = User::all();
 		
-		return view('auth.register', compact('users', 'countries', 'roles'));
+		return view('auth.register', compact('users', 'countries', 'roles','categories'));
 		
 	}	
 	
