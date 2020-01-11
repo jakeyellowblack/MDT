@@ -3,10 +3,12 @@
 namespace MDT\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use MDT\Category;
 use MDT\Time;
 use MDT\Job;
 use MDT\Skill;
+use MDT\User;
 use DB;
 
 class JobController extends Controller
@@ -61,13 +63,21 @@ class JobController extends Controller
 	
 	public function destroy($id)
     {	
-			
-				$job = Job::find($id)->where('user_id', auth()->user()->id);
+
+    			$job = Job::find($id);
 				
+			if($job->user_id == auth()->user()->id){	
 				$job->delete();
 				
 				return redirect()->to('home')->with('status2',
 				'The Post has been deleted successfully');
+					}
+					
+					else{
+				return redirect()->to('home')->with('status2',
+				'You cant do this mamahuevo');
+			}
+				
 	
 		
     }
