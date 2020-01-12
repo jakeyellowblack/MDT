@@ -27,6 +27,11 @@ class User extends Authenticatable
 	{
 		return $this->belongsTo(Job::class);
 	}
+
+	public function freelancer()
+	{
+		return $this->hasTo(Freelancer::class);
+	}
 		
 		
 	public function countries() 
@@ -100,7 +105,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'firstname', 'lastname', 'country_id', 'email', 'approved', 'password',
+        'firstname', 'lastname', 'country_id', 'email', 'approved', 'password','avatar',
     ];
 
     /**

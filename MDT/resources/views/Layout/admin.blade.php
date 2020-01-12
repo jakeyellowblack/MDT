@@ -56,7 +56,7 @@
 										<div class="user-profile">
 											<div class="username-dt">
 												<div class="usr-pic">
-													<img src="images/resources/user-pic.png" alt="">
+													<img src="images/resources/{{Auth::user()->avatar}}" alt="">
 												</div>
 											</div><!--username-dt end-->
                                             

@@ -11,6 +11,7 @@ use MDT\User;
 use MDT\Country;
 use MDT\Role;
 use MDT\Category;
+use MDT\Freelancer;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -56,16 +57,30 @@ class RegisterController extends Controller
 		if($request->roles==3)
 		{
 			$this->validatordos($request->all())->validate();
+			
 		}
 		else
 		{
 			$this->validator($request->all())->validate();
 		}
-
+		//dd($request);
 		event(new Registered($user = $this->create($request->all())));
 
 		if($request->roles==3)
 		{
+		/*	$user=User::lastest();
+			dd($user);
+
+			$freelancer = new Freelancer(
+				array(
+					'user_id' => $user->get('id'), 
+					//'category_id' =>$request->get('category_id'),
+					//'linkedin_url' =>$request->get('linkedin_url'),
+					//'file' => $request->get('file'),
+			));
+
+			$freelancer->save();
+		*/
 			return redirect()->route('register')->with('status', 'Registered successfully, please be attentive to your email.');
 		}
 		else
@@ -74,7 +89,6 @@ class RegisterController extends Controller
 		}
 			
 	}
-
 	 
     public function __construct()
     {
@@ -82,13 +96,6 @@ class RegisterController extends Controller
         $this->middleware('guest');
 		
     }
-
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
 	 
     protected function validator(array $data)
     {
@@ -163,15 +170,7 @@ class RegisterController extends Controller
 			'category_id' => ['required'],
         ],$message);
     }
-	
-	
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \MDT\User
-     */
-	 
+		 
     protected function create(array $data)
     {
 		
