@@ -39,7 +39,7 @@ class StoreFreelancerRequest extends FormRequest
 		
 		
         return [
-            'linkedin_url' => 'nullable|unique:freelancers|domain:www.linkedin.com/in',
+            'linkedin_url' => 'unique:freelancers|domain:www.linkedin.com/in',
 			'file' => 'required|mimes:docx,pdf,xml,doc',
 			'category_id' => 'required',
         ];

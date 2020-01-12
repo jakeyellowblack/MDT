@@ -158,8 +158,8 @@ class RegisterController extends Controller
             'country_id' => ['required', 'integer'],
             'password' => ['required', 'string', 'min:5', 'confirmed'],
 			'approved' => ['required'],
-			'linkedin_url' => ['nullable|unique:freelancers|domain:www.linkedin.com/in'],
-			'file' => ['required|mimes:docx,pdf,xml,doc'],
+			'linkedin_url' => ['unique:freelancers','domain:www.linkedin.com/in'],
+			'file' => ['required','mimes:docx,pdf,xml,doc'],
 			'category_id' => ['required'],
         ],$message);
     }
