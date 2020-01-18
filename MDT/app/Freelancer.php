@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Freelancer extends Model
 {
     protected $fillable = [
-		'user_id',
+		'user_id','file','category_id','linkedin_url',
 	];
 	
 	public function user()

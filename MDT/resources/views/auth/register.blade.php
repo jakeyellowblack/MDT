@@ -271,7 +271,7 @@
                                 
 									<div class="dff-tab" id="tab-4">
                                     
-<!-------------------------------------------------FIN DEL FORM PARA FREELANCERS------------------------------------>  
+<!-------------------------------------------------FIN DEL FORM PARA CLIENTS---------------------------------------->  
 
 
 
@@ -356,8 +356,6 @@
 								</div>  
 <!--FIN DEL CONFIRM PASSWORD-->                                           
                                                 
-
-
 <!--LINKEDIN-->                                                             
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
@@ -379,7 +377,6 @@
 							</div>
 						</div>                    
 <!--FIN DEL FILE-->
-
 
 <!--CATEGORY-->                                                
 	                            <div class="col-lg-12 no-pdd">
