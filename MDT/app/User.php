@@ -30,7 +30,7 @@ class User extends Authenticatable
 
 	public function freelancer()
 	{
-		return $this->hasTo(Freelancer::class);
+		return $this->hasOne(Freelancer::class);
 	}
 		
 		

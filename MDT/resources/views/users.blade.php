@@ -297,13 +297,15 @@
                                               <div class="request-details">
                                             
 							  					<div class="noty-user-img">
-						  						  <img src="images/resources/r-img1.png" alt="">
+						  						  <img src="images/resources/{{Auth::user()->avatar}}" alt="">
 							  					</div>
                                                 
 							  					<div class="request-info">
 						  						  <h3>{{ $user->firstname}} {{ $user->lastname}}</h3>
                                                     <p><span>{{ $user->email }}</span></p>              
                                                     <p><span>{{ $user->created_at }}</span></p>
+                                                    <p><span>{{ $user->freelancer->category->name }}</span></p>
+                                                    <p><span>{{ $user->freelancer->linkedin_url }}</span></p>
                                                     
 							  					</div>
                                                 

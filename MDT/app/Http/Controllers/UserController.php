@@ -4,15 +4,12 @@ namespace MDT\Http\Controllers;
 
 use Illuminate\Http\Request;
 use MDT\User;
-use MDT\Freelancer;
-use DB;
 
 class UserController extends Controller
 {
     public function index()
     {
         $users = User::where('approved',0)->get();
-        $freelancers=DB::table('freelancers')->get();
         return view('users', compact('users'));
     }
 

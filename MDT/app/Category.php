@@ -15,4 +15,9 @@ class Category extends Model
 	{
 		return $this->belongsTo(Job::class);
 	}
+
+	public function freelancer()
+	{
+		return $this->hasOne(Freelancer::class);
+	}
 }
