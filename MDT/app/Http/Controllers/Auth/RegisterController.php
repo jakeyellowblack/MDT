@@ -68,23 +68,17 @@ class RegisterController extends Controller
 
 		if($request->roles==3)
 		{
-			//dd($user);
-			//$email = $request->input('email');
-			//dd($email);
-			//$id = User::where('email','=',$email)->get('id');
-			$id = DB::table('users')->latest('id')->first();
-			//dd($id);
-			//dd($request);
-			$request["country_id"] = $id->get('id');
-			dd($request);
-			$freelancer = new Freelancer(
-				array(
-					'user_id' 		=> $id->get('id'), 
+			$user_id=$user->id;
+
+			$freelancer = new Freelancer(array(
+
+					'user_id' 		=> $user_id, 
 					'category_id' 	=> $request->get('category_id'),
 					'linkedin_url' 	=> $request->get('linkedin_url'),
 					'file' 			=> $request->file('file')->store('public/resume'),
+					
 			));
-			//dd($freelancer);
+
 			$freelancer->save();
 		
 			return redirect()->route('register')->with('status', 'Registered successfully, please be attentive to your email.');

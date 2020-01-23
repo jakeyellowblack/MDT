@@ -61,7 +61,17 @@
                             
                          <!--Fin Icono Projects-->
                             
+                         <!--Icono de Users-->  
+                          
+							<li>
+								<a href="users" title="">
+									<span><img src="images/icon4.png" alt=""></span>
+									Users
+								</a>
+							</li>
                             
+                         <!--Fin Icono Users--> 
+
                          <!--Icono de Profiles-->  
                           
 							<li>

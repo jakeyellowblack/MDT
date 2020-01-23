@@ -310,6 +310,10 @@ class CountryTableSeeder extends Seeder
         $country = new Country();
         $country->name= "Eritrea";
         $country->save();
+        //LISTO
+        $country = new Country();
+        $country->name= "European Union";
+        $country->save();
         //LISTO       
         $country = new Country();
         $country->name= "Estonia";
@@ -974,10 +978,7 @@ class CountryTableSeeder extends Seeder
         $country->name= "Uganda";
         $country->save();
         //LISTO
-        $country = new Country();
-        $country->name= "Unión Europea";
-        $country->save();
-
+        
         $country = new Country();
         $country->name= "United Arab Emirates";
         $country->save();

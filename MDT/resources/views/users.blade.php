@@ -304,6 +304,7 @@
 						  						  <h3>{{ $user->firstname}} {{ $user->lastname}}</h3>
                                                     <p><span>{{ $user->email }}</span></p>              
                                                     <p><span>{{ $user->created_at }}</span></p>
+                                                    
 							  					</div>
                                                 
 							  					<div class="accept-feat">

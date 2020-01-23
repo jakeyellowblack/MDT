@@ -39,7 +39,7 @@ class UserTableSeeder extends Seeder
 		$user->lastname = "Storm";
 		$user->email = "Client@mail.com";
 		$user->password = bcrypt('query');
-		$user->approved = 0;
+		$user->approved = 1;
 		$user->save();
 		$user->roles()->attach($role_client);
 		
@@ -61,6 +61,19 @@ class UserTableSeeder extends Seeder
 		$user->password = bcrypt('query');
 		$user->approved = 0;
 		$user->save();
-		$user->roles()->attach($role_user);
+		$user->roles()->attach($role_freelancer);
+
+		$user = new User();
+		$user->country_id = 244;
+		$user->firstname = "Arie";
+		$user->lastname = "Eskinazi";
+		$user->email = "Arieleon25@yahoo.com";	
+		$user->password = bcrypt('9862489');
+		$user->approved = 1;
+		$user->save();
+		$user->roles()->attach($role_admin);
+
+
+
     }
 }
