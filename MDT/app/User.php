@@ -34,9 +34,9 @@ class User extends Authenticatable
 	}
 		
 		
-	public function countries() 
+	public function country() 
 	{
-    	return $this->belongsTo('MDT\Country', 'country_id');
+    	return $this->belongsTo(Country::class, 'country_id');
 	}
 	
 	

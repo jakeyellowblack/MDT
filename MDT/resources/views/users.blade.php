@@ -42,11 +42,10 @@
 						<div class="col-lg-3">
 							<div class="acc-leftbar">
 								<div class="nav nav-tabs" id="nav-tab" role="tablist">
+								    <a class="nav-item nav-link active" id="nav-privcy-tab" data-toggle="tab" href="#privcy" role="tab" aria-controls="privacy" aria-selected="false"><i class="fa fa-group"></i>Approve</a>
 								    <a class="nav-item nav-link" id="nav-acc-tab" data-toggle="tab" href="#nav-acc" role="tab" aria-controls="nav-acc" aria-selected="true"><i class="la la-cogs"></i>Account Setting</a>
 								    <a class="nav-item nav-link" id="nav-status-tab" data-toggle="tab" href="#nav-status" role="tab" aria-controls="nav-status" aria-selected="false"><i class="fa fa-line-chart"></i>Status</a>
 								    <a class="nav-item nav-link" id="nav-password-tab" data-toggle="tab" href="#nav-password" role="tab" aria-controls="nav-password" aria-selected="false"><i class="fa fa-lock"></i>Change Password</a>
-								    <a class="nav-item nav-link" id="nav-notification-tab" data-toggle="tab" href="#nav-notification" role="tab" aria-controls="nav-notification" aria-selected="false"><i class="fa fa-flash"></i>Notifications</a>
-								    <a class="nav-item nav-link active" id="nav-privcy-tab" data-toggle="tab" href="#privcy" role="tab" aria-controls="privacy" aria-selected="false"><i class="fa fa-group"></i>Requests</a>
 								    <a class="nav-item nav-link" id="security" data-toggle="tab" href="#security-login" role="tab" aria-controls="security-login" aria-selected="false"><i class="fa fa-user-secret"></i>Security and Login</a>
 								    <a class="nav-item nav-link" id="nav-privacy-tab" data-toggle="tab" href="#privacy" role="tab" aria-controls="privacy" aria-selected="false"><i class="fa fa-paw"></i>Privacy</a>
 								    <a class="nav-item nav-link" id="nav-blockking-tab" data-toggle="tab" href="#blockking" role="tab" aria-controls="blockking" aria-selected="false"><i class="fa fa-cc-diners-club"></i>Blocking</a>
@@ -198,85 +197,7 @@
 										</form>
 									</div><!--acc-setting end-->
 							  	</div>
-							  	<div class="tab-pane fade" id="nav-notification" role="tabpanel" aria-labelledby="nav-notification-tab">
-							  		<div class="acc-setting">
-							  			<h3>Notifications</h3>
-							  			<div class="notifications-list">
-							  				<div class="notfication-details">
-								  				<div class="noty-user-img">
-								  					<img src="images/resources/ny-img1.png" alt="">
-								  				</div>
-								  				<div class="notification-info">
-								  					<h3><a href="#" title="">Jassica William</a> Comment on your project.</h3>
-								  					<span>2 min ago</span>
-								  				</div><!--notification-info -->
-							  				</div><!--notfication-details end-->
-							  				<div class="notfication-details">
-								  				<div class="noty-user-img">
-								  					<img src="images/resources/ny-img2.png" alt="">
-								  				</div>
-								  				<div class="notification-info">
-								  					<h3><a href="#" title="">Poonam Verma</a> Bid on your Latest project.</h3>
-								  					<span>2 min ago</span>
-								  				</div><!--notification-info -->
-							  				</div><!--notfication-details end-->
-							  				<div class="notfication-details">
-								  				<div class="noty-user-img">
-								  					<img src="images/resources/ny-img3.png" alt="">
-								  				</div>
-								  				<div class="notification-info">
-								  					<h3><a href="#" title="">Tonney Dhman</a> Comment on your project.</h3>
-								  					<span>2 min ago</span>
-								  				</div><!--notification-info -->
-							  				</div><!--notfication-details end-->
-							  				<div class="notfication-details">
-								  				<div class="noty-user-img">
-								  					<img src="images/resources/ny-img1.png" alt="">
-								  				</div>
-								  				<div class="notification-info">
-								  					<h3><a href="#" title="">Jassica William</a> Comment on your project.</h3>
-								  					<span>2 min ago</span>
-								  				</div><!--notification-info -->
-							  				</div><!--notfication-details end-->
-							  				<div class="notfication-details">
-								  				<div class="noty-user-img">
-								  					<img src="images/resources/ny-img1.png" alt="">
-								  				</div>
-								  				<div class="notification-info">
-								  					<h3><a href="#" title="">Jassica William</a> Comment on your project.</h3>
-								  					<span>2 min ago</span>
-								  				</div><!--notification-info -->
-							  				</div><!--notfication-details end-->
-							  				<div class="notfication-details">
-								  				<div class="noty-user-img">
-								  					<img src="images/resources/ny-img2.png" alt="">
-								  				</div>
-								  				<div class="notification-info">
-								  					<h3><a href="#" title="">Poonam Verma </a> Bid on your Latest project.</h3>
-								  					<span>2 min ago</span>
-								  				</div><!--notification-info -->
-							  				</div><!--notfication-details end-->
-							  				<div class="notfication-details">
-								  				<div class="noty-user-img">
-								  					<img src="images/resources/ny-img3.png" alt="">
-								  				</div>
-								  				<div class="notification-info">
-								  					<h3><a href="#" title="">Tonney Dhman</a> Comment on your project</h3>
-								  					<span>2 min ago</span>
-								  				</div><!--notification-info -->
-							  				</div><!--notfication-details end-->
-							  				<div class="notfication-details">
-								  				<div class="noty-user-img">
-								  					<img src="images/resources/ny-img1.png" alt="">
-								  				</div>
-								  				<div class="notification-info">
-								  					<h3><a href="#" title="">Jassica William</a> Comment on your project.</h3>
-								  					<span>2 min ago</span>
-								  				</div><!--notification-info -->
-							  				</div><!--notfication-details end-->
-							  			</div><!--notifications-list end-->
-							  		</div><!--acc-setting end-->
-							  	</div>
+							  	
                                 
                                 
 							  	<div class="tab-pane fade show active" id="privcy" role="tabpanel" aria-labelledby="nav-privcy-tab">
@@ -302,11 +223,14 @@
                                                 
 							  					<div class="request-info">
 						  						  <h3>{{ $user->firstname}} {{ $user->lastname}}</h3>
-                                                    <p><span>{{ $user->email }}</span></p>              
+                                                    <p><span>{{ $user->email }}</span></p>
+                                                    <p><span>{{ $user->country->name}}</span></p>              
                                                     <p><span>{{ $user->created_at }}</span></p>
                                                     <p><span>{{ $user->freelancer->category->name }}</span></p>
-                                                    <p><span>{{ $user->freelancer->linkedin_url }}</span></p>
-                                                    
+                                                    <p><a target="_blank" href="{{ $user->freelancer->linkedin_url }}">LinkedIn</a></p>
+                                                    <p><a target="_blank" href="{{ $user->freelancer->file}}">PDF</a><p>
+													
+
 							  					</div>
                                                 
 							  					<div class="accept-feat">
@@ -316,10 +240,10 @@
 							  							<button type="submit" class="accept-req">Approve</button>
 							  							<p>&nbsp;</p>                                                    
                                                       </form>
-                                                    <form method="DELETE" action="{{ route('users.disapprove', [$user->id]) }}">
-                                                    @csrf
-							  							<button type="submit" class="noaccept-req">Disapprove</button>
-                                                    </form>
+                                                <form method="DELETE" action="{{ route('users.disapprove', [$user->id]) }}">
+                                                		@csrf
+						  								<button type="submit" class="noaccept-req">Decline</button>
+                                                </form>
                                                     
                                                  </div><!--accept-feat end-->  
                                           </div><!--request-detailse end-->                                             

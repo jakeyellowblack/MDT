@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Country extends Model
 {
-	public function users()
+	public function user()
 		{
-			return $this->hasMany(User::class);
+			return $this->hasOne(User::class);
 		}
 		
 		public function clients()
