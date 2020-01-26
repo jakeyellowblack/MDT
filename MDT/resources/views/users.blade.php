@@ -233,17 +233,17 @@
                                                     
                                                     @if (!empty($user->freelancer->linkedin_url)) 
                                                     
-                                                    <p><a target="_blank" href="{{ $user->freelancer->linkedin_url }}"><i class="fa fa-linkedin"></i></a></p>
+                                                    <a target="_blank" href="{{ $user->freelancer->linkedin_url }}"><i class="fa fa-linkedin"></i></a>
                                                     
                                                     @endif
                                                     
                                                     @if (strpos($user->freelancer->file, '.pdf'))
                                                     
-                                                    <p><a target="_blank" href="{{ $user->freelancer->file}}"><i class="fa fa-file-pdf"></i></a><p>
+                                                    <a target="_blank" href="resume/{{ $user->freelancer->file}}" download="{{ $user->freelancer->file}}"><i class="fa fa-file-pdf"></i></a>
                                                     
                                                     @else (strpos($user->freelancer->file, '.docx'))
                                                     
-                                                    <p><a target="_blank" href="{{ $user->freelancer->file}}"><i class="fa fa-file-word"></i></a><p>
+                                                    <a target="_blank" href="resume/{{ $user->freelancer->file}}" download="{{ $user->freelancer->file}}"><i class="fa fa-file-word"></i></a>
                                                     
                                                     @endif
 
