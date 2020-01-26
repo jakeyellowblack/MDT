@@ -227,9 +227,12 @@
                                                     <p><span>{{ $user->country->name}}</span></p>              
                                                     <p><span>{{ $user->created_at }}</span></p>
                                                     <p><span>{{ $user->freelancer->category->name }}</span></p>
-                                                    <p><a target="_blank" href="{{ $user->freelancer->linkedin_url }}">LinkedIn</a></p>
-                                                    <p><a target="_blank" href="{{ $user->freelancer->file}}">PDF</a><p>
-													
+                                                    @if (!empty($user->freelancer->linkedin_url)) 
+                                                    
+                                                    <p><a target="_blank" href="{{ $user->freelancer->linkedin_url }}"><i class="fa fa-linkedin"></i></a></p>
+                                                    
+                                                    @endif
+                                                    <p><a target="_blank" href="{{ $user->freelancer->file}}"><i class="fa fa-file-pdf"></i></a><p>
 
 							  					</div>
                                                 

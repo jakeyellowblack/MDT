@@ -68,6 +68,13 @@ class RegisterController extends Controller
 
 		if($request->roles==3)
 		{
+			if($request->hasFile('file')) 
+		{
+		  $file = $request->file('file');
+		  $filename = time().$file->getClientOriginalName();
+		  $file->move(public_path().'/resume/', $filename);
+        }
+			
 			$user_id=$user->id;
 
 			$freelancer = new Freelancer(array(
@@ -75,7 +82,7 @@ class RegisterController extends Controller
 					'user_id' 		=> $user_id, 
 					'category_id' 	=> $request->get('category_id'),
 					'linkedin_url' 	=> $request->get('linkedin_url'),
-					'file' 			=> $request->file('file')->store('public/resume'),
+					'file' 			=> $request->file= $filename,
 					
 			));
 
@@ -165,7 +172,7 @@ class RegisterController extends Controller
             'country_id' 	=> ['required', 'integer'],
             'password' 		=> ['required', 'string', 'min:5', 'confirmed'],
 			'approved' 		=> ['required'],
-			'linkedin_url' 	=> ['unique:freelancers','domain:www.linkedin.com/in'],
+			'linkedin_url' 	=> ['unique:freelancers','domain:www.linkedin.com/in','nullable'],
 			'file' 			=> ['required','mimes:docx,pdf,xml,doc,zip'],
 			'category_id' 	=> ['required'],
         ],$message);
