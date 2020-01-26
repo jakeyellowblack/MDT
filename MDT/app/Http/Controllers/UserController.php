@@ -10,7 +10,9 @@ class UserController extends Controller
     public function index()
     {
         $users = User::where('approved',0)->get();
-        return view('users', compact('users'));
+		$clients = User::where('approved',1)->get();
+		
+        return view('users', compact('users', 'clients'));
     }
 
     public function approve($user_id)
