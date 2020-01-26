@@ -43,8 +43,8 @@
 							<div class="acc-leftbar">
 								<div class="nav nav-tabs" id="nav-tab" role="tablist">
 								    <a class="nav-item nav-link active" id="nav-privcy-tab" data-toggle="tab" href="#privcy" role="tab" aria-controls="privacy" aria-selected="false"><i class="fa fa-group"></i>Approve</a>
-								    <a class="nav-item nav-link" id="nav-acc-tab" data-toggle="tab" href="#nav-acc" role="tab" aria-controls="nav-acc" aria-selected="true"><i class="la la-cogs"></i>Account Setting</a>
-								    <a class="nav-item nav-link" id="nav-status-tab" data-toggle="tab" href="#nav-status" role="tab" aria-controls="nav-status" aria-selected="false"><i class="fa fa-line-chart"></i>Status</a>
+								    <a class="nav-item nav-link" id="nav-acc-tab" data-toggle="tab" href="#nav-acc" role="tab" aria-controls="nav-acc" aria-selected="true"><i class="fa fa-black-tie"></i>Project Managers</a>
+								    <a class="nav-item nav-link" id="nav-status-tab" data-toggle="tab" href="#nav-status" role="tab" aria-controls="nav-status" aria-selected="false"><i class="fa fa-laptop"></i>Freelancers</a>
 								    <a class="nav-item nav-link" id="nav-password-tab" data-toggle="tab" href="#nav-password" role="tab" aria-controls="nav-password" aria-selected="false"><i class="fa fa-lock"></i>Change Password</a>
 								    <a class="nav-item nav-link" id="security" data-toggle="tab" href="#security-login" role="tab" aria-controls="security-login" aria-selected="false"><i class="fa fa-user-secret"></i>Security and Login</a>
 								    <a class="nav-item nav-link" id="nav-privacy-tab" data-toggle="tab" href="#privacy" role="tab" aria-controls="privacy" aria-selected="false"><i class="fa fa-paw"></i>Privacy</a>
@@ -53,113 +53,26 @@
 							    </div>
 							</div><!--acc-leftbar end-->
 						</div>
+                        
+                        
 						<div class="col-lg-9">
 							<div class="tab-content" id="nav-tabContent">
 								<div class="tab-pane fade" id="nav-acc" role="tabpanel" aria-labelledby="nav-acc-tab">
 									<div class="acc-setting">
-										<h3>Account Setting</h3>
-										<form>
-											<div class="notbar">
-												<h4>Notification Sound</h4>
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium nulla quis erat dapibus, varius hendrerit neque suscipit. Integer in ex euismod, posuere lectus id</p>
-												<div class="toggle-btn">
-													<div class="custom-control custom-switch">
-														<input type="checkbox" class="custom-control-input" id="customSwitch1">
-														<label class="custom-control-label" for="customSwitch1"></label>
-													</div>
-												</div>
-											</div><!--notbar end-->
-											<div class="notbar">
-												<h4>Notification Email</h4>
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium nulla quis erat dapibus, varius hendrerit neque suscipit. Integer in ex euismod, posuere lectus id</p>
-												<div class="toggle-btn">
-													<div class="custom-control custom-switch">
-														<input type="checkbox" class="custom-control-input" id="customSwitch2">
-														<label class="custom-control-label" for="customSwitch2"></label>
-													</div>
-												</div>
-											</div><!--notbar end-->
-											<div class="notbar">
-												<h4>Chat Message Sound</h4>
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium nulla quis erat dapibus, varius hendrerit neque suscipit. Integer in ex euismod, posuere lectus id</p>
-												<div class="toggle-btn">
-													<div class="custom-control custom-switch">
-														<input type="checkbox" class="custom-control-input" id="customSwitch3">
-														<label class="custom-control-label" for="customSwitch3"></label>
-													</div>
-												</div>
-											</div><!--notbar end-->
-											<div class="save-stngs">
-												<ul>
-                                                
-													<li><button type="submit">Save Setting</button></li>
-                                                
-													<li><button type="submit">Restore Setting</button></li>
-												</ul>
-											</div><!--save-stngs end-->
-										</form>
+										<h3>Project Managers List</h3>
+										
 									</div><!--acc-setting end-->
 								</div>
+                                
+                                
+                                
 							  	<div class="tab-pane fade" id="nav-status" role="tabpanel" aria-labelledby="nav-status-tab">
 							  		<div class="acc-setting">
-							  			<h3>Profile Status</h3>
-							  			<div class="profile-bx-details">
-							  				<div class="row">
-							  					<div class="col-lg-3 col-md-6 col-sm-12">
-							  						<div class="profile-bx-info">
-							  							<div class="pro-bx">
-							  								<img src="images/pro-icon1.png" alt="">
-							  								<div class="bx-info">
-							  									<h3>$5,145</h3>
-							  									<h5>Total Income</h5>
-							  								</div><!--bx-info end-->
-							  							</div><!--pro-bx end-->
-							  							<p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
-							  						</div><!--profile-bx-info end-->
-							  					</div>
-							  					<div class="col-lg-3 col-md-6 col-sm-12">
-							  						<div class="profile-bx-info">
-							  							<div class="pro-bx">
-							  								<img src="images/pro-icon2.png" alt="">
-							  								<div class="bx-info">
-							  									<h3>$4,745</h3>
-							  									<h5>Widthraw</h5>
-							  								</div><!--bx-info end-->
-							  							</div><!--pro-bx end-->
-							  							<p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
-							  						</div><!--profile-bx-info end-->
-							  					</div>
-							  					<div class="col-lg-3 col-md-6 col-sm-12">
-							  						<div class="profile-bx-info">
-							  							<div class="pro-bx">
-							  								<img src="images/pro-icon3.png" alt="">
-							  								<div class="bx-info">
-							  									<h3>$1,145</h3>
-							  									<h5>Sent</h5>
-							  								</div><!--bx-info end-->
-							  							</div><!--pro-bx end-->
-							  							<p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
-							  						</div><!--profile-bx-info end-->
-							  					</div>
-							  					<div class="col-lg-3 col-md-6 col-sm-12">
-							  						<div class="profile-bx-info">
-							  							<div class="pro-bx">
-							  								<img src="images/pro-icon4.png" alt="">
-							  								<div class="bx-info">
-							  									<h3>130</h3>
-							  									<h5>Total Projects</h5>
-							  								</div><!--bx-info end-->
-							  							</div><!--pro-bx end-->
-							  							<p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
-							  						</div><!--profile-bx-info end-->
-							  					</div>
-							  				</div>
-							  			</div><!--profile-bx-details end-->
-							  			<div class="pro-work-status">
-							  				<!-- <h4>Work Status  -  Last Months Working Status</h4> -->
-							  			</div><!--pro-work-status end-->
+							  			<h3>Freelancers List</h3>
+                                        	
 							  		</div><!--acc-setting end-->
 							  	</div>
+                                
 							  	<div class="tab-pane fade" id="nav-password" role="tabpanel" aria-labelledby="nav-password-tab">
 							  		<div class="acc-setting">
 										<h3>Account Setting</h3>
