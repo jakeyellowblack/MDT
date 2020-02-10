@@ -219,7 +219,11 @@
                                                     <p><span>{{ $user->country->name}}</span></p>              
                                                     <p><span>{{ $user->created_at }}</span></p>
                                                     <p><span>{{ $user->freelancer->category->name }}</span></p>
-                                                    
+
+                                                    @foreach ($user->roles as $role)
+    												<p><span>{{ $role->name }}</span></p>
+													@endforeach
+    												
                                                     @if (!empty($user->freelancer->linkedin_url)) 
                                                     
                                                     <a target="_blank" href="{{ $user->freelancer->linkedin_url }}"><i class="fa fa-linkedin"></i></a>

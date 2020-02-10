@@ -60,7 +60,7 @@
 								<div class="main-left-sidebar">
 									<div class="user_profile">
 										<div class="user-pro-img">
-											<img src="images/resources/user-pro-img.png" alt="">
+											<img src="images/resources/{{Auth::user()->avatar}}" alt="">
 											<div class="add-dp" id="OpenImgUpload">
 												<input type="file" id="file">
 												<label for="file"><i class="fas fa-camera"></i></label>												
@@ -781,7 +781,7 @@
 										<div class="post-bar">
 											<div class="post_topbar">
 												<div class="usy-dt">
-													<img src="images/resources/us-pic.png" alt="">
+													<img src="images/resources/{{Auth::user()->avatar}}" alt="">
                                                     
                           <!--Fin Imagen de Perfil del Usuario Posteador--> 
                                                     

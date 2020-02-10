@@ -8,7 +8,7 @@ class Role extends Model
 {
     public function users()
 		{
-			return $this->belongsToMany('MDT\User');
+			return $this->belongsToMany(User::class);
 		}
 		
 		public function clients()

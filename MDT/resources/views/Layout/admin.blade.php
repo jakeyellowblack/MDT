@@ -232,7 +232,7 @@
 											<div class="epi-sec">
 												<ul class="descp">
 													<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-													<li><img src="images/icon9.png" alt=""><span>{{ $jo->user->countries->name }}</span></li>
+													<li><img src="images/icon9.png" alt=""><span>{{ $jo->user->country->name }}</span></li>
 												</ul>
                                                 
 												<ul class="bk-links">

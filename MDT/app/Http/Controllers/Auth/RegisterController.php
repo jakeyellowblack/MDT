@@ -69,11 +69,11 @@ class RegisterController extends Controller
 		if($request->roles==3)
 		{
 			if($request->hasFile('file')) 
-		{
-		  $file = $request->file('file');
-		  $filename = time().$file->getClientOriginalName();
-		  $file->move(public_path().'/resume/', $filename);
-        }
+			{
+			  $file = $request->file('file');
+			  $filename = time().$file->getClientOriginalName();
+			  $file->move(public_path().'/resume/', $filename);
+	        }
 			
 			$user_id=$user->id;
 

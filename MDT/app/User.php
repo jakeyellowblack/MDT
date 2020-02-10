@@ -14,10 +14,9 @@ class User extends Authenticatable
 	
 	public function roles()
 	{
-		return $this->belongsToMany('MDT\Role');
+		return $this->belongsToMany(Role::class);
 	}
-		
-	
+
 	public function post()
 	{
 		return $this->belongsTo(Post::class);
@@ -39,7 +38,6 @@ class User extends Authenticatable
     	return $this->belongsTo(Country::class, 'country_id');
 	}
 	
-	
 	public function autorizeRoles($roles)
 	{
 			if($this->hasAnyRole($roles))
@@ -47,7 +45,7 @@ class User extends Authenticatable
 				return true;
 				}
 			
-		abort(401, 'No estás autorizado para entrar a esta área');	
+		abort(401, 'You are not authorized to enter this area');	
 	}
 	
 	
