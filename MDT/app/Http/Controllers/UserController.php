@@ -4,15 +4,17 @@ namespace MDT\Http\Controllers;
 
 use Illuminate\Http\Request;
 use MDT\User;
+use MDT\Role;
+
 
 class UserController extends Controller
 {
     public function index()
     {
         $users = User::where('approved',0)->get();
-		$clients = User::where('approved',1)->get();
-		
-        return view('users', compact('users', 'clients'));
+		$clients = Role::findOrFail(2);
+        $freelancers = Role::findOrFail(3);
+        return view('users', compact('users', 'clients','freelancers'));
     }
 
     public function approve($user_id)
