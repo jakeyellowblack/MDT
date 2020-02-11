@@ -27,13 +27,24 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
     <link rel="stylesheet" type="text/css" href="css/customfile.css">
+   <link rel="stylesheet" type="text/css" href="css/tooltip.css">
+    <link rel="stylesheet" type="text/css" href="css/circle.css">
+   
+
 <!--FIN DE ESTILOS DE CSS-->
     
 <!--SECCIÓN DE 'ESTILOS EXTRAS' PARA LA PÁGINA-->
 	<style type="text/css">
+
+a{
+  text-align: right;
+  display: inline-block;
+  width: 100%;
+}
+
 	.sign-in .wrapper .sign-in-page .signin-popup .signin-pop .row .col-lg-6 .cmp-info p {
 	text-align: center;
-}
+
     .sign-in .wrapper .sign-in-page .signin-popup .signin-pop .row .col-lg-6 .login-sec #tab-2 #tab-3 form .row {
 	text-align: left;
 }
@@ -80,26 +91,32 @@
                                     
 									<form method="POST" action="{{ route('login') }}">
                                     @csrf
-										<div class="row">
+									  <div class="row">
 											
 <!--EMAIL--> 
-								<div class="col-lg-12 no-pdd">
-									<div class="sn-field">
+
+							 <div class="col-lg-12 no-pdd">
+
+							   <div class="sn-field">
+
 										<input id="email" type="email" class="form-control" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                                                    
-                        		
 										<i class="la la-envelope-o"></i>
-									</div><!--sn-field end-->
-								</div>
+							   </div>
+                             </div><!--sn-field end-->
+                        
+
+                               
+
 <!--FIN DEL EMAIL-->                                           
-                                                         
-<!--PASSWORD-->                                            
+                                          
+<!--PASSWORD-->        
+              
 								<div class="col-lg-12 no-pdd">
-									<div class="sn-field">
+								  <div class="sn-field">
 										<input id="password" type="password" class="form-control" name="password" placeholder="Password" required autocomplete="current-password">        
                                             
 									<i class="la la-lock"></i>
-									</div>
+								  </div>
 								</div>                                          
 <!--FIN DEL PASSWORD-->                                             
                                    
@@ -130,7 +147,7 @@
 												<button type="submit" value="submit">Sign in</button>
 											</div>
 <!--FIN DEL BUTTON-->
-										</div>  
+									  </div>  
 									</form>
                                     
 <!--LOGUEO POR MEDIO DE REDES SOCIALES--> 
@@ -168,6 +185,12 @@
 							<div class="row">
 
 <!--FIRSTNAME-->
+
+        <a href="#aboutModal" data-tooltip="•Obligatory field
+        •It can only contain letters
+        
+        Example: Peter" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>
+
 								<div class="col-lg-12 no-pdd">
 									<div class="sn-field">
 										<input id="firstname" type="text" onkeypress="return soloLetras(event)" class="form-control @error('firstname') is-invalid @enderror" name="firstname" placeholder="First Name" value="{{ old('firstname') }}" required autocomplete="firstname">                                                        
@@ -182,6 +205,11 @@
 <!--FIN DEL FIRSTNAME-->                                                 
                                 
 <!--LASTNAME--> 
+
+<a href="#aboutModal" data-tooltip="•Obligatory field
+•It can only contain letters
+
+Example: Parker" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
 										<input id="lastname" type="text" onkeypress="return soloLetras(event)" class="form-control @error('lastname') is-invalid @enderror" name="lastname" placeholder="Last Name" value="{{ old('lastname') }}" required autocomplete="lastname">               
@@ -195,7 +223,9 @@
 								</div>
 <!--FIN DEL LASTNAME-->                                                 
                                                 
-<!--COUNTRY-->           
+<!--COUNTRY-->        
+
+<a href="#aboutModal" data-tooltip="•Obligatory field" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>   
 
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
@@ -211,7 +241,12 @@
 								</div>
 <!--FIN DEL COUNTRY-->
                          
-<!--EMAIL-->                               
+<!--EMAIL-->  
+
+<a href="#aboutModal" data-tooltip="•Obligatory field
+
+Example: john@email.com" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>   
+       
                               	<div class="col-lg-12 no-pdd">
 									<div class="sn-field">
 										<input id="email" type="email" class="form-control" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email">                                      
@@ -223,7 +258,12 @@
 
                    {!! Form::hidden('roles', '2') !!}                          
                                                                                               
-<!--PASSWORD-->                                                                              
+<!--PASSWORD-->           
+<a href="#aboutModal" data-tooltip="•Obligatory field
+•Min: 10 characters
+•Max: 20 characters" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>
+
+                                                                   
                         <div class="col-lg-12 no-pdd">
 							<div class="sn-field">
 								<input id="password" type="password" class="form-control" name="password" placeholder="Password" value="{{ old('password') }}" required autocomplete="password">     
@@ -234,6 +274,11 @@
 <!--FIN DEL PASSWORD-->                                                
                                                  
 <!--CONFIRM PASSWORD-->
+
+<a href="#aboutModal" data-tooltip="•Obligatory field
+•Min: 10 characters
+•Max: 20 characters" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>
+                                    
                         <div class="col-lg-12 no-pdd">
 							<div class="sn-field">
 								<input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password" value="{{ old('password') }}" required autocomplete="new-password">  
@@ -262,10 +307,10 @@
 						</div>
 <!--FIN DEL BUTTON-->										
 
-								</div>
+					  </div>
                                               
                                             
-							</form>
+				  </form>
 								</div><!--dff-tab end-->
                                 
                                 
@@ -282,8 +327,14 @@
 											<div class="row">
                                             
                                             
-<!--FIRSTNAME-->                                              
-                                <div class="col-lg-12 no-pdd">
+<!--FIRSTNAME-->    
+                        
+        <a href="#aboutModal" data-tooltip="•Obligatory field
+        •It can only contain letters
+        
+        Example: Peter" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>
+        
+                       <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
 										<input id="firstname" type="text" onkeypress="return soloLetras(event)" class="form-control @error('firstname') is-invalid @enderror" name="firstname" placeholder="First Name" value="{{ old('firstname') }}" required autocomplete="firstname">                                                      
                                 @error('firstname')
@@ -296,7 +347,13 @@
 							    </div>
 <!--FIN DEL FIRSTNAME-->                                                  
 
-<!--LASTNAME-->                                                                    
+<!--LASTNAME-->
+
+<a href="#aboutModal" data-tooltip="•Obligatory field
+•It can only contain letters
+
+Example: Parker" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>
+                                                                    
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
 										<input id="lastname" type="text" onkeypress="return soloLetras(event)" class="form-control @error('lastname') is-invalid @enderror" name="lastname" placeholder="Last Name" value="{{ old('lastname') }}" required autocomplete="lastname">                    
@@ -310,7 +367,10 @@
 								</div>
 <!--FIN DEL LASTNAME-->                                                  
                                                 
-<!--COUNTRY-->                                                 
+<!--COUNTRY-->   
+   
+<a href="#aboutModal" data-tooltip="•Obligatory field" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>   
+                                           
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
 										<select class="form-control" name="country_id">                                
@@ -325,7 +385,12 @@
 								</div>
 <!--FIN DEL COUNTRY-->                                                  
                                                                    
-<!--EMAIL-->                         
+<!--EMAIL-->
+
+        <a href="#aboutModal" data-tooltip="•Obligatory field
+        
+        Example: john@email.com" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a> 
+                                                     
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
 										<input id="email" type="email" class="form-control" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email">   
@@ -337,7 +402,12 @@
 
 				 {!! Form::hidden('roles','3') !!}                                                
        
-<!--PASSWORD-->                                            
+<!--PASSWORD-->
+
+        <a href="#aboutModal" data-tooltip="•Obligatory field
+        •Min: 10 characters
+        •Max: 20 characters" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>
+                                                                        
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
 										<input id="password" type="password" class="form-control" name="password" placeholder="Password" value="{{ old('password') }}" required autocomplete="password"> 
@@ -348,6 +418,11 @@
 <!--FIN DEL PASSWORD-->                                                
 
 <!--CONFIRM PASSWORD-->
+
+<a href="#aboutModal" data-tooltip="•Obligatory field
+•Min: 10 characters
+•Max: 20 characters" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>
+                                    
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
 										<input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password" value="{{ old('password') }}" required autocomplete="new-password">
@@ -356,7 +431,12 @@
 								</div>  
 <!--FIN DEL CONFIRM PASSWORD-->                                           
                                                 
-<!--LINKEDIN-->                                                             
+<!--LINKEDIN-->
+
+    <a href="#aboutModal" data-tooltip="•Optional field
+    
+    Example: https://www.linkedin.com/in/peter-parker-a9321b167/" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>
+                                                                                             
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
 										<input id="linkedin_url" type="url" class="form-control" name="linkedin_url" placeholder="LinkedIn Profile URL" >                    
@@ -366,7 +446,11 @@
 								</div>                                               
 <!--FIN DEL LINKEDIN-->                                          
                                                          
-<!--FILE-->                                  	
+<!--FILE-->   
+
+ <a href="#aboutModal" data-tooltip="•Obligatory field
+ •Valid formats: .docx, .pdf & .doc" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>
+                                                                   	
 						<div class="col-lg-12 no-pdd">
 							<div class="sn-field">                                             
 	                            <div class="file-upload">
@@ -378,7 +462,10 @@
 						</div>                    
 <!--FIN DEL FILE-->
 
-<!--CATEGORY-->                                                
+<!--CATEGORY-->   
+
+          <a href="#aboutModal" data-tooltip="•Obligatory field" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>   
+                                   
 	                            <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
 										<select class="form-control" name="category_id">
@@ -450,10 +537,11 @@
   
 <!--SECCIÓN JAVASCRIPT-->    
    
-<script src="{{ asset('vendor/stringToSlug/jquery.stringToSlug.min.js') }}"></script>  
-    
-<script>
+<script src="{{ asset('vendor/stringToSlug/jquery.stringToSlug.min.js') }}"></script> 
 
+
+
+<script>
 
 <!--FUNCIÓN PARA TIPEAR 'SOLO LETRAS' EN INPUTS-->  
 		 
@@ -520,6 +608,8 @@
 			});
 			
 <!--FIN DE LA FUNCIÓN 'SOLO NÚMEROS'-->
+
+
 
 </script>
 <!--FIN DE SECCIÓN JAVASCRIPT--> 
