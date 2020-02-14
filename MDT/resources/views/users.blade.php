@@ -23,6 +23,23 @@
     <link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <style type="text/css">
+    #modal1 .modal-dialog .modal-content .modal-footer .btn.btn-primary {
+	text-align: right;
+}
+    #modal1 .modal-dialog .modal-content .modal-footer .btn.btn-primary {
+	text-align: right;
+}
+    #modal1 .modal-dialog .modal-content .modal-footer {
+	text-align: right;
+}
+    #modal1 .modal-dialog .modal-content .modal-header .modal-title {
+	color: #FFF;
+}
+    #modal1 .modal-dialog .modal-content .modal-body h3 {
+	font-weight: bold;
+}
+    </style>
 <!--FIN DE ESTILOS DE CSS-->
 </head>
 
@@ -153,11 +170,17 @@
 							  					</div>
                                                                                                 
                                              <div class="accept-feat">
-                                            
-                                            <form  action="{{ route('users.destroy', [$user->id]) }}">
-		                                    		@csrf
-					  								<button type="submit" class="show-req">Show more</button>
-		                                    </form>
+                                             
+                                 
+										
+	<a href="#modal1" 
+    id="{{ $user->id}}" 
+    firstname="{{ $user->firstname}}" 
+    lastname="{{ $user->lastname}}" 
+    email="{{ $user->email }}" 
+    country="{{ $user->country->name}}" 
+    created="{{ $user->created_at }}" 
+    data-toggle="modal"><button class="show-req">Show more</button></a>
                                             <p>&nbsp;</p>
                                             <form action="{{ route('users.destroy', [$user->id]) }}">
 		                                    		@csrf
@@ -186,7 +209,47 @@
                                         	
 							  		</div><!--acc-setting end-->
 							  	</div>                               
-<!----------------------------------------------FIN FREELANCER---------------------------------------------------------->							  	
+<!----------------------------------------------FIN FREELANCER---------------------------------------------------------->
+
+<!------------------------------------------FORMULARIO "POP UP" PARA TRABAJOS-------------------------------------------->
+
+<div class="modal fade modal-slide-in-right" aria-hidden="true"
+role="dialog" tabindex="-1" id="modal1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+        
+                        <div class="modal-header">
+                                        <h4 class="modal-title">Freelancer Info</h4>
+                                        
+                            <button type="button" class="close" data-dismiss="modal" 
+                            aria-hidden="true">&times;
+                            </button>
+                            
+                        </div>
+            
+			<div class="modal-body">
+                                                             <div class="request-info">
+
+              <h3><span class="firsts"></span> <span class="lasts"></span></h3>
+                 <p><span class="emails"></span></p>
+                 <p><span class="countries"></span></p>
+                 <p><span class="createds"></span></p>
+           
+                                                    
+							  					</div>
+             
+		  </div>
+            
+            
+		  <div class="modal-footer">
+		    <button type="button" class="show-req" data-dismiss="modal">Cerrar</button>
+		  </div>
+            
+		</div>
+	</div>
+</div>
+
+<!--------------------------------------FIN FORMULARIO "POP UP" PARA TRABAJOS-------------------------------------------->						  	
                                 
 <!----------------------------------------------INICIO REQUEST---------------------------------------------------------->                               
 							  	<div class="tab-pane fade show active" id="privcy" role="tabpanel" aria-labelledby="nav-privcy-tab">
@@ -243,7 +306,7 @@
                                     					@csrf
 							  							<button type="submit" class="accept-req">Approve</button>
 							  							<p>&nbsp;</p>                                                    
-                                                      </form>
+</form>
                                                 <form method="DELETE" action="{{ route('users.disapprove', [$user->id]) }}">
                                                 		@csrf
 						  								<button type="submit" class="noaccept-req">Decline</button>
@@ -484,9 +547,9 @@
                                                        	</div>
                                                        </div>
                                                    </div>
-                                               </div>
-			                                </div>
-			                                </div>
+                                          </div>
+	                                  </div>
+	                                  </div>
 			                                <hr>
 			                                <div class="row">
 			                     		<div class="col-12">
@@ -516,7 +579,7 @@
                                                        	</div>
                                                        </div>
                                                    </div>
-                                               </div>
+                                          </div>
 			                                </div>
 			                                </div>
 			                                <hr>
@@ -548,7 +611,7 @@
                                                        	</div>
                                                        </div>
                                                    </div>
-                                               </div>
+                                          </div>
 			                                </div>
 			                                </div>
 			                                <hr>
@@ -572,7 +635,7 @@
                                                        	</div>
                                                        </div>
                                                    </div>
-                                               </div>
+                                          </div>
 			                                </div>
 			                                </div>
 			                                <hr>
@@ -600,7 +663,7 @@
                                                        	</div>
                                                        </div>
                                                    </div>
-                                               </div>
+                                          </div>
 			                                </div>
 			                                </div>
 			                                <hr>
@@ -612,7 +675,7 @@
 			                                		</div>
 			                                	</div>
 			                                </div>
-			                                </div>
+                                  </div>
 							  	</div>
 							  	<div class="tab-pane fade" id="nav-deactivate" role="tabpanel" aria-labelledby="nav-deactivate-tab">
 							  		<div class="acc-setting">
@@ -691,7 +754,33 @@
 <script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
 <script type="text/javascript" src="lib/slick/slick.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
-
+<script>
+$(function(){
+	$("a").click(function(e){
+  	e.preventDefault();
+	
+    var id = $(this).attr('id');
+    $(".ids").html(id);
+	
+	var firstname = $(this).attr('firstname');
+    $(".firsts").html(firstname);
+	
+	var lastname = $(this).attr('lastname');
+    $(".lasts").html(lastname);
+	
+	var email = $(this).attr('email');
+    $(".emails").html(email);
+	
+	var country = $(this).attr('country');
+    $(".countries").html(country);
+	
+	var created = $(this).attr('created');
+    $(".createds").html(created);
+	
+    $("#modal-id").modal('show');
+  })
+})
+</script>
 
 </body>
 </html>
