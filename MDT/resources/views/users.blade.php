@@ -86,10 +86,20 @@
 					  					</div>
 
 											<div class="accept-feat">
-
+                                            
+                                            <form  action="{{ route('users.destroy', [$user->id]) }}">
+		                                    		@csrf
+					  								<button type="submit" class="show-req">Show more</button>
+		                                    </form>
+                                            <p>&nbsp;</p>
+                                            <form action="{{ route('users.destroy', [$user->id]) }}">
+		                                    		@csrf
+					  								<button type="submit" class="edit-req">Edit</button>
+		                                    </form>
+											<p>&nbsp;</p>
 						  					<form method="DELETE" action="{{ route('users.destroy', [$user->id]) }}">
 		                                    		@csrf
-					  								<button type="submit" class="noaccept-req">Delete</button>
+					  								<button type="submit" class="delete-req">Delete</button>
 		                                    </form>
 
 											</div>
@@ -141,6 +151,27 @@
                                                     <p><span>{{ $user->created_at }}</span></p>
                                                     
 							  					</div>
+                                                                                                
+                                             <div class="accept-feat">
+                                            
+                                            <form  action="{{ route('users.destroy', [$user->id]) }}">
+		                                    		@csrf
+					  								<button type="submit" class="show-req">Show more</button>
+		                                    </form>
+                                            <p>&nbsp;</p>
+                                            <form action="{{ route('users.destroy', [$user->id]) }}">
+		                                    		@csrf
+					  								<button type="submit" class="edit-req">Edit</button>
+		                                    </form>
+											<p>&nbsp;</p>
+						  					<form method="DELETE" action="{{ route('users.destroy', [$user->id]) }}">
+		                                    		@csrf
+					  								<button type="submit" class="delete-req">Delete</button>
+		                                    </form>
+
+											</div>
+                                                
+                                                
                                           </div><!--request-detailse end--> 
                                           @endif
                                                     @empty
