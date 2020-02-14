@@ -189,7 +189,7 @@ a{
         <a href="#aboutModal" data-tooltip="•Obligatory field
         •It can only contain letters
         
-        Example: Peter" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>
+        Example: Peter" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="fa fa-exclamation"></i></span></a>
 
 								<div class="col-lg-12 no-pdd">
 									<div class="sn-field">
@@ -209,7 +209,7 @@ a{
 <a href="#aboutModal" data-tooltip="•Obligatory field
 •It can only contain letters
 
-Example: Parker" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>
+Example: Parker" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="fa fa-exclamation"></i></span></a>
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
 										<input id="lastname" type="text" onkeypress="return soloLetras(event)" class="form-control @error('lastname') is-invalid @enderror" name="lastname" placeholder="Last Name" value="{{ old('lastname') }}" required autocomplete="lastname">               
@@ -225,7 +225,7 @@ Example: Parker" data-toggle="modal" data-target="#myModal" class="btn btn-circl
                                                 
 <!--COUNTRY-->        
 
-<a href="#aboutModal" data-tooltip="•Obligatory field" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>   
+<a href="#aboutModal" data-tooltip="•Obligatory field" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="fa fa-exclamation"></i></span></a>   
 
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
@@ -245,7 +245,7 @@ Example: Parker" data-toggle="modal" data-target="#myModal" class="btn btn-circl
 
 <a href="#aboutModal" data-tooltip="•Obligatory field
 
-Example: john@email.com" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>   
+Example: john@email.com" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="fa fa-exclamation"></i></span></a>   
        
                               	<div class="col-lg-12 no-pdd">
 									<div class="sn-field">
@@ -261,7 +261,7 @@ Example: john@email.com" data-toggle="modal" data-target="#myModal" class="btn b
 <!--PASSWORD-->           
 <a href="#aboutModal" data-tooltip="•Obligatory field
 •Min: 10 characters
-•Max: 20 characters" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>
+•Max: 20 characters" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="fa fa-exclamation"></i></span></a>
 
                                                                    
                         <div class="col-lg-12 no-pdd">
@@ -277,7 +277,7 @@ Example: john@email.com" data-toggle="modal" data-target="#myModal" class="btn b
 
 <a href="#aboutModal" data-tooltip="•Obligatory field
 •Min: 10 characters
-•Max: 20 characters" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>
+•Max: 20 characters" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="fa fa-exclamation"></i></span></a>
                                     
                         <div class="col-lg-12 no-pdd">
 							<div class="sn-field">
@@ -332,7 +332,7 @@ Example: john@email.com" data-toggle="modal" data-target="#myModal" class="btn b
         <a href="#aboutModal" data-tooltip="•Obligatory field
         •It can only contain letters
         
-        Example: Peter" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>
+        Example: Peter" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="fa fa-exclamation"></i></span></a>
         
                        <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
@@ -352,7 +352,7 @@ Example: john@email.com" data-toggle="modal" data-target="#myModal" class="btn b
 <a href="#aboutModal" data-tooltip="•Obligatory field
 •It can only contain letters
 
-Example: Parker" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>
+Example: Parker" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="fa fa-exclamation"></i></span></a>
                                                                     
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
@@ -369,7 +369,7 @@ Example: Parker" data-toggle="modal" data-target="#myModal" class="btn btn-circl
                                                 
 <!--COUNTRY-->   
    
-<a href="#aboutModal" data-tooltip="•Obligatory field" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>   
+<a href="#aboutModal" data-tooltip="•Obligatory field" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="fa fa-exclamation"></i></span></a>   
                                            
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
@@ -389,7 +389,7 @@ Example: Parker" data-toggle="modal" data-target="#myModal" class="btn btn-circl
 
         <a href="#aboutModal" data-tooltip="•Obligatory field
         
-        Example: john@email.com" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a> 
+        Example: john@email.com" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="fa fa-exclamation"></i></span></a> 
                                                      
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
@@ -406,7 +406,7 @@ Example: Parker" data-toggle="modal" data-target="#myModal" class="btn btn-circl
 
         <a href="#aboutModal" data-tooltip="•Obligatory field
         •Min: 10 characters
-        •Max: 20 characters" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>
+        •Max: 20 characters" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="fa fa-exclamation"></i></span></a>
                                                                         
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
@@ -421,7 +421,7 @@ Example: Parker" data-toggle="modal" data-target="#myModal" class="btn btn-circl
 
 <a href="#aboutModal" data-tooltip="•Obligatory field
 •Min: 10 characters
-•Max: 20 characters" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>
+•Max: 20 characters" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="fa fa-exclamation"></i></span></a>
                                     
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
@@ -435,7 +435,7 @@ Example: Parker" data-toggle="modal" data-target="#myModal" class="btn btn-circl
 
     <a href="#aboutModal" data-tooltip="•Optional field
     
-    Example: https://www.linkedin.com/in/peter-parker-a9321b167/" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>
+    Example: https://www.linkedin.com/in/peter-parker-a9321b167/" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="fa fa-question"></i></span></a>
                                                                                              
                                 <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
@@ -449,13 +449,13 @@ Example: Parker" data-toggle="modal" data-target="#myModal" class="btn btn-circl
 <!--FILE-->   
 
  <a href="#aboutModal" data-tooltip="•Obligatory field
- •Valid formats: .docx, .pdf & .doc" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>
+ •Valid formats: .docx, .pdf & .doc" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="fa fa-exclamation"></i></span></a>
                                                                    	
 						<div class="col-lg-12 no-pdd">
 							<div class="sn-field">                                             
 	                            <div class="file-upload">
 	                                <input class="file-upload__input" type="file" name="file" id="file" multiple>
-	                                <button class="file-upload__button" type="button">Choose File(s)</button>
+	                                <button class="file-upload__button" type="button">Upload Resume</button>
 	                                <span class="file-upload__label"></span>
 		                        </div>
 							</div>
@@ -464,7 +464,7 @@ Example: Parker" data-toggle="modal" data-target="#myModal" class="btn btn-circl
 
 <!--CATEGORY-->   
 
-          <a href="#aboutModal" data-tooltip="•Obligatory field" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="la la-exclamation"></i></span></a>   
+          <a href="#aboutModal" data-tooltip="•Obligatory field" data-toggle="modal" data-target="#myModal" class="btn btn-circle-micro btn-info"><span class="glyphicon glyphicon-thumbs-up"><i class="fa fa-exclamation"></i></span></a>   
                                    
 	                            <div class="col-lg-12 no-pdd">
 									<div class="sn-field">
