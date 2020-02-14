@@ -59,7 +59,7 @@ Route::get('auth/success', [
 Route::get('/users', 'UserController@index')->name('users.index');
 Route::post('/users/{user_id}/approve', 'UserController@approve')->name('users.approve');
 Route::delete('/users/{user_id}/disapprove', 'UserController@disapprove')->name('users.disapprove');
-
+Route::delete('/users/{user_id}/destroy', 'UserController@destroy')->name('users.destroy');
 Auth::routes();
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {

@@ -62,42 +62,47 @@
 								<div class="tab-pane fade" id="nav-acc" role="tabpanel" aria-labelledby="nav-acc-tab">
 									<div class="acc-setting">
 										<h3>Project Managers List</h3>
-                                        
-                                        
                                         <div class="requests-list">
-							  				
-                                                
+ 
                                                 @if (session('message'))
                                                     <div class="alert alert-success" role="alert">
                                                         {{ session('message') }}
                                                     </div>
                         						@endif
+
+                                        @forelse ($clients->users as $user)
+	
+                                      	<div class="request-details">
+                                    
+					  						<div class="noty-user-img">
+				  								<img src="images/resources/{{Auth::user()->avatar}}" alt="">
+					  						</div>
+                                        
+					  					<div class="request-info">
+				  						  <h3>{{ $user->firstname}} {{ $user->lastname}}</h3>
+                                            <p><span>{{ $user->email }}</span></p>
+                                            <p><span>{{ $user->country->name}}</span></p>              
+                                            <p><span>{{ $user->created_at }}</span></p>
+					  					</div>
+
+											<div class="accept-feat">
+
+						  					<form method="DELETE" action="{{ route('users.destroy', [$user->id]) }}">
+		                                    		@csrf
+					  								<button type="submit" class="noaccept-req">Delete</button>
+		                                    </form>
+
+											</div>
+
+                                  		</div><!--request-detailse end--> 
+
+                                                @empty
                                                 
-                                                
-                                                @forelse ($clients->users as $client)
-                                              
-                                              	
-                                              	<div class="request-details">
+                                                    <img src="images/no-users.png" alt="">
+
                                             
-							  					<div class="noty-user-img">
-						  							<img src="images/resources/{{Auth::user()->avatar}}" alt="">
-							  					</div>
-                                                
-							  					<div class="request-info">
-						  						  <h3>{{ $client->firstname}} {{ $client->lastname}}</h3>
-                                                    <p><span>{{ $client->email }}</span></p>
-                                                    <p><span>{{ $client->country->name}}</span></p>              
-                                                    <p><span>{{ $client->created_at }}</span></p>
-                                                    
-							  					</div>
-                                          		</div><!--request-detailse end--> 
-                                          
-                                                    @empty
-                                                    
-                                                        <img src="images/no-users.png" alt="">
 
-                                                @endforelse
-
+										@endforelse
 							  			</div><!--requests-list end-->
                                         
 										
@@ -149,45 +154,7 @@
                                         
                                         	
 							  		</div><!--acc-setting end-->
-							  	</div>
-                                
-							  	<div class="tab-pane fade" id="nav-password" role="tabpanel" aria-labelledby="nav-password-tab">
-							  		<div class="acc-setting">
-										<h3>Account Setting</h3>
-										<form>
-											<div class="cp-field">
-												<h5>Old Password</h5>
-												<div class="cpp-fiel">
-													<input type="text" name="old-password" placeholder="Old Password">
-													<i class="fa fa-lock"></i>
-												</div>
-											</div>
-											<div class="cp-field">
-												<h5>New Password</h5>
-												<div class="cpp-fiel">
-													<input type="text" name="new-password" placeholder="New Password">
-													<i class="fa fa-lock"></i>
-												</div>
-											</div>
-											<div class="cp-field">
-												<h5>Repeat Password</h5>
-												<div class="cpp-fiel">
-													<input type="text" name="repeat-password" placeholder="Repeat Password">
-													<i class="fa fa-lock"></i>
-												</div>
-											</div>
-											<div class="cp-field">
-												<h5><a href="#" title="">Forgot Password?</a></h5>
-											</div>
-											<div class="save-stngs pd2">
-												<ul>
-													<li><button type="submit">Save Setting</button></li>
-													<li><button type="submit">Restore Setting</button></li>
-												</ul>
-											</div><!--save-stngs end-->
-										</form>
-									</div><!--acc-setting end-->
-							  	</div>
+							  	</div>                               
 <!----------------------------------------------FIN FREELANCER---------------------------------------------------------->							  	
                                 
 <!----------------------------------------------INICIO REQUEST---------------------------------------------------------->                               

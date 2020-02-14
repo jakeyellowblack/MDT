@@ -32,4 +32,11 @@ class UserController extends Controller
         return redirect()->route('users.index')->withMessage('User disapproved successfully');
     }
 
+    public function destroy($user_id)
+    {
+        $user = User::findOrFail($user_id);
+        $user->delete();
+        return redirect()->route('users.index')->withMessage('User deleted successfully');
+    }
+
 }
