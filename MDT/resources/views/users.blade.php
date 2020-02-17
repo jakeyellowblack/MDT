@@ -13,7 +13,7 @@
     <meta name="keywords" content="" />
 <!--ESTILOS DE CSS-->      
     <link rel="stylesheet" type="text/css" href="css/animate.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/line-awesome.css">
     <link rel="stylesheet" type="text/css" href="css/line-awesome-font-awesome.min.css">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -104,10 +104,17 @@
 
 											<div class="accept-feat">
                                             
-                                            <form  action="{{ route('users.destroy', [$user->id]) }}">
-		                                    		@csrf
-					  								<button type="submit" class="show-req">Show more</button>
-		                                    </form>
+                                            
+                                            
+                                            
+                                           <a href="#modal1" 
+    id="{{ $user->id}}" 
+    firstname="{{ $user->firstname}}" 
+    lastname="{{ $user->lastname}}" 
+    email="{{ $user->email }}" 
+    country="{{ $user->country->name}}" 
+    created="{{ $user->created_at }}" 
+    data-toggle="modal"><button class="show-req">Show more</button></a>
                                             <p>&nbsp;</p>
                                             <form action="{{ route('users.destroy', [$user->id]) }}">
 		                                    		@csrf
@@ -211,7 +218,7 @@
 							  	</div>                               
 <!----------------------------------------------FIN FREELANCER---------------------------------------------------------->
 
-<!------------------------------------------FORMULARIO "POP UP" PARA TRABAJOS-------------------------------------------->
+<!------------------------------------------"MODAL" PARA FREELANCERS-------------------------------------------->
 
 <div class="modal fade modal-slide-in-right" aria-hidden="true"
 role="dialog" tabindex="-1" id="modal1">
@@ -219,7 +226,7 @@ role="dialog" tabindex="-1" id="modal1">
 		<div class="modal-content">
         
                         <div class="modal-header">
-                                        <h4 class="modal-title">Freelancer Info</h4>
+                                        <h4 class="modal-title">User Information</h4>
                                         
                             <button type="button" class="close" data-dismiss="modal" 
                             aria-hidden="true">&times;
@@ -230,10 +237,11 @@ role="dialog" tabindex="-1" id="modal1">
 			<div class="modal-body">
                                                              <div class="request-info">
 
-              <h3><span class="firsts"></span> <span class="lasts"></span></h3>
-                 <p><span class="emails"></span></p>
-                 <p><span class="countries"></span></p>
-                 <p><span class="createds"></span></p>
+                 <p><b>Name:</b> <span class="firsts"></span></p>
+                 <p><b>Lastname:</b> <span class="lasts"></span></p>
+                 <p><b>E-mail:</b> <span class="emails"></span></p>
+                 <p><b>Country:</b> <span class="countries"></span></p>
+                 <p><b>Creation date:</b> <span class="createds"></span></p>
            
                                                     
 							  					</div>
