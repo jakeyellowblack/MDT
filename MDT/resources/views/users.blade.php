@@ -293,11 +293,11 @@ role="dialog" tabindex="-1" id="modal1">
                                                     
                                                     @if (strpos($user->freelancer->file, '.pdf'))
                                                     
-                                                    <a target="_blank" href="resume/{{ $user->freelancer->file}}" download="{{ $user->freelancer->file}}"><i class="fa fa-file-pdf"></i></a>
+                                                    <a target="_blank" href="resume/{{ $user->freelancer->file}}" download="{{ $user->freelancer->file}}"><i class="fa fa-file-pdf-o"></i></a>
                                                     
                                                     @else (strpos($user->freelancer->file, '.docx'))
                                                     
-                                                    <a target="_blank" href="resume/{{ $user->freelancer->file}}" download="{{ $user->freelancer->file}}"><i class="fa fa-file-word"></i></a>
+                                                    <a target="_blank" href="resume/{{ $user->freelancer->file}}" download="{{ $user->freelancer->file}}"><i class="fa fa-file-word-o"></i></a>
                                                     
                                                     @endif
 
@@ -357,14 +357,6 @@ role="dialog" tabindex="-1" id="modal1">
 
 	</div><!--theme-layout end-->
 
-
-
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/popper.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
-<script type="text/javascript" src="lib/slick/slick.min.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
 <script>
 $(function(){
 	$("a").click(function(e){
@@ -392,6 +384,14 @@ $(function(){
   })
 })
 </script>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/popper.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
+<script type="text/javascript" src="lib/slick/slick.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
 
 </body>
 </html>
